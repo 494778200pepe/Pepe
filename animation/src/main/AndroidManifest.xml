@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pepe.animation">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PropertyAnimationAct"/>
+        <activity android:name=".Property.ObjectAnimatorAct"/>
+        <activity android:name=".Property.ValueAnimatorAct"/>
+        <activity android:name=".Property.AnimatorSetAct"/>
+        <activity android:name=".Property.PropertyValuesHolderAct"/>
+        <activity android:name=".Property.LayoutAnimaAct"/>
+        <activity android:name=".Property.KeyframeAct"/>
+        <activity android:name=".Property.ViewAnimateAct"/>
+        <activity android:name=".Property.DropActivity"/>
+        <activity android:name=".Property.PropertyActivity"/>
+        <activity android:name=".Property.TimerActivity"/>
+        <activity android:name=".Property.MojiDemoAct"/>
+        <activity android:name=".VectorAnimationAct"/>
+        <activity android:name=".Vector.VectorDemo1Act"/>
+        <activity android:name=".Vector.VectorDemo2Act"/>
+        <activity android:name=".Vector.VectorDemo3Act"/>
+        <activity android:name=".ViewAnimationAct"/>
+        <activity android:name=".View.TweenAnimationAct"/>
+        <activity android:name=".View.tween.AlphaAnimationAct"/>
+        <activity android:name=".View.tween.ScaleAnimationAct"/>
+        <activity android:name=".View.tween.RotateAnimationAct"/>
+        <activity android:name=".View.tween.TranslateAnimationAct"/>
+        <activity android:name=".View.tween.AnimationSetAct"/>
+        <activity android:name=".View.tween.LayoutAnimationControllerAct"/>
+        <activity android:name=".View.tween.InterpolatorAct"/>
+        <activity android:name=".View.tween.CustomAnimationAct"/>
+        <activity android:name=".View.FrameAnimationAct"/>
+        <activity android:name=".Demo1Act"/>
+    </application>
+
+</manifest>

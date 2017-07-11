@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:width 定义几何宽度，尺寸标准随意，一般为dp-->
+ <!-- android:height 定义几何高度，尺寸标准随意，一般为dp-->
+<!-- android:viewportWidth 定义viewport宽度，viewport是将path绘制在上面的一个虚拟画布-->
+ <!-- android:viewportHeight 定义viewport高度-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportHeight="600"
+    android:viewportWidth="600"
+    android:name="test"><!--android:name 定义这个VectorDrawable的名字-->
+    <!--android:pivotX 定义缩放或者旋转中轴点x坐标，是虚拟画布中的坐标-->
+    <!--android:pivotY 定义缩放或者旋转中轴点y坐标，是虚拟画布中的坐标-->
+    <group
+        android:name="rotationGroup"
+        android:pivotX="300.0"
+        android:pivotY="300.0"
+        android:rotation="45">
+       <!-- android:pathData 定义路径采用了SVG文件里d标签中的path值-->
+        <path
+            android:name="v"
+            android:fillColor="#ff00ff"
+            android:pathData="M300,70 l 0,-70 70,70 0,0 -70,70z"/>
+    </group>
+</vector>

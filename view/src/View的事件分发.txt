@@ -1,0 +1,19 @@
+做学问，容不得半点马虎和偷懒!
+
+1、onTouch 优先于 onClick
+    如果 onTouch 返回true，事件被消费，onClick 就不会执行
+2、View 中只有 dispatchTouchEvent 和 onTouchEvent
+3、整个View的事件转发流程是：
+    dispatchTouchEvent -> setOnTouchListener 的 onTouch 方法 -> onTouchEvent
+    在 dispatchTouchEvent 中会进行 onTouchListener 的判断，如果 onTouchListener 不会 null 且返回true，则表示事件被消费，onTouchEvent 不会被执行；
+    否则执行 onTouchEvent 。
+4、setOnLongClickListener 和 setOnClickListener 是否只能执行一个？
+    不是的。只要 onLongClick 返回false，则两个都会执行。
+
+
+
+参考blog：
+    Android View 事件分发机制 源码解析 （上） - Hongyang - CSDN博客
+    http://blog.csdn.net/lmj623565791/article/details/38960443
+    Android事件分发机制完全解析，带你从源码的角度彻底理解(上) - 郭霖的专栏 - CSDN博客
+    http://blog.csdn.net/guolin_blog/article/details/9097463/

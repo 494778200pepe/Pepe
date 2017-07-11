@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:propertyName="pathData"
+    android:valueFrom="M100,100 L400,100L400,400L100,400z"
+    android:valueTo="M250,100L250,100L400,400L100,400z"
+    android:valueType="pathType">
+
+</objectAnimator>

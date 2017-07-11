@@ -1,0 +1,12 @@
+做学问，容不得半点马虎和偷懒!
+
+
+
+Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客
+http://blog.csdn.net/lmj623565791/article/details/46858663
+ViewDragHelper的简单分析（一) - 菜鸟博客 - CSDN博客
+http://blog.csdn.net/chunqiuwei/article/details/50778842
+Android应用ViewDragHelper详解及部分源码浅析 - 工匠若水 - CSDN博客
+http://blog.csdn.net/yanbober/article/details/50419059
+ViewDragHelper详解 - pi9nc的专栏 - CSDN博客
+http://blog.csdn.net/pi9nc/article/details/39583377

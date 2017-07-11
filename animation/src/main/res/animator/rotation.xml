@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--android:propertyName指定动画类型-->
+    <!--android:valueFrom指定动画开始位置-->
+    <!--android:valueTo指定动画结束位置-->
+<!--android:duration指定动画时间-->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:propertyName="rotation"
+    android:valueFrom="0"
+    android:valueTo="360" />

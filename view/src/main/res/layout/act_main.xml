@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <Button
+        android:id="@+id/main_btn0"
+        style="@style/CommonButton"
+        android:text="AndroidUI" />
+
+    <Button
+        android:id="@+id/main_btn1"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="MaterialMenu" />
+
+    <Button
+        android:id="@+id/main_btn2"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="RippleEffect" />
+
+    <Button
+        android:id="@+id/main_btn3"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="Tickplusdrawable" />
+
+    <Button
+        android:id="@+id/main_btn4"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="FloatingButton" />
+
+    <Button
+        android:id="@+id/main_btn5"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="AnimatedVector" />
+
+    <Button
+        android:id="@+id/main_btn6"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="MaterialDialog" />
+
+    <Button
+        android:id="@+id/main_btn7"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="Transitions" />
+
+    <Button
+        android:id="@+id/main_btn8"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="MaterialEditText" />
+
+    <Button
+        android:id="@+id/main_btn9"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="MaterialToolbar" />
+    <Button
+        android:id="@+id/main_btn10"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="MaterialTab" />
+    <Button
+        android:id="@+id/main_btn11"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="Phoenix"/>
+    <Button
+        android:id="@+id/main_btn12"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="SideMenu" />
+    <Button
+        android:id="@+id/main_btn13"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="ContextMenu" />
+    <Button
+        android:id="@+id/main_btn14"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="DiscreteSeekBar" />
+    <Button
+        android:id="@+id/main_btn15"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="" />
+    <Button
+        android:id="@+id/main_btn16"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="" />
+
+
+</LinearLayout>
+

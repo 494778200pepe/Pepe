@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Android中的Selector的用法 - 开心阳 - 博客频道 - CSDN.NET-->
+    <!--http://blog.csdn.net/shakespeare001/article/details/7788400-->
+    <!--安卓开发中selector的使用方法详解_干货分享 _麦子学院-->
+    <!--http://q.maiziedu.com/article/9236/-->
+    <!--Android的selector，背景选择器 - 学习Android - 51CTO技术博客-->
+    <!--http://android.blog.51cto.com/268543/564581/-->
+    <!--Android Selector 与 Shape 基本用法 - 东名夜雨 的专栏 - 博客频道 - CSDN.NET-->
+    <!--http://blog.csdn.net/wswqiang/article/details/6616306-->
+    <!-- 默认时的背景图片-->
+    <!--Android开发：shape和selector和layer-list的（详细说明） - - 博客频道 - CSDN.NET-->
+    <!--http://blog.csdn.net/brokge/article/details/9713041-->
+    <!--Android之用layer-list，shape，selector画各种背景 - 柳絮丶 - 博客频道 - CSDN.NET-->
+    <!--http://blog.csdn.net/jenly121/article/details/50319005-->
+    <item android:drawable="@mipmap/ic_launcher" />
+
+    <!-- 没有焦点时的背景图片 -->
+    <item
+        android:state_window_focused="false"
+        android:drawable="@mipmap/ic_launcher"
+        />
+
+    <!-- 非触摸模式下获得焦点并单击时的背景图片 -->
+    <item
+        android:state_focused="true"
+        android:state_pressed="true"
+        android:drawable= "@mipmap/ic_launcher"
+        />
+
+    <!-- 触摸模式下单击时的背景图片-->
+    <item
+        android:state_focused="false"
+        android:state_pressed="true"
+        android:drawable="@mipmap/ic_launcher"
+        />
+
+    <!--选中时的图片背景-->
+    <item
+        android:state_selected="true"
+        android:drawable="@mipmap/ic_launcher"
+        />
+
+    <!--获得焦点时的图片背景-->
+    <item
+        android:state_focused="true"
+        android:drawable="@mipmap/ic_launcher"
+        />
+</selector>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="150dp"
+    android:height="24dp"
+    android:viewportHeight="24"
+    android:viewportWidth="150">
+    <!--  android:strokeColor 定义path的外轮廓颜色-->
+    <!-- android:strokeAlpha 路径的透明度-->
+    <!--  android:strokeLineCap 设置线的顶路径，圆(round)还是方(square)等-->
+    <!--  android:strokeLineJoin 设置线连接处路径方式-->
+    <!--  android:strokeMiterLimit 设置线的修饰-->
+    <!--  android:strokeWidth 路径的宽度-->
+    <path
+        android:name="search"
+        android:pathData="M141,17 A9,9 0 1,1 142,16 L149,23"
+        android:strokeAlpha="0.8"
+        android:strokeWidth="2"
+        android:strokeColor="#ff00ff"
+        android:strokeLineCap="round"></path>
+</vector>

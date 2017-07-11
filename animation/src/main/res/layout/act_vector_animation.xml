@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/main_btn0"
+        style="@style/CommonButton"
+        android:text="demo1 " />
+
+    <Button
+        android:id="@+id/main_btn1"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="demo1" />
+    <demo2
+        android:id="@+id/main_btn2"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="demo3" />
+    <Button
+        android:id="@+id/main_btn3"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="demo4" />
+    <Button
+        android:id="@+id/main_btn4"
+        style="@style/CommonButton"
+        android:layout_marginTop="10dp"
+        android:text="MojiDemo" />
+
+</LinearLayout>

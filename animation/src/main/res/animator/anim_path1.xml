@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--anim_path1.xml-->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+                android:duration="500"
+                android:interpolator="@android:anim/bounce_interpolator"
+                android:propertyName="pathData"
+                android:valueFrom="
+            M 20,80
+            L 50,80 80,80"
+                android:valueTo="
+            M 20,80
+            L 50,50 80,80"
+                android:valueType="pathType"/>
+<!--代码中定义了一个pathType的属性动画，并指定了变化的起始值。
+在SVG的路径变化属性动画中，变化前后的节点数必须相同，这也是为什么前面需要使用三个点来绘制一条直线的原因，
+因为后面需要中间点进行动画交换。-->

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--android开发之shape详解 - Android移动开发技术文章_手机开发 - 红黑联盟-->
+    <!--http://www.2cto.com/kf/201510/447702.html-->
+    <!--android:shape属性详解 - dreamfly2007的专栏 - 博客频道 - CSDN.NET-->
+    <!--http://blog.csdn.net/dreamfly2007/article/details/8486054-->
+    <!--rectagle矩形，oval椭圆，line水平直线，ring环形-->
+    <!--android:shape=["rectangle" | "oval" | "line" | "ring"] ， 默认为rectangle-->
+
+    <!--圆角半径-->
+    <!--shape=“rectangle”时使用-->
+    <!--radius为角的弧度，可同时设置四个角的半径，radius值越大角越圆-->
+    <!--如果同时设置五个属性，则Radius属性无效-->
+    <corners
+        android:bottomLeftRadius="2dp"
+        android:bottomRightRadius="2dp"
+        android:radius="9dp"
+        android:topLeftRadius="2dp"
+        android:topRightRadius="2dp" />
+
+    <!-- 渐变 当设置填充颜色后，无渐变效果。-->
+    <!--startColor和android:endColor分别为起始和结束颜色 -->
+    <!--angle是渐变角度，必须为45的整数倍（包括0）-->
+    <!--android:type：渐变默认的模式为android:type="linear"，即线性渐变-->
+    <!--可以指定渐变为径向渐变，android:type="radial"，径向渐变需要指定半径android:gradientRadius="50"。-->
+    <!-- android:useLevel 这个属性不知道有什么用。-->
+    <!--android:startColor  起始颜色-->
+    <!--android:endColor  结束颜色-->
+    <!--android:angle  渐变角度，0从上到下，90表示从左到右，数值为45的整数倍默认为0-->
+    <!--android:type  渐变的样式 liner线性渐变 radial环形渐变 sweep-->
+    <gradient
+        android:angle="45"
+        android:centerColor="@android:color/black"
+        android:centerX="0"
+        android:centerY="0"
+        android:endColor="@android:color/black"
+        android:gradientRadius="90"
+        android:startColor="@android:color/white"
+        android:type="radial"
+        android:useLevel="true" />
+
+    <!-- 各方向的间隔 -->
+    <padding
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp" />
+
+    <!-- 宽度和高度 -->
+    <size
+        android:width="50dp"
+        android:height="50dp" />
+
+    <!-- 填充的颜色 -->
+    <solid android:color="@android:color/white" />
+
+    <!-- 描边 dashWidth和dashGap属性，只要其中一个设置为0dp，则边框为实现边框-->
+    <!--android:dashWidth表示'-'这样一个横线的宽度，android:dashGap表示之间隔开的距离-->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/black"
+        android:dashWidth="1dp"
+        android:dashGap="2dp"
+        />
+
+</shape>
