@@ -25,11 +25,6 @@
     当我们把disallowIntercept设置为true时，!disallowIntercept直接为false，于是拦截的方法体就被跳过了~
 
 
-
-
-
-
-
 Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客
 http://blog.csdn.net/guolin_blog/article/details/9153747
 Android ViewGroup事件分发机制 - Hongyang - CSDN博客

@@ -17,6 +17,7 @@
         <activity android:name=".paint.act.PaintAntiAliasAct"/>
         <activity android:name=".paint.act.PaintCapAct"/>
         <activity android:name=".paint.act.PaintStyleAct"/>
+        <activity android:name=".EventAct"/>
     </application>
 
 </manifest>

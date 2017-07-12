@@ -18,7 +18,10 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
-                new ItemActivity(PaintAct.class, "Paint")
+                new ItemActivity(PaintAct.class, "Paint"),
+                new ItemActivity(PaintAct.class, "Canvas"),
+                new ItemActivity(PaintAct.class, "Path"),
+                new ItemActivity(EventAct.class, "Event")
         );
         ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(
                 this,

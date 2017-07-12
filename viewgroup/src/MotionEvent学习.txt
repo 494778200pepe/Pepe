@@ -1,0 +1,34 @@
+做学问，容不得半点马虎和偷懒!
+
+
+主要的事件类型有:
+    ACTION_DOWN: 表示用户开始触摸.
+    ACTION_MOVE: 表示用户在移动(手指或者其他)
+    ACTION_UP:表示用户抬起了手指
+    ACTION_CANCEL:表示手势被取消了,一些关于这个事件类型的讨论见:http://stackoverflow.com/questions/11960861/what-causes-a-motionevent-action-cancel-in-android
+
+还有一个不常见的:
+    ACTION_OUTSIDE: 表示用户触碰超出了正常的UI边界.
+    但是对于多点触控的支持,Android加入了以下一些事件类型.来处理,如另外有手指按下了,有的手指抬起来了.等等:
+    ACTION_POINTER_DOWN:有一个非主要的手指按下了.
+    ACTION_POINTER_UP:一个非主要的手指抬起来了
+
+
+Action的值在0x00到0xff之间
+    通常用 action & ACTION_MASK 来获取action的值
+    public static final int ACTION_MASK             = 0xff;
+    通常用 action & ACTION_POINTER_INDEX_MASK 来获取是第几个点的action
+    public static final int ACTION_POINTER_INDEX_MASK  = 0xff00;
+    // & 之后，移位
+    public static final int ACTION_POINTER_INDEX_SHIFT = 8;
+        return (mAction & ACTION_POINTER_INDEX_MASK) >> ACTION_POINTER_INDEX_SHIFT;
+    }
+
+    计算机始终还是以位来存储信息的。如果我们多我熟悉以位为基本单位来理解信息的存储。对于理解android中的很多变量是很有帮助的。
+    因为他其中的很多东西使用的这样的节约内在的技巧。
+    如onMeasure中的MeasureSpec。
+
+
+
+android触控,先了解MotionEvent(一) - 李海珍的个人页面
+https://my.oschina.net/banxi/blog/56421
