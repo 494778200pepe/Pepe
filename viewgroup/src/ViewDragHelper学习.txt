@@ -1,18 +1,123 @@
 做学问，容不得半点马虎和偷懒!
 
+
+1、创建：mDragHelper = ViewDragHelper.create(this, mDragHelperCallback);
+2、TouchSlop：
+    系统能识别出被认为是滑动的最小距离，小于这个常量，系统不认为你在进行滑动。与设备有关。
+    通过
+        ViewConfigration.get(getContext()).getScaledTouchSlop()
+    方法获得
+3、 @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        final int action = MotionEventCompat.getActionMasked(ev);
+        if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
+            mDragHelper.cancel();
+            return false;
+        }
+        return mDragHelper.shouldInterceptTouchEvent(ev);
+    }
+4、 @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        mDragHelper.processTouchEvent(ev);
+        return true;
+    }
+5、关于Callback:
+    public static abstract class Callback {
+        public void onViewDragStateChanged(int state) {}
+            //当ViewDragHelper状态发生变化时回调（STATE_IDLE,STATE_DRAGGING,STATE_SETTLING）
+        public void onViewPositionChanged(View changedView, int left, int top, int dx, int dy) {}
+            //被拖拽的View位置变化时回调，changedView为位置变化的view，left、top变化后的x、y坐标，dx、dy为新位置与旧位置的偏移量
+        public void onViewCaptured(View capturedChild, int activePointerId) {}
+            //成功捕获到子View时或者手动调用captureChildView()时回调
+        public void onViewReleased(View releasedChild, float xvel, float yvel) {}
+            //当前拖拽的view松手或者ACTION_CANCEL时调用，xvel、yvel为离开屏幕时的速率
+        public void onEdgeTouched(int edgeFlags, int pointerId) {}
+            //当触摸到边界时回调
+        public void onEdgeDragStarted(int edgeFlags, int pointerId) {}
+            //ACTION_MOVE且没有锁定边缘时触发，在此可手动调用captureChildView()触发从边缘拖动子View
+        public boolean onEdgeLock(int edgeFlags)
+            //true的时候会锁住当前的边界，false则unLock。锁定后的边缘就不会回调onEdgeDragStarted()
+        public int getOrderedChildIndex(int index) {
+            //寻找当前触摸点View时回调此方法，如需改变遍历子view顺序可重写此方法
+            return index;
+        }
+        public int getViewHorizontalDragRange(View child) {
+            //返回拖拽子View在相应方向上可以被拖动的最远距离，默认为0
+            return 0;
+        }
+        public int getViewVerticalDragRange(View child) {
+            //返回拖拽子View在相应方向上可以被拖动的最远距离，默认为0
+            return 0;
+        }
+        public abstract boolean tryCaptureView(View child, int pointerId);
+            //对触摸view判断，如果需要当前触摸的子View进行拖拽移动就返回true，否则返回false
+        public int clampViewPositionHorizontal(View child, int left, int dx) {
+            //拖拽的子View在所属方向上移动的位置，child为拖拽的子View，left为子view应该到达的x坐标，dx为挪动差值
+            return 0;
+        }
+        public int clampViewPositionVertical(View child, int top, int dy) {
+            //同上，top为子view应该到达的y坐标
+            return 0;
+        }
+    }
+6、关于ViewDragHelper:
+    public static ViewDragHelper create(ViewGroup forParent, float sensitivity, Callback cb)
+        //sensitivity越大,对滑动的检测就越敏感,默认传1即可，  用来设置滑动的最小检测距离
+    public void setEdgeTrackingEnabled(int edgeFlags)
+        //设置允许父View的某个边缘可以用来响应托拽事件，
+    public boolean shouldInterceptTouchEvent(MotionEvent ev)
+        //在父view onInterceptTouchEvent方法中调用
+    public void processTouchEvent(MotionEvent ev)
+        //在父view onTouchEvent方法中调用
+    public void captureChildView(View childView, int activePointerId)
+        //在父View内捕获指定的子view用于拖曳，会回调tryCaptureView()
+    public boolean smoothSlideViewTo(View child, int finalLeft, int finalTop)
+        //某个View自动滚动到指定的位置，初速度为0，可在任何地方调用，动画移动会回调continueSettling(boolean)方法，直到结束
+    public boolean settleCapturedViewAt(int finalLeft, int finalTop)
+        //以松手前的滑动速度为初值，让捕获到的子View自动滚动到指定位置，只能在Callback的onViewReleased()中使用，其余同上
+    public void flingCapturedView(int minLeft, int minTop, int maxLeft, int maxTop)
+        //以松手前的滑动速度为初值，让捕获到的子View在指定范围内fling惯性运动，只能在Callback的onViewReleased()中使用，其余同上
+    public boolean continueSettling(boolean deferCallbacks)
+        //在调用settleCapturedViewAt()、flingCapturedView()和smoothSlideViewTo()时，该方法返回true，一般重写父view的computeScroll方法，进行该方法判断
+    public void abort()
+        //中断动画
+
+    在ViewDragHelper的滑动中共有三个方法可以调用，smoothSlideViewTo、settleCapturedViewAt、flingCapturedView，
+    动画移动会回调continueSettling(boolean)方法，在内部是用的ScrollerCompat来实现滑动的。
+    在computeScroll方法中判断continueSettling(boolean)的返回值，来动态刷新界面：
+     @Override
+     public void computeScroll() {
+          if (mViewDragHelper.continueSettling(true)) {
+              invalidate();
+          }
+     }
+
+7、
+
+
+强大的ViewDragHelper和ViewDragHelper的妙用 一 - 大叔的愤怒，你驾驭不了 - CSDN博客
+http://blog.csdn.net/jaysong2012/article/details/46912875
+自定义控件辅助神器ViewDragHelper - 简书
+http://www.jianshu.com/p/e4d1f88ca922
+Android 一步一步教你使用ViewDragHelper - 希尔瓦娜斯女神 - 博客园
+http://www.cnblogs.com/punkisnotdead/p/4724825.html
+Viewdraghelper解析 - 冒泡的章鱼 - 博客园
+http://www.cnblogs.com/liemng/p/4997427.html
+
+
+
+Android应用ViewDragHelper详解及部分源码浅析 - 工匠若水 - CSDN博客
+http://blog.csdn.net/yanbober/article/details/50419059
+ViewDragHelper的简单分析（一) - 菜鸟博客 - CSDN博客
+http://blog.csdn.net/chunqiuwei/article/details/50778842
+Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客
+http://blog.csdn.net/lmj623565791/article/details/46858663
 Android ViewDragHelper源码解析 - 随心而悦StayReal - 博客园
 http://www.cnblogs.com/lqstayreal/p/4500219.html
+ViewDragHelper详解 - pi9nc的专栏 - CSDN博客
+http://blog.csdn.net/pi9nc/article/details/39583377
+
+
 
 ViewDragHelper详解 - 泡在网上的日子
 http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/0911/1680.html
-强大的ViewDragHelper和ViewDragHelper的妙用 一 - 大叔的愤怒，你驾驭不了 - CSDN博客
-http://blog.csdn.net/jaysong2012/article/details/46912875
-
-Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客
-http://blog.csdn.net/lmj623565791/article/details/46858663
-ViewDragHelper的简单分析（一) - 菜鸟博客 - CSDN博客
-http://blog.csdn.net/chunqiuwei/article/details/50778842
-Android应用ViewDragHelper详解及部分源码浅析 - 工匠若水 - CSDN博客
-http://blog.csdn.net/yanbober/article/details/50419059
-ViewDragHelper详解 - pi9nc的专栏 - CSDN博客
-http://blog.csdn.net/pi9nc/article/details/39583377

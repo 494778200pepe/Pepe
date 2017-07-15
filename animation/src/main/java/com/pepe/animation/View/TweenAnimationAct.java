@@ -6,15 +6,16 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.zitech.animationdemo.R;
-import com.zitech.animationdemo.View.tween.AlphaAnimationAct;
-import com.zitech.animationdemo.View.tween.AnimationSetAct;
-import com.zitech.animationdemo.View.tween.CustomAnimationAct;
-import com.zitech.animationdemo.View.tween.InterpolatorAct;
-import com.zitech.animationdemo.View.tween.LayoutAnimationControllerAct;
-import com.zitech.animationdemo.View.tween.RotateAnimationAct;
-import com.zitech.animationdemo.View.tween.ScaleAnimationAct;
-import com.zitech.animationdemo.View.tween.TranslateAnimationAct;
+import com.pepe.animation.R;
+import com.pepe.animation.View.tween.AlphaAnimationAct;
+import com.pepe.animation.View.tween.AnimationSetAct;
+import com.pepe.animation.View.tween.CustomAnimationAct;
+import com.pepe.animation.View.tween.InterpolatorAct;
+import com.pepe.animation.View.tween.LayoutAnimationControllerAct;
+import com.pepe.animation.View.tween.RotateAnimationAct;
+import com.pepe.animation.View.tween.ScaleAnimationAct;
+import com.pepe.animation.View.tween.TranslateAnimationAct;
+
 
 /**
  * Created by pepe on 2016/8/18 0018.

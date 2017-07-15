@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.pepe.view.paint.PaintAct;
+import com.pepe.view.touch.EventAct;
 
 import java.util.Arrays;
 import java.util.List;

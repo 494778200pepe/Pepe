@@ -5,17 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.zitech.animationdemo.Property.AnimatorSetAct;
-import com.zitech.animationdemo.Property.DropActivity;
-import com.zitech.animationdemo.Property.KeyframeAct;
-import com.zitech.animationdemo.Property.LayoutAnimaAct;
-import com.zitech.animationdemo.Property.MojiDemoAct;
-import com.zitech.animationdemo.Property.ObjectAnimatorAct;
-import com.zitech.animationdemo.Property.PropertyActivity;
-import com.zitech.animationdemo.Property.PropertyValuesHolderAct;
-import com.zitech.animationdemo.Property.TimerActivity;
-import com.zitech.animationdemo.Property.ValueAnimatorAct;
-import com.zitech.animationdemo.Property.ViewAnimateAct;
+import com.pepe.animation.Property.AnimatorSetAct;
+import com.pepe.animation.Property.DropActivity;
+import com.pepe.animation.Property.KeyframeAct;
+import com.pepe.animation.Property.LayoutAnimaAct;
+import com.pepe.animation.Property.MojiDemoAct;
+import com.pepe.animation.Property.ObjectAnimatorAct;
+import com.pepe.animation.Property.PropertyActivity;
+import com.pepe.animation.Property.PropertyValuesHolderAct;
+import com.pepe.animation.Property.TimerActivity;
+import com.pepe.animation.Property.ValueAnimatorAct;
+import com.pepe.animation.Property.ViewAnimateAct;
+
 
 /**
  * Created by pepe on 2016/8/18 0018.

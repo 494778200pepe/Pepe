@@ -1,7 +1,6 @@
 package com.pepe.animation.Property;
 
 
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -9,7 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
+
 
 /**
  * Created by pepe on 2016/8/21 0021.

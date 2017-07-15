@@ -12,7 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
+
 
 /**
  * Created by pepe on 2016/8/20 0020.

@@ -20,7 +20,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
 
 import java.util.ArrayList;
 import java.util.List;

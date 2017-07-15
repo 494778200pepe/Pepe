@@ -1,4 +1,4 @@
-package com.pepe.viewgroup;
+package com.pepe.viewgroup.drag;
 
 import android.content.Context;
 import android.graphics.Point;

@@ -6,8 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.zitech.animationdemo.View.FrameAnimationAct;
-import com.zitech.animationdemo.View.TweenAnimationAct;
+import com.pepe.animation.View.FrameAnimationAct;
+import com.pepe.animation.View.TweenAnimationAct;
+
 
 /**
  * Created by pepe on 2016/8/18 0018.

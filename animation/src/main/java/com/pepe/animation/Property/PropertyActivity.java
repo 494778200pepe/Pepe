@@ -9,7 +9,7 @@ import android.view.animation.BounceInterpolator;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
 
 import java.util.ArrayList;
 import java.util.List;

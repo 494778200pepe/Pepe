@@ -6,9 +6,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.zitech.animationdemo.Vector.VectorDemo1Act;
-import com.zitech.animationdemo.Vector.VectorDemo2Act;
-import com.zitech.animationdemo.Vector.VectorDemo3Act;
+import com.pepe.animation.Vector.VectorDemo1Act;
+import com.pepe.animation.Vector.VectorDemo2Act;
+import com.pepe.animation.Vector.VectorDemo3Act;
+
 
 /**
  * Created by pepe on 2016/8/19 0019.

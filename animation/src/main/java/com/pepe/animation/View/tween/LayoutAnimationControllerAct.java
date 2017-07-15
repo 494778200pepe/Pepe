@@ -4,7 +4,8 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
+
 
 /**
  * Created by pepe on 2016/8/20 0020.

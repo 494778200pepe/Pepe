@@ -11,7 +11,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.GridLayout;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
+
 
 /**
  * Created by pepe on 2016/8/21 0021.

@@ -12,7 +12,8 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.zitech.animationdemo.R;
+import com.pepe.animation.R;
+
 
 /**
  * Created by pepe on 2016/8/21 0021.
