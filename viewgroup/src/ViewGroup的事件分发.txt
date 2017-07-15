@@ -1,5 +1,15 @@
 做学问，容不得半点马虎和偷懒!
 
+      一、只要我们的onInterceptTouchEvent return true 那么我们的MotionEvent 与ChildView 无缘
+      二、如果我们的onInterceptTouchEvent  return false；那么我们的ChildView  会优先获得MotionEvent ，
+            但是当我们的ChildView  并不在TouchTarget上，我们的ViewGroup依然有机会得到本次MotionEvent 。
+            获得之后执行super.dispatchTouchEvent(ev)；也就是把ViewGroup 当做一个View了。
+      三、 onInterceptTouchEvent 并不会在每一次 MotionEvent事件（ACTION_DOWN、ACTION_MOVE、ACTION_UP 等）调用，
+            例如果在ACTION_DOWN 时，onInterceptTouchEvent 拦截，return true 交给了ViewGroup 而View没有得到的话，ACTION_MOVE时就不会调用，
+            但是如果return false，ChildView 得到了ACTION_MOVE时，onInterceptTouchEvent 就会再次调用
+
+
+
 1、进入ViewGroup：onInterceptTouchEvent,判断是否拦截，两个参数：disallowIntercept || !onInterceptTouchEvent(ev) 。
       disallowIntercept 默认是false，主要是根据 onInterceptTouchEvent(ev)来判断，这个默认也是false，！之后就是true了。也就是不拦截。
       disallowIntercept 可以通过requestDisallowInterceptTouchEvent(true)方法进行修改。
@@ -31,6 +41,10 @@
     Android给我们提供了一个方法：requestDisallowInterceptTouchEvent(boolean) 用于设置是否允许拦截。
     getParent().requestDisallowInterceptTouchEvent(true);
     当我们把disallowIntercept设置为true时，!disallowIntercept直接为false，于是拦截的方法体就被跳过了~
+
+onInterceptTouchEvent 与 onTouchEvent 分析与MotionEvent在ViewGroup与View中的分发 - 大叔的愤怒，你驾驭不了 - CSDN博客
+http://blog.csdn.net/jaysong2012/article/details/46909959
+
 
 参考blog：
     Android事件分发机制完全解析，带你从源码的角度彻底理解(下) - 郭霖的专栏 - CSDN博客

@@ -92,13 +92,18 @@
           }
      }
 
-7、
+7、为什么setOnClickable之后，就不能拦截了
+    拦截应该是在执行 子view 的 dispatchTouchEvent 之前啊
+    既然在之前，管你消不消费事件，都可以拦截，然后执行的。
 
 
 强大的ViewDragHelper和ViewDragHelper的妙用 一 - 大叔的愤怒，你驾驭不了 - CSDN博客
 http://blog.csdn.net/jaysong2012/article/details/46912875
 自定义控件辅助神器ViewDragHelper - 简书
 http://www.jianshu.com/p/e4d1f88ca922
+Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客
+http://blog.csdn.net/lmj623565791/article/details/46858663
+
 Android 一步一步教你使用ViewDragHelper - 希尔瓦娜斯女神 - 博客园
 http://www.cnblogs.com/punkisnotdead/p/4724825.html
 Viewdraghelper解析 - 冒泡的章鱼 - 博客园
@@ -110,8 +115,7 @@ Android应用ViewDragHelper详解及部分源码浅析 - 工匠若水 - CSDN博�
 http://blog.csdn.net/yanbober/article/details/50419059
 ViewDragHelper的简单分析（一) - 菜鸟博客 - CSDN博客
 http://blog.csdn.net/chunqiuwei/article/details/50778842
-Android ViewDragHelper完全解析 自定义ViewGroup神器 - Hongyang - CSDN博客
-http://blog.csdn.net/lmj623565791/article/details/46858663
+
 Android ViewDragHelper源码解析 - 随心而悦StayReal - 博客园
 http://www.cnblogs.com/lqstayreal/p/4500219.html
 ViewDragHelper详解 - pi9nc的专栏 - CSDN博客
