@@ -7,8 +7,8 @@
     event.getX():表示的是触摸的点距离         自身左边界的距离
     event.getY():表示的是触摸的点距离         自身上边界的距离
 触摸点 - 屏幕
-event.getRawX:表示的是触摸点距离          屏幕左边界的距离
-event.getRawY:表示的是触摸点距离          屏幕上边界的距离
+    event.getRawX:表示的是触摸点距离          屏幕左边界的距离
+    event.getRawY:表示的是触摸点距离          屏幕上边界的距离
 自身View - 父View
     View.getTop():子View的                   顶部到父View顶部的距离
     View.getRight():子View的                 右边界到父View的左边界的距离

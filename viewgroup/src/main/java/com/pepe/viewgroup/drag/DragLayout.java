@@ -73,6 +73,10 @@ public class DragLayout extends LinearLayout {
         mDragView.setClickable(true);
     }
 
+    /**
+     * 由父视图调用用来请求子视图根据偏移值 mScrollX,mScrollY重新绘制
+     * 自定义ViewGroup必须实现方法体
+     */
     @Override
     public void computeScroll() {
         if (mDragHelper.continueSettling(true)) {

@@ -12,7 +12,7 @@
 
 1、进入ViewGroup：onInterceptTouchEvent,判断是否拦截，两个参数：disallowIntercept || !onInterceptTouchEvent(ev) 。
       disallowIntercept 默认是false，主要是根据 onInterceptTouchEvent(ev)来判断，这个默认也是false，！之后就是true了。也就是不拦截。
-      disallowIntercept 可以通过requestDisallowInterceptTouchEvent(true)方法进行修改。
+      disallowIntercept 可以通过requestDisallowInterceptTouchEvent(true)方法进行修改，修改flag。
      默认不拦截：查找是哪个 child 的坐标范围，进入该 child 的 dispatchTouchEvent。
           如果 dispatchTouchEvent 返回true，设置 mMotionTarget = child。同时返回true。
           拦截不成功，mMotionTarget = null，那么  return super.dispatchTouchEvent(ev);  也就是把ViewGroup 当做一个View了。
@@ -30,12 +30,7 @@
     ACTION_UP中，ViewGroup捕获到事件，然后判断是否拦截，如果没有拦截，则直接调用mMotionTarget.dispatchTouchEvent(ev)
         如果被拦截，mMotionTarget执行完dispatchTouchEvent后， mMotionTarget = null,然后执行一次 MotionEvent.ACTION_CANCEL。
     当然了在分发之前都会修改下坐标系统，把当前的x，y分别减去child.left 和 child.top ，然后传给child;
-4、关于onInterceptTouchEvent
-    默认是不拦截的，即返回false；如果你需要拦截，只要return true就行了，这要该事件就不会往子View传递了。
-    如果你在DOWN retrun true ，则DOWN,MOVE,UP子View都不会捕获事件；
-    如果你在MOVE return true , 则子View在MOVE和UP都不会捕获事件。
-    原因很简单，当onInterceptTouchEvent(ev) return true的时候，会把mMotionTarget 置为null ;
-5、如何不被拦截？
+4、如何不被拦截？
     如果ViewGroup的onInterceptTouchEvent(ev) 当ACTION_MOVE时return true ，即拦截了子View的MOVE以及UP事件；
     此时子View希望依然能够响应MOVE和UP时该咋办呢？
     Android给我们提供了一个方法：requestDisallowInterceptTouchEvent(boolean) 用于设置是否允许拦截。
@@ -57,6 +52,16 @@ http://blog.csdn.net/jaysong2012/article/details/46909959
             http://blog.csdn.net/lmj623565791/article/details/38339817/
             Android 自定义控件打造史上最简单的侧滑菜单 - Hongyang - CSDN博客
             http://blog.csdn.net/lmj623565791/article/details/39185641
+
+
+dispatchTouchEvent分析：
+1、如果是down  先清空上次down的信息
+2、判断是否拦截：a、如果是down，或者mFirstTouchTarget != null
+                b、判断group的tag，是否允许拦截
+                    如果允许拦截，执行intercepted = onInterceptTouchEvent(ev);
+                    如果不允许拦截，intercepted = false;
+                c、如果不是down，并且 或者mFirstTouchTarget == null，那么intercepted = true;
+3、如果不是取消，并且不是拦截
 
 
 
