@@ -1,1 +1,1 @@
-include ':app', ':widget', ':generic', ':enum', ':glide', ':annotation', ':animation', ':view', ':viewgroup', ':handler', ':stacktrace', ':stpexecutor', ':switcher', ':kenburns', ':spannablestring'
+include ':app', ':widget', ':generic', ':enum', ':glide', ':annotation', ':animation', ':view', ':viewgroup', ':handler', ':stacktrace', ':stpexecutor', ':switcher', ':kenburns', ':spannablestring', ':viewflipper'
