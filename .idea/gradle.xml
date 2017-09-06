@@ -15,8 +15,11 @@
             <option value="$PROJECT_DIR$/generic" />
             <option value="$PROJECT_DIR$/glide" />
             <option value="$PROJECT_DIR$/handler" />
+            <option value="$PROJECT_DIR$/kenburns" />
+            <option value="$PROJECT_DIR$/spannablestring" />
             <option value="$PROJECT_DIR$/stacktrace" />
             <option value="$PROJECT_DIR$/stpexecutor" />
+            <option value="$PROJECT_DIR$/switcher" />
             <option value="$PROJECT_DIR$/view" />
             <option value="$PROJECT_DIR$/viewgroup" />
             <option value="$PROJECT_DIR$/widget" />

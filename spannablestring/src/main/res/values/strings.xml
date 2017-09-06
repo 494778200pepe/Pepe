@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SpannableString</string>
+    <string name="main_detect_result">上次体检是%1$s前，共发现%2$d个问题。</string>
+</resources>

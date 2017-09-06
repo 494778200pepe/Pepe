@@ -10,8 +10,11 @@
       <module fileurl="file://$PROJECT_DIR$/generic/generic.iml" filepath="$PROJECT_DIR$/generic/generic.iml" />
       <module fileurl="file://$PROJECT_DIR$/glide/glide.iml" filepath="$PROJECT_DIR$/glide/glide.iml" />
       <module fileurl="file://$PROJECT_DIR$/handler/handler.iml" filepath="$PROJECT_DIR$/handler/handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kenburns/kenburns.iml" filepath="$PROJECT_DIR$/kenburns/kenburns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spannablestring/spannablestring.iml" filepath="$PROJECT_DIR$/spannablestring/spannablestring.iml" />
       <module fileurl="file://$PROJECT_DIR$/stacktrace/stacktrace.iml" filepath="$PROJECT_DIR$/stacktrace/stacktrace.iml" />
       <module fileurl="file://$PROJECT_DIR$/stpexecutor/stpexecutor.iml" filepath="$PROJECT_DIR$/stpexecutor/stpexecutor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/switcher/switcher.iml" filepath="$PROJECT_DIR$/switcher/switcher.iml" />
       <module fileurl="file://$PROJECT_DIR$/view/view.iml" filepath="$PROJECT_DIR$/view/view.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewgroup/viewgroup.iml" filepath="$PROJECT_DIR$/viewgroup/viewgroup.iml" />
       <module fileurl="file://$PROJECT_DIR$/widget/widget.iml" filepath="$PROJECT_DIR$/widget/widget.iml" />
