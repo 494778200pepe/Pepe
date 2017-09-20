@@ -16,10 +16,12 @@
             <option value="$PROJECT_DIR$/glide" />
             <option value="$PROJECT_DIR$/handler" />
             <option value="$PROJECT_DIR$/kenburns" />
+            <option value="$PROJECT_DIR$/myplayview" />
             <option value="$PROJECT_DIR$/spannablestring" />
             <option value="$PROJECT_DIR$/stacktrace" />
             <option value="$PROJECT_DIR$/stpexecutor" />
             <option value="$PROJECT_DIR$/switcher" />
+            <option value="$PROJECT_DIR$/tool" />
             <option value="$PROJECT_DIR$/view" />
             <option value="$PROJECT_DIR$/viewflipper" />
             <option value="$PROJECT_DIR$/viewgroup" />

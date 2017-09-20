@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+     >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="恭喜"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/listitem_tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="#4FA526"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="投资"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/listitem_tv_investnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#e93b46"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:singleLine="true"
+        android:text="获得"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/listitem_tv_benefitnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#e93b46"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="收益！"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+</LinearLayout>
