@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Glide/glide.iml" filepath="$PROJECT_DIR$/Glide/glide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Handler/handler.iml" filepath="$PROJECT_DIR$/Handler/handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPCClient/IPCClient.iml" filepath="$PROJECT_DIR$/IPCClient/IPCClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IPCServer/ipcserver.iml" filepath="$PROJECT_DIR$/IPCServer/ipcserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pepe.iml" filepath="$PROJECT_DIR$/Pepe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tool/tool.iml" filepath="$PROJECT_DIR$/Tool/tool.iml" />
       <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/enum/enum.iml" filepath="$PROJECT_DIR$/enum/enum.iml" />
       <module fileurl="file://$PROJECT_DIR$/generic/generic.iml" filepath="$PROJECT_DIR$/generic/generic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/glide/glide.iml" filepath="$PROJECT_DIR$/glide/glide.iml" />
-      <module fileurl="file://$PROJECT_DIR$/handler/handler.iml" filepath="$PROJECT_DIR$/handler/handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/kenburns/kenburns.iml" filepath="$PROJECT_DIR$/kenburns/kenburns.iml" />
       <module fileurl="file://$PROJECT_DIR$/myplayview/myplayview.iml" filepath="$PROJECT_DIR$/myplayview/myplayview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/retrofit/retrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/spannablestring/spannablestring.iml" filepath="$PROJECT_DIR$/spannablestring/spannablestring.iml" />
       <module fileurl="file://$PROJECT_DIR$/stacktrace/stacktrace.iml" filepath="$PROJECT_DIR$/stacktrace/stacktrace.iml" />
       <module fileurl="file://$PROJECT_DIR$/stpexecutor/stpexecutor.iml" filepath="$PROJECT_DIR$/stpexecutor/stpexecutor.iml" />
       <module fileurl="file://$PROJECT_DIR$/switcher/switcher.iml" filepath="$PROJECT_DIR$/switcher/switcher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tool/tool.iml" filepath="$PROJECT_DIR$/tool/tool.iml" />
       <module fileurl="file://$PROJECT_DIR$/view/view.iml" filepath="$PROJECT_DIR$/view/view.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewflipper/viewflipper.iml" filepath="$PROJECT_DIR$/viewflipper/viewflipper.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewgroup/viewgroup.iml" filepath="$PROJECT_DIR$/viewgroup/viewgroup.iml" />
