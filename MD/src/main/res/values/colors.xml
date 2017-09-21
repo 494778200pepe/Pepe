@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+
+    <color name="green">#a3c639</color>
+    <color name="dark_green">#85a71d</color>
+    <color name="yellow">#ff0</color>
+    <color name="gray">#ccc</color>
+
+    <color name="primary">#8BC34A</color>
+    <color name="primary_dark">#689F38</color>
+    <color name="accent">#FF5252</color>
+    <color name="primary_text">#212121</color>
+    <color name="second_accent">#FFEB3B</color>
+
+    <color name="indigo_500">#3f51b5</color>
+    <color name="indigo_700">#303f9f</color>
+    <color name="cyan_500">#00bcd4</color>
+
+    <color name="red">#bf360c</color>
+    <color name="ripple_red">#ffbf5232</color>
+
+    <color name="material_teal">@color/material_deep_teal_500</color>
+    <color name="ripple_material_teal">#ff149691</color>
+
+    <color name="blue">#304f9f</color>
+    <color name="grey">@color/material_blue_grey_800</color>
+    <color name="light">@color/primary_material_light</color>
+
+
+    <color name="windowBackgroundColor">#333333</color>
+    <color name="black_translucent">#80000000</color>
+
+
+    <color name="saffron">#F4B63E</color>
+    <color name="eggplant">#663D4E</color>
+    <color name="sienna">#EB6460</color>
+
+    <color name="text_color">#222222</color>
+</resources>

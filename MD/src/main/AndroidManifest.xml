@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pepe.md" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AndroidUIAct"/>
+        <activity android:name=".MaterialMenuAct"/>
+        <activity android:name=".RippleEffectAct"/>
+        <activity android:name=".TickplusdrawableAct"/>
+        <activity android:name=".FloatingButtonAct"/>
+        <activity android:name=".AnimatedVectorAct"/>
+        <activity android:name=".animatedvector.ExampleActivity"/>
+        <activity android:name=".animatedvector.FillInHeartActivity"/>
+        <activity android:name=".animatedvector.PathMorphActivity"/>
+        <activity android:name=".animatedvector.RotateActivity"/>
+        <activity android:name=".MaterialDialogAct"/>
+        <activity android:name=".TransitionsAct"/>
+        <activity android:name=".MaterialEditTextAct"/>
+        <activity android:name=".MaterialToolbarAct"/>
+        <activity android:name=".MaterialTabAct"/>
+        <activity android:name=".materialtab.IconTabActivity"/>
+        <activity android:name=".materialtab.SwipableIconTabActivity"/>
+        <activity android:name=".materialtab.SwipableTextTabActivity"/>
+        <activity android:name=".materialtab.TextTabActivity"/>
+        <activity android:name=".PhoenixAct"/>
+        <activity android:name=".SideMenuAct"/>
+        <activity android:name=".ContextMenuAct"/>
+        <activity android:name=".DiscreteSeekBarAct"/>
+    </application>
+
+</manifest>

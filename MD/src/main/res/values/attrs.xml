@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ActionView">
+        <attr name="av_color" format="color"/>
+        <attr name="av_action" format="enum">
+            <enum name="drawer" value="0"/>
+            <enum name="back" value="1"/>
+            <enum name="close" value="2"/>
+            <enum name="plus" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <integer name="rcv_animationDurationHide">420</integer>
+    <integer name="rcv_animationDurationReveal">420</integer>
+    <integer name="av_animationDuration">340</integer>
+
+
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color"/>
+        <attr name="fab_colorDisabled" format="color"/>
+        <attr name="fab_colorNormal" format="color"/>
+        <attr name="fab_icon" format="reference"/>
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_title" format="string"/>
+        <attr name="fab_stroke_visible" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed" format="color"/>
+        <attr name="fab_addButtonColorNormal" format="color"/>
+        <attr name="fab_addButtonSize" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_addButtonPlusIconColor" format="color"/>
+        <attr name="fab_addButtonStrokeVisible" format="boolean"/>
+        <attr name="fab_labelStyle" format="reference"/>
+        <attr name="fab_labelsPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+
+        <!--<declare-styleable name="SecondFloatingActionButton">-->
+            <!--<attr name="fab_colorPressed" format="color" />-->
+            <!--<attr name="fab_colorNormal" format="color" />-->
+            <!--<attr name="fab_colorRipple" format="color" />-->
+            <!--<attr name="fab_shadow" format="boolean" />-->
+        <!--</declare-styleable>-->
+</resources>

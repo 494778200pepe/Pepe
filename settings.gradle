@@ -1,1 +1,1 @@
-include ':app', ':widget', ':generic', ':enum', ':Glide', ':annotation', ':animation', ':view', ':viewgroup', ':Handler', ':stacktrace', ':stpexecutor', ':switcher', ':kenburns', ':spannablestring', ':viewflipper', ':myplayview', ':Tool', ':retrofit', ':IPCClient', ':IPCServer'
+include ':app', ':widget', ':generic', ':enum', ':Glide', ':annotation', ':animation', ':view', ':viewgroup', ':Handler', ':stacktrace', ':stpexecutor', ':switcher', ':kenburns', ':spannablestring', ':viewflipper', ':myplayview', ':Tool', ':retrofit', ':IPCClient', ':IPCServer', ':MD'
