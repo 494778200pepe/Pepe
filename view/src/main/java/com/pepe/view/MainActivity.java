@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import com.hencoder.practicedraw1.Practice1Activity;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
 
@@ -19,6 +20,8 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
+                new ItemActivity(Practice1Activity.class, "Practice1"),
+                new ItemActivity(Practice1Activity.class, "Practice2"),
                 new ItemActivity(PaintAct.class, "Paint"),
                 new ItemActivity(PaintAct.class, "Canvas"),
                 new ItemActivity(PaintAct.class, "Path"),

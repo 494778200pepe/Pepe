@@ -22,6 +22,10 @@
         <activity android:name=".paint.act.PaintCapAct" />
         <activity android:name=".paint.act.PaintStyleAct" />
         <activity android:name=".touch.EventAct" />
+        <activity android:name="com.hencoder.practicedraw1.Practice1Activity"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.hencoder.practicedraw2.Practice2Activity"
+            android:theme="@style/Theme.AppCompat"/>/>
     </application>
 
 </manifest>
