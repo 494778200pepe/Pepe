@@ -48,5 +48,9 @@ public class View_Paint_Align extends View {
         //right表示字符在水平方向上以x为起点向左延伸，在垂直方向上以y为起点向下延伸。
         mPaint.setTextAlign(Paint.Align.RIGHT);
         canvas.drawText("right", x, y, mPaint);
+
+
+        float[] points = {20, 20, 120, 20, 70, 20, 70, 120, 20, 120, 120, 120, 150, 20, 250, 20, 150, 20, 150, 120, 250, 20, 250, 120, 150, 120, 250, 120};
+        canvas.drawLines(points, mPaint);
     }
 }

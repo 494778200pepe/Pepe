@@ -1,0 +1,91 @@
+Canvas | Android Developers
+https://developer.android.google.cn/reference/android/graphics/Canvas.html
+内部类
+enum    Canvas.EdgeType
+enum    Canvas.VertexMode
+常量
+int	    ALL_SAVE_FLAG
+int	    CLIP_SAVE_FLAG
+int	    CLIP_TO_LAYER_SAVE_FLAG
+int	    FULL_COLOR_LAYER_SAVE_FLAG
+int	    HAS_ALPHA_LAYER_SAVE_FLAG
+int	    MATRIX_SAVE_FLAG
+参数
+protected   int	    mDensity
+protected   long    mNativeCanvasWrapper
+protected   int	    mScreenDensity
+构造方法
+Canvas()
+Canvas(Bitmap bitmap)
+方法
+一：drawXXX()
+
+void	drawPaint(Paint paint)
+
+画颜色
+void	drawColor(int color)
+void	drawRGB(int r, int g, int b)
+void    drawARGB(int a, int r, int g, int b)
+void	drawColor(int color, PorterDuff.Mode mode)
+
+
+画点
+void	drawPoint(float x, float y, Paint paint)
+void	drawPoints(float[] pts, Paint paint)
+void	drawPoints(float[] pts, int offset, int count, Paint paint)
+画线
+void	drawLine(float startX, float startY, float stopX, float stopY, Paint paint)
+void	drawLines(float[] pts, int offset, int count, Paint paint)
+//pts里面的画线是成对出现的，点的坐标成对，点与点连线 也是成对（也就是四个点，组成一条线）
+void	drawLines(float[] pts, Paint paint)
+画路径
+void	drawPath(Path path, Paint paint)
+
+画圆
+void	drawCircle(float cx, float cy, float radius, Paint paint)
+画椭圆
+void	drawOval(float left, float top, float right, float bottom, Paint paint)
+void	drawOval(RectF oval, Paint paint)
+画弧
+void	drawArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean useCenter, Paint paint)
+void	drawArc(RectF oval, float startAngle, float sweepAngle, boolean useCenter, Paint paint)
+
+画矩形
+void	drawRect(float left, float top, float right, float bottom, Paint paint)
+void	drawRect(Rect r, Paint paint)
+void	drawRect(RectF rect, Paint paint)
+void	drawRoundRect(RectF rect, float rx, float ry, Paint paint)
+void	drawRoundRect(float left, float top, float right, float bottom, float rx, float ry, Paint paint)
+
+画图片
+void	drawPicture(Picture picture, RectF dst)
+void	drawPicture(Picture picture)
+void	drawPicture(Picture picture, Rect dst)
+画.9图
+void	drawPatch(NinePatch patch, RectF dst, Paint paint)
+void	drawPatch(NinePatch patch, Rect dst, Paint paint)
+画bitmap
+void	drawBitmap(Bitmap bitmap, Matrix matrix, Paint paint)
+void	drawBitmap(int[] colors, int offset, int stride, float x, float y, int width, int height, boolean hasAlpha, Paint paint)
+void	drawBitmap(int[] colors, int offset, int stride, int x, int y, int width, int height, boolean hasAlpha, Paint paint)
+void	drawBitmap(Bitmap bitmap, Rect src, Rect dst, Paint paint)
+void	drawBitmap(Bitmap bitmap, Rect src, RectF dst, Paint paint)
+void	drawBitmap(Bitmap bitmap, float left, float top, Paint paint)
+//可以绘制具有网格拉伸效果的 Bitmap
+void	drawBitmapMesh(Bitmap bitmap, int meshWidth, int meshHeight, float[] verts, int vertOffset, int[] colors, int colorOffset, Paint paint)
+
+画文字
+void	drawPosText(String text, float[] pos, Paint paint)
+void	drawPosText(char[] text, int index, int count, float[] pos, Paint paint)
+void	drawText(CharSequence text, int start, int end, float x, float y, Paint paint)
+void	drawText(String text, float x, float y, Paint paint)
+void	drawText(char[] text, int index, int count, float x, float y, Paint paint)
+void	drawText(String text, int start, int end, float x, float y, Paint paint)
+void	drawTextOnPath(String text, Path path, float hOffset, float vOffset, Paint paint)
+void	drawTextOnPath(char[] text, int index, int count, Path path, float hOffset, float vOffset, Paint paint)
+void	drawTextRun(char[] text, int index, int count, int contextIndex, int contextCount, float x, float y, boolean isRtl, Paint paint)
+void	drawTextRun(CharSequence text, int start, int end, int contextStart, int contextEnd, float x, float y, boolean isRtl, Paint paint)
+
+其他
+void	drawVertices(Canvas.VertexMode mode, int vertexCount, float[] verts, int vertOffset, float[] texs, int texOffset, int[] colors, int colorOffset, short[] indices, int indexOffset, int indexCount, Paint paint)
+
