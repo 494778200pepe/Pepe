@@ -26,20 +26,21 @@ public class Practice2DrawCircleView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         //默认是fill
-        Paint paint = new Paint();
-        canvas.drawCircle(100,100,50,paint);
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        canvas.drawCircle(200,150,100,paint);
 
+        paint.setStrokeWidth(3);
         paint.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(200,100,50,paint);
+        canvas.drawCircle(500,150,110,paint);
 
         paint.setColor(Color.BLUE);
         paint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(100,200,50,paint);
+        canvas.drawCircle(200,400,100,paint);
 
         paint.setColor(Color.BLACK);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(20);
-        canvas.drawCircle(200,200,50,paint);
+        paint.setStrokeWidth(40);
+        canvas.drawCircle(500,400,110,paint);
 
 //        练习内容：使用 canvas.drawCircle() 方法画圆
 //        一共四个圆：1.实心圆 2.空心圆 3.蓝色实心圆 4.线宽为 20 的空心圆

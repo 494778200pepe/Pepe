@@ -25,7 +25,7 @@ public class Practice8DrawArcView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Paint paint = new Paint();
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         RectF rectF  =new RectF(20,20,300,150);
         canvas.drawArc(rectF,-100,90,true,paint);
 

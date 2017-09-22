@@ -2,6 +2,9 @@ package com.hencoder.practicedraw1.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -23,13 +26,23 @@ public class Practice9DrawPathView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-//        Path path = new Path();
-//        path.moveTo(150,100);
-//        path.addArc(200, 200, 400, 400, -225, 225);
-//        path.arcTo(400, 200, 600, 400, -180, 225, false);
-//        path.lineTo(400, 542);
-//        path.close();
-//        canvas.drawPath(path,new Paint());
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(Color.BLACK);
+        paint.setStyle(Paint.Style.FILL);
+        int startX = 300, startY = 200;
+        int radius = 50;
+        Path path = new Path();
+        path.moveTo(startX, startY);
+        path.addCircle(startX, startY, radius, Path.Direction.CCW);
+        path.addCircle(startX+radius*2, startY, radius, Path.Direction.CCW);
+        int r = (int) (radius / Math.sqrt(2));
+        int t = (int) ((radius * 2 + r * 2) / Math.sqrt(2));
+        path.moveTo(startX - r, startY + r);
+        path.lineTo(startX + radius, startY + t);
+        path.lineTo(startX + radius * 2 + r, startY + r);
+        path.lineTo(startX + radius, startY);
+        path.close();
+        canvas.drawPath(path, paint);
 
 //        练习内容：使用 canvas.drawPath() 方法画心形
     }
