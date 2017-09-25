@@ -30,14 +30,14 @@ public class Practice10HistogramView extends View {
         int[] values = {0, 1, 1, 10, 20, 25, 10};
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(Color.WHITE);
-        paint.setStrokeWidth(3);
+        paint.setStrokeWidth(2);
         paint.setTextSize(25);
         int x = 80, y = 400;
         float[] points = {x, y, x, 80, x, y, x + 600, y};
         canvas.drawLines(points, 0, 8, paint);
         int height = 10;
         int width = 60;
-        int space = 25;
+        int space = 20;
         int offset = 10;
         int newX;
         for (int i = 0; i < names.length; i++) {

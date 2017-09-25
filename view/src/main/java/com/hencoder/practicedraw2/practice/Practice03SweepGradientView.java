@@ -2,7 +2,9 @@ package com.hencoder.practicedraw2.practice;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.SweepGradient;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -30,7 +32,8 @@ public class Practice03SweepGradientView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        SweepGradient sweepGradient = new SweepGradient(300, 300, Color.parseColor("#E91E63"), Color.parseColor("#2196F3"));
+        paint.setShader(sweepGradient);
         canvas.drawCircle(300, 300, 200, paint);
     }
 }
