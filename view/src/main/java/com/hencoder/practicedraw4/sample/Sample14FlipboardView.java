@@ -13,7 +13,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
-import com.hencoder.hencoderpracticedraw4.R;
+import com.pepe.view.R;
+
 
 public class Sample14FlipboardView extends View {
     Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);

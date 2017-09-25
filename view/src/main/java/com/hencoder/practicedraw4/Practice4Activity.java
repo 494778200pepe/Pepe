@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 
+import com.pepe.view.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,26 +21,26 @@ public class Practice4Activity extends AppCompatActivity {
     List<PageModel> pageModels = new ArrayList<>();
 
     {
-        pageModels.add(new PageModel(R.layout.sample_clip_rect, R.string.title_clip_rect, R.layout.practice_clip_rect));
-        pageModels.add(new PageModel(R.layout.sample_clip_path, R.string.title_clip_path, R.layout.practice_clip_path));
-        pageModels.add(new PageModel(R.layout.sample_translate, R.string.title_translate, R.layout.practice_translate));
-        pageModels.add(new PageModel(R.layout.sample_scale, R.string.title_scale, R.layout.practice_scale));
-        pageModels.add(new PageModel(R.layout.sample_rotate, R.string.title_rotate, R.layout.practice_rotate));
-        pageModels.add(new PageModel(R.layout.sample_skew, R.string.title_skew, R.layout.practice_skew));
-        pageModels.add(new PageModel(R.layout.sample_matrix_translate, R.string.title_matrix_translate, R.layout.practice_matrix_translate));
-        pageModels.add(new PageModel(R.layout.sample_matrix_scale, R.string.title_matrix_scale, R.layout.practice_matrix_scale));
-        pageModels.add(new PageModel(R.layout.sample_matrix_rotate, R.string.title_matrix_rotate, R.layout.practice_matrix_rotate));
-        pageModels.add(new PageModel(R.layout.sample_matrix_skew, R.string.title_matrix_skew, R.layout.practice_matrix_skew));
-        pageModels.add(new PageModel(R.layout.sample_camera_rotate, R.string.title_camera_rotate, R.layout.practice_camera_rotate));
-        pageModels.add(new PageModel(R.layout.sample_camera_rotate_fixed, R.string.title_camera_rotate_fixed, R.layout.practice_measure_text));
-        pageModels.add(new PageModel(R.layout.sample_camera_rotate_hitting_face, R.string.title_camera_rotate_hitting_face, R.layout.practice_camera_rotate_hitting_face));
-        pageModels.add(new PageModel(R.layout.sample_flipboard, R.string.title_flipboard, R.layout.practice_flipboard));
+        pageModels.add(new PageModel(R.layout.sample4_clip_rect, R.string.title_clip_rect, R.layout.practice4_clip_rect));
+        pageModels.add(new PageModel(R.layout.sample4_clip_path, R.string.title_clip_path, R.layout.practice4_clip_path));
+        pageModels.add(new PageModel(R.layout.sample4_translate, R.string.title_translate, R.layout.practice4_translate));
+        pageModels.add(new PageModel(R.layout.sample4_scale, R.string.title_scale, R.layout.practice4_scale));
+        pageModels.add(new PageModel(R.layout.sample4_rotate, R.string.title_rotate, R.layout.practice4_rotate));
+        pageModels.add(new PageModel(R.layout.sample4_skew, R.string.title_skew, R.layout.practice4_skew));
+        pageModels.add(new PageModel(R.layout.sample4_matrix_translate, R.string.title_matrix_translate, R.layout.practice4_matrix_translate));
+        pageModels.add(new PageModel(R.layout.sample4_matrix_scale, R.string.title_matrix_scale, R.layout.practice4_matrix_scale));
+        pageModels.add(new PageModel(R.layout.sample4_matrix_rotate, R.string.title_matrix_rotate, R.layout.practice4_matrix_rotate));
+        pageModels.add(new PageModel(R.layout.sample4_matrix_skew, R.string.title_matrix_skew, R.layout.practice4_matrix_skew));
+        pageModels.add(new PageModel(R.layout.sample4_camera_rotate, R.string.title_camera_rotate, R.layout.practice4_camera_rotate));
+        pageModels.add(new PageModel(R.layout.sample4_camera_rotate_fixed, R.string.title_camera_rotate_fixed, R.layout.practice_measure_text));
+        pageModels.add(new PageModel(R.layout.sample4_camera_rotate_hitting_face, R.string.title_camera_rotate_hitting_face, R.layout.practice4_camera_rotate_hitting_face));
+        pageModels.add(new PageModel(R.layout.sample4_flipboard, R.string.title_flipboard, R.layout.practice4_flipboard));
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.act_practice4);
 
         pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {

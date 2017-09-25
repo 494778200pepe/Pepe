@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
 
+import com.pepe.view.R;
+
 public class PageFragment extends Fragment {
     @LayoutRes int sampleLayoutRes;
     @LayoutRes int practiceLayoutRes;

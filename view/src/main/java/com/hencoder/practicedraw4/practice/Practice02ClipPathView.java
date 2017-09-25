@@ -10,7 +10,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.hencoder.hencoderpracticedraw4.R;
+import com.pepe.view.R;
+
 
 public class Practice02ClipPathView extends View {
     Paint paint = new Paint();
