@@ -32,7 +32,7 @@ public class Practice4Activity extends AppCompatActivity {
         pageModels.add(new PageModel(R.layout.sample4_matrix_rotate, R.string.title_matrix_rotate, R.layout.practice4_matrix_rotate));
         pageModels.add(new PageModel(R.layout.sample4_matrix_skew, R.string.title_matrix_skew, R.layout.practice4_matrix_skew));
         pageModels.add(new PageModel(R.layout.sample4_camera_rotate, R.string.title_camera_rotate, R.layout.practice4_camera_rotate));
-        pageModels.add(new PageModel(R.layout.sample4_camera_rotate_fixed, R.string.title_camera_rotate_fixed, R.layout.practice3_measure_text));
+        pageModels.add(new PageModel(R.layout.sample4_camera_rotate_fixed, R.string.title_camera_rotate_fixed, R.layout.practice4_measure_text));
         pageModels.add(new PageModel(R.layout.sample4_camera_rotate_hitting_face, R.string.title_camera_rotate_hitting_face, R.layout.practice4_camera_rotate_hitting_face));
         pageModels.add(new PageModel(R.layout.sample4_flipboard, R.string.title_flipboard, R.layout.practice4_flipboard));
     }

@@ -21,17 +21,17 @@ public class Practice1Activity extends AppCompatActivity {
     List<PageModel> pageModels = new ArrayList<>();
 
     {
-        pageModels.add(new PageModel(R.layout.sample_color, R.string.title_draw_color, R.layout.practice1_color));
-        pageModels.add(new PageModel(R.layout.sample_circle, R.string.title_draw_circle, R.layout.practice1_circle));
-        pageModels.add(new PageModel(R.layout.sample_rect, R.string.title_draw_rect, R.layout.practice1_rect));
-        pageModels.add(new PageModel(R.layout.sample_point, R.string.title_draw_point, R.layout.practice1_point));
-        pageModels.add(new PageModel(R.layout.sample_oval, R.string.title_draw_oval, R.layout.practice1_oval));
-        pageModels.add(new PageModel(R.layout.sample_line, R.string.title_draw_line, R.layout.practice1_line));
-        pageModels.add(new PageModel(R.layout.sample_round_rect, R.string.title_draw_round_rect, R.layout.practice1_round_rect));
-        pageModels.add(new PageModel(R.layout.sample_arc, R.string.title_draw_arc, R.layout.practice1_arc));
-        pageModels.add(new PageModel(R.layout.sample_path, R.string.title_draw_path, R.layout.practice1_path));
-        pageModels.add(new PageModel(R.layout.sample_histogram, R.string.title_draw_histogram, R.layout.practice1_histogram));
-        pageModels.add(new PageModel(R.layout.sample_pie_chart, R.string.title_draw_pie_chart, R.layout.practice1_pie_chart));
+        pageModels.add(new PageModel(R.layout.sample1_color, R.string.title_draw_color, R.layout.practice1_color));
+        pageModels.add(new PageModel(R.layout.sample1_circle, R.string.title_draw_circle, R.layout.practice1_circle));
+        pageModels.add(new PageModel(R.layout.sample1_rect, R.string.title_draw_rect, R.layout.practice1_rect));
+        pageModels.add(new PageModel(R.layout.sample1_point, R.string.title_draw_point, R.layout.practice1_point));
+        pageModels.add(new PageModel(R.layout.sample1_oval, R.string.title_draw_oval, R.layout.practice1_oval));
+        pageModels.add(new PageModel(R.layout.sample1_line, R.string.title_draw_line, R.layout.practice1_line));
+        pageModels.add(new PageModel(R.layout.sample1_round_rect, R.string.title_draw_round_rect, R.layout.practice1_round_rect));
+        pageModels.add(new PageModel(R.layout.sample1_arc, R.string.title_draw_arc, R.layout.practice1_arc));
+        pageModels.add(new PageModel(R.layout.sample1_path, R.string.title_draw_path, R.layout.practice1_path));
+        pageModels.add(new PageModel(R.layout.sample1_histogram, R.string.title_draw_histogram, R.layout.practice1_histogram));
+        pageModels.add(new PageModel(R.layout.sample1_pie_chart, R.string.title_draw_pie_chart, R.layout.practice1_pie_chart));
     }
 
     @Override
