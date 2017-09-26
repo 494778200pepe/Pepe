@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class Practice11GetFontSpacingView extends View {
@@ -32,12 +33,24 @@ public class Practice11GetFontSpacingView extends View {
         super.onDraw(canvas);
 
         // 使用 Paint.getFontSpacing() 来获取推荐的行距
-        float spacing = 20;
+//        float spacing = 20;
+        float spacing = paint.getFontSpacing();
 
         canvas.drawText(text, 50, 100, paint);
+        Log.d("pepe", "spaceing = " + paint.getFontSpacing());
 
+
+        paint.setTextSize(80);
         canvas.drawText(text, 50, 100 + spacing, paint);
+        Log.d("pepe", "spaceing = " + paint.getFontSpacing());
+
+
+        paint.setTextSize(120);
+        if( paint.getTextSize() > paint.getFontSpacing()){
+            canvas.translate(0,paint.getTextSize() - paint.getFontSpacing());
+        }
 
         canvas.drawText(text, 50, 100 + spacing * 2, paint);
+        Log.d("pepe", "spaceing = " + paint.getFontSpacing());
     }
 }
