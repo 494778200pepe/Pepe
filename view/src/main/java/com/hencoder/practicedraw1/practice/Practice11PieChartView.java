@@ -10,6 +10,11 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+/**
+ * Jucongyuan/PracticeDraw1: 《HenCoder Android 开发进阶：UI 1-1 绘制基础》 的练习项目
+ * https://github.com/Jucongyuan/PracticeDraw1
+ */
+
 public class Practice11PieChartView extends View {
 
     public Practice11PieChartView(Context context) {

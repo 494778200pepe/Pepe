@@ -4,12 +4,25 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
+import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import java.util.ArrayList;
+
+/**
+ * Jucongyuan/PracticeDraw1: 《HenCoder Android 开发进阶：UI 1-1 绘制基础》 的练习项目
+ * https://github.com/Jucongyuan/PracticeDraw1
+ */
+
 public class Practice10HistogramView extends View {
+
+    Paint rectPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private int viewWidth, viewHeight;
+    private float startX, startY;
+    private int max;
 
     public Practice10HistogramView(Context context) {
         super(context);
@@ -23,39 +36,83 @@ public class Practice10HistogramView extends View {
         super(context, attrs, defStyleAttr);
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        String[] names = {"Froyo", "GB", "ICS", "JB", "KitKat", "L", "M"};
-        int[] values = {0, 1, 1, 10, 20, 25, 10};
-        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setColor(Color.WHITE);
-        paint.setStrokeWidth(2);
-        paint.setTextSize(25);
-        int x = 80, y = 400;
-        float[] points = {x, y, x, 80, x, y, x + 600, y};
-        canvas.drawLines(points, 0, 8, paint);
-        int height = 10;
-        int width = 60;
-        int space = 20;
-        int offset = 10;
-        int newX;
-        for (int i = 0; i < names.length; i++) {
-            newX = x + space * (i + 1) + width * i;
-            canvas.drawText(names[i], newX + offset*(6-names[i].length())/2, y + 25, paint);
-        }
+    private ArrayList<Data> datas = new ArrayList<>();
 
-        paint.setColor(Color.GREEN);
-        for (int j = 0; j < names.length; j++) {
-            newX = x + space * (j + 1) + width * j;
-            canvas.drawRect(new Rect(newX, y - values[j] * height, newX + width, y), paint);
-        }
-        paint.setTextSize(33);
-        canvas.drawText("直方图", 310,480,paint);
+    {
+        rectPaint.setColor(Color.GREEN);
+        rectPaint.setStrokeWidth(2);
 
-//        综合练习
-//        练习内容：使用各种 Canvas.drawXXX() 方法画直方图
+        textPaint.setColor(Color.WHITE);
+        textPaint.setTextSize(25);
+        textPaint.setTextAlign(Paint.Align.CENTER);
+
+
+        datas.add(new Data(0, "Froyo"));
+        datas.add(new Data(1, "GB"));
+        datas.add(new Data(1, "ICS"));
+        datas.add(new Data(10, "JB"));
+        datas.add(new Data(20, "KitKat"));
+        datas.add(new Data(25, "L"));
+        datas.add(new Data(10, "M"));
+        max = Integer.MIN_VALUE;
+        for (Data data : datas) {
+            max = Math.max(max, data.getValue());
+        }
     }
 
 
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        viewWidth = getWidth();
+        viewHeight = getHeight();
+        startX = (int) (viewWidth * 0.1);
+        startY = (int) (viewHeight * 0.7);
+
+        //画坐标
+        float width = viewWidth * 0.8f / datas.size() * 0.8f;
+        float space = viewWidth * 0.8f / datas.size() * 0.2f;
+
+        float[] points = {startX, startY, startX, viewHeight * 0.1f, startX, startY, viewWidth * 0.9f + space, startY};
+        canvas.drawLines(points, 0, 8, rectPaint);
+        float height = viewHeight * 0.6f / max;
+
+        for (int i = 0; i < datas.size(); i++) {
+            startX = startX + space;
+            canvas.drawText(datas.get(i).getName(), startX + width / 2, startY + 25, textPaint);
+            canvas.drawRect(new RectF(startX, startY - datas.get(i).getValue() * height, startX + width, startY), rectPaint);
+            startX = startX + width;
+        }
+        textPaint.setTextSize(33);
+        canvas.drawText("直方图", viewWidth / 2, viewHeight * 0.9f, textPaint);
+
+//        综合练习
+//        练习内容：使用各种 Canvas.drawXXX() 方法画直方图
+
+        //测量文字的宽度方法一
+//        rectPaint.measureText("1d2sfs");
+        //测量文字的宽度方法二
+//        Rect mBound = new Rect();
+//        rectPaint.getTextBounds(text, 0, text.length(), mBound);
+//        //字体的中间点和柱状图的中间点一直
+//        canvas.drawText(text, offset + viewWidth * i - mBound.viewWidth() / 2, textY, rectPaint);
+    }
+
+    private class Data {
+        int value;
+        String name;
+
+        Data(int value, String name) {
+            this.value = value;
+            this.name = name;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public String getName() {
+            return name;
+        }
+    }
 }

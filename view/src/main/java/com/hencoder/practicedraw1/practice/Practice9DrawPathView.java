@@ -34,7 +34,7 @@ public class Practice9DrawPathView extends View {
         Path path = new Path();
         path.moveTo(startX, startY);
         path.addCircle(startX, startY, radius, Path.Direction.CCW);
-        path.addCircle(startX+radius*2, startY, radius, Path.Direction.CCW);
+        path.addCircle(startX + radius * 2, startY, radius, Path.Direction.CCW);
         int r = (int) (radius / Math.sqrt(2));
         int t = (int) ((radius * 2 + r * 2) / Math.sqrt(2));
         path.moveTo(startX - r, startY + r);
@@ -43,6 +43,13 @@ public class Practice9DrawPathView extends View {
         path.lineTo(startX + radius, startY);
         path.close();
         canvas.drawPath(path, paint);
+
+//        Path path1 = new Path();
+//        //addArc() 只是一个直接使用了 forceMoveTo = true 的简化版 arcTo() 。
+//        path1.arcTo(startX - radius, startY - radius, startX + radius, startY + radius, -225, 225,true);
+//        path1.addArc(startX  + radius, startY - radius, startX + 2*radius, startY + 2*radius, -180, 225);
+//        path1.lineTo(startX + radius,(float)(startY+radius+(radius + (radius *  Math.sqrt(2) - radius))));
+//        canvas.drawPath(path1, rectPaint);
 
 //        练习内容：使用 canvas.drawPath() 方法画心形
     }
