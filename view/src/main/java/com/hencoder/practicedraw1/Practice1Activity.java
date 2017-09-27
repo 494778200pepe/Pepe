@@ -32,6 +32,7 @@ public class Practice1Activity extends AppCompatActivity {
         pageModels.add(new PageModel(R.layout.sample1_path, R.string.title_draw_path, R.layout.practice1_path));
         pageModels.add(new PageModel(R.layout.sample1_histogram, R.string.title_draw_histogram, R.layout.practice1_histogram));
         pageModels.add(new PageModel(R.layout.sample1_pie_chart, R.string.title_draw_pie_chart, R.layout.practice1_pie_chart));
+        pageModels.add(new PageModel(R.layout.sample1_round, R.string.title_draw_round, R.layout.practice1_round));
     }
 
     @Override

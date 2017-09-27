@@ -13,6 +13,7 @@
     <string name="title_draw_path">drawPath()</string>
     <string name="title_draw_histogram">直方图</string>
     <string name="title_draw_pie_chart">饼图</string>
+    <string name="title_draw_round">圆环</string>
     <!--practice2-->
     <string name="title_linear_gradient">LinearGradient</string>
     <string name="title_radial_gradient">RadialGradient</string>
