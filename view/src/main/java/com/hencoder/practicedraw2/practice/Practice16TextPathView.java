@@ -37,9 +37,9 @@ public class Practice16TextPathView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
         canvas.drawText(text, 50, 200, paint);
-
+        //50,400设置textPath的原点
+        paint.getTextPath(text, 0, text.length(), 50, 400, textPath);
         canvas.drawPath(textPath, pathPaint);
     }
 }
