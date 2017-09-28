@@ -34,7 +34,7 @@ public class Sample15FillPathView extends View {
         path.rLineTo(80, -150);
         path.rLineTo(100, 100);
         path.rLineTo(70, -120);
-        path.rLineTo(150, 80);
+//        path.rLineTo(150, 80);
 
         pathPaint.setStyle(Paint.Style.STROKE);
     }
@@ -52,12 +52,12 @@ public class Sample15FillPathView extends View {
         canvas.drawPath(path, paint);
 
         canvas.save();
-        canvas.translate(500, 0);
+        canvas.translate(300, 0);
         canvas.drawPath(path1, pathPaint);
         canvas.restore();
 
         canvas.save();
-        canvas.translate(0, 200);
+        canvas.translate(0, 150);
         paint.setStyle(Paint.Style.STROKE);
         // 第二处：设置 Style 为 STROKE 后再获取 Path
         paint.getFillPath(path, path2);
@@ -65,12 +65,12 @@ public class Sample15FillPathView extends View {
         canvas.restore();
 
         canvas.save();
-        canvas.translate(500, 200);
+        canvas.translate(300, 150);
         canvas.drawPath(path2, pathPaint);
         canvas.restore();
 
         canvas.save();
-        canvas.translate(0, 400);
+        canvas.translate(0, 300);
         paint.setStrokeWidth(40);
         // 第三处：Style 为 STROKE 并且线条宽度为 40 时的 Path
         paint.getFillPath(path, path3);
@@ -78,7 +78,7 @@ public class Sample15FillPathView extends View {
         canvas.restore();
 
         canvas.save();
-        canvas.translate(500, 400);
+        canvas.translate(300, 300);
         canvas.drawPath(path3, pathPaint);
         canvas.restore();
     }

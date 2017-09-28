@@ -43,6 +43,7 @@ public class Practice11PieChartView extends View {
     {
 
         paint.setTextSize(20);
+        paint.setStrokeWidth(2);
 
         datas.add(new Data(120, "Lollipop", Color.RED));
         datas.add(new Data(60, "Marshmallow", Color.YELLOW));
@@ -90,13 +91,15 @@ public class Practice11PieChartView extends View {
             float stopX, stopY = startY;
             lineAngle = lineAngle % 360;
             if (lineAngle <= 270 && lineAngle >= 90) {
-                stopX = startX - 50;
+                stopX = viewWidthCenter - radius - 40;
                 paint.setTextAlign(Paint.Align.RIGHT);
+                canvas.drawText(data.getName(), stopX - 5, stopY + 5, paint);
             } else {
                 paint.setTextAlign(Paint.Align.LEFT);
-                stopX = startX + 50;
+                stopX = viewWidthCenter + radius + 40;
+                canvas.drawText(data.getName(), stopX + 5, stopY + 5, paint);
             }
-            canvas.drawText(data.getName(), stopX, stopY + 5, paint);
+
             canvas.drawLine(startX, startY, stopX, stopY, paint);
 
             if (data.getValue() == maxAngle) {

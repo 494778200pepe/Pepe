@@ -4,7 +4,7 @@ https://developer.android.google.cn/reference/android/graphics/Canvas.html
 enum    Canvas.EdgeType
 enum    Canvas.VertexMode
 常量
-int	    ALL_SAVE_FLAG                       抗锯齿
+int	    ALL_SAVE_FLAG                       保留图层的flag
 int	    CLIP_SAVE_FLAG
 int	    CLIP_TO_LAYER_SAVE_FLAG
 int	    FULL_COLOR_LAYER_SAVE_FLAG
