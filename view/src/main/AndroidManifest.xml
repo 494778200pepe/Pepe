@@ -28,13 +28,16 @@
             android:theme="@style/Theme.AppCompat" />
         <activity
             android:name="com.hencoder.practicedraw2.Practice2Activity"
-            android:theme="@style/Theme.AppCompat" />/>
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name="com.hencoder.practicedraw3.Practice3Activity"
             android:theme="@style/Theme.AppCompat" />
         <activity
             android:name="com.hencoder.practicedraw4.Practice4Activity"
-            android:theme="@style/Theme.AppCompat" />/>
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.hencoder.practicedraw5.Practice5Activity"
+            android:theme="@style/Theme.AppCompat" />
     </application>
 
 </manifest>
