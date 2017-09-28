@@ -35,14 +35,14 @@ public class Practice11GetFontSpacingView extends View {
         // 使用 Paint.getFontSpacing() 来获取推荐的行距
 //        float spacing = 20;
         float spacing = paint.getFontSpacing();
-
+        paint.setTextSize(60);
         canvas.drawText(text, 50, 100, paint);
-        Log.d("pepe", "spaceing = " + paint.getFontSpacing());
+        Log.d("pepe", "spaceing70 = " + paint.getFontSpacing());
 
 
         paint.setTextSize(80);
         canvas.drawText(text, 50, 100 + spacing, paint);
-        Log.d("pepe", "spaceing = " + paint.getFontSpacing());
+        Log.d("pepe", "spaceing93 = " + paint.getFontSpacing());
 
 
         paint.setTextSize(120);
@@ -51,6 +51,6 @@ public class Practice11GetFontSpacingView extends View {
         }
 
         canvas.drawText(text, 50, 100 + spacing * 2, paint);
-        Log.d("pepe", "spaceing = " + paint.getFontSpacing());
+        Log.d("pepe", "spaceing140 = " + paint.getFontSpacing());
     }
 }

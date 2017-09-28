@@ -47,6 +47,8 @@ public class Practice15FillPathView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        //Paint.getFillPath()和Paint.getTextPath()使用时要关闭硬件加速
+        //Manifest.xml: android:hardwareAccelerated="false"
 
         // 使用 Paint.getFillPath() 获取实际绘制的 Path
 

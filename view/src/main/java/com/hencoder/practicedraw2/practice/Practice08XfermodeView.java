@@ -42,7 +42,7 @@ public class Practice08XfermodeView extends View {
 
         // 使用 paint.setXfermode() 设置不同的结合绘制效果
 
-        // 别忘了用 canvas.saveLayer() 开启 off-screen buffer
+        // 别忘了用 canvas.saveLayer() 开启 off-screen buffer,使用离屏缓冲
         int saved = canvas.saveLayer(null,null, Canvas.ALL_SAVE_FLAG);
 
         canvas.drawBitmap(bitmap1, 0, 0, paint);
