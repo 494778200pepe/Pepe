@@ -12,6 +12,7 @@ import com.hencoder.practicedraw2.Practice2Activity;
 import com.hencoder.practicedraw3.Practice3Activity;
 import com.hencoder.practicedraw4.Practice4Activity;
 import com.hencoder.practicedraw5.Practice5Activity;
+import com.hencoder.practicedraw6.Practice6Activity;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
 
@@ -29,6 +30,7 @@ public class MainActivity extends ListActivity {
                 new ItemActivity(Practice3Activity.class, "Practice3"),
                 new ItemActivity(Practice4Activity.class, "Practice4"),
                 new ItemActivity(Practice5Activity.class, "Practice5"),
+                new ItemActivity(Practice6Activity.class, "Practice6"),
                 new ItemActivity(PaintAct.class, "Paint"),
                 new ItemActivity(PaintAct.class, "Canvas"),
                 new ItemActivity(PaintAct.class, "Path"),
