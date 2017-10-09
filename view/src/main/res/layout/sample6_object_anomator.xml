@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hencoder.practicedraw6.sample.sample08.Sample08ObjectAnimatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.hencoder.anim.practicedraw6.sample.sample08.Sample08ObjectAnimatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2B2B2B">
 
-    <com.hencoder.practicedraw6.sample.sample08.Sample08ObjectAnimatorView
+    <com.hencoder.anim.practicedraw6.sample.sample08.Sample08ObjectAnimatorView
         android:id="@+id/objectAnimatorView"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -20,4 +20,4 @@
         android:textSize="16sp"
         android:text="@string/animate"/>
 
-</com.hencoder.practicedraw6.sample.sample08.Sample08ObjectAnimatorLayout>
+</com.hencoder.anim.practicedraw6.sample.sample08.Sample08ObjectAnimatorLayout>

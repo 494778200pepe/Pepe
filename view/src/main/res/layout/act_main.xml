@@ -17,7 +17,8 @@
         android:id="@+id/main_btn1"
         style="@style/CommonButton"
         android:layout_marginTop="10dp"
-        android:text="MaterialMenu" />
+        android:text="MaterialMenu"
+        />
 
     <Button
         android:id="@+id/main_btn2"

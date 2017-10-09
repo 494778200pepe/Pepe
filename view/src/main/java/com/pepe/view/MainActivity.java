@@ -2,17 +2,19 @@ package com.pepe.view;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
-import com.hencoder.practicedraw1.Practice1Activity;
-import com.hencoder.practicedraw2.Practice2Activity;
-import com.hencoder.practicedraw3.Practice3Activity;
-import com.hencoder.practicedraw4.Practice4Activity;
-import com.hencoder.practicedraw5.Practice5Activity;
-import com.hencoder.practicedraw6.Practice6Activity;
+import com.hencoder.anim.practicedraw6.Practice6Activity;
+import com.hencoder.draw.practicedraw1.Practice1Activity;
+import com.hencoder.draw.practicedraw2.Practice2Activity;
+import com.hencoder.draw.practicedraw3.Practice3Activity;
+import com.hencoder.draw.practicedraw4.Practice4Activity;
+import com.hencoder.draw.practicedraw5.Practice5Activity;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
 
