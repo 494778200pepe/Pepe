@@ -55,4 +55,13 @@ public class Practice08ObjectAnimatorView extends View {
         paint.setStyle(Paint.Style.FILL);
         canvas.drawText((int) progress + "%", centerX, centerY - (paint.ascent() + paint.descent()) / 2, paint);
     }
+
+    public void setProgress(float pro){
+        progress = pro;
+        invalidate();
+    }
+
+    public float getProgress(){
+        return progress;
+    }
 }

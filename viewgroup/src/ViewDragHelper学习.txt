@@ -13,8 +13,8 @@
 
 
 
-1、创建：mDragHelper = ViewDragHelper.create(this, mDragHelperCallback);
-2、TouchSlop：
+1、 创建：mDragHelper = ViewDragHelper.create(this, mDragHelperCallback);
+2、 TouchSlop：
     系统能识别出被认为是滑动的最小距离，小于这个常量，系统不认为你在进行滑动。与设备有关。
     通过
         ViewConfigration.get(getContext()).getScaledTouchSlop()
@@ -33,7 +33,7 @@
         mDragHelper.processTouchEvent(ev);
         return true;
     }
-5、关于Callback:
+5、 关于Callback:
     public static abstract class Callback {
         public void onViewDragStateChanged(int state) {}
             //当ViewDragHelper状态发生变化时回调（STATE_IDLE,STATE_DRAGGING,STATE_SETTLING）

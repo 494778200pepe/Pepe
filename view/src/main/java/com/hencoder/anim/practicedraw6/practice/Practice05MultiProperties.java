@@ -14,6 +14,7 @@ import com.pepe.view.R;
 public class Practice05MultiProperties extends ConstraintLayout {
     Button animateBt;
     ImageView imageView;
+    int multiState = 0;
 
     public Practice05MultiProperties(Context context) {
         super(context);
@@ -39,6 +40,21 @@ public class Practice05MultiProperties extends ConstraintLayout {
         animateBt.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(multiState == 0){
+                    imageView.animate().scaleX(1);
+                    imageView.animate().scaleY(1);
+                    imageView.animate().alpha(1);
+                    imageView.animate().translationX(400);
+                    imageView.animate().rotation(360);
+                    multiState = 1;
+                }else{
+                    imageView.animate().scaleX(0);
+                    imageView.animate().scaleY(0);
+                    imageView.animate().alpha(0);
+                    imageView.animate().translationX(0);
+                    imageView.animate().rotation(0);
+                    multiState = 0;
+                }
                 // TODO 在这里处理点击事件，同时对多个属性做动画
             }
         });
