@@ -1,0 +1,44 @@
+android.graphics.Camera 是一个可以让你将 2D 物件在 3D 空间中移动，并将在其移动后的结果画在屏幕上的类别。
+
+打开api说明文件
+
+    1. //Public Constructors
+    2.   Camera()
+       创建一个新的摄像头，空的转换
+
+    3. //Public Methods
+    4. void  applyToCanvas(Canvas canvas)
+       计算对应当前转换矩阵，并将其应用到指定的画布上。
+    5. float  dotWithNormal(float dx, float dy, float dz)
+    6. void  getMatrix(Matrix matrix)
+        计算对应当前转换矩阵，并将其复制到所提供的矩阵对象。
+    7. void  restore()
+        Restores the saved state, if any.
+        恢复保存的状态，如果有的话。
+    8. void rotate(float x, float y, float z)
+        Applies a rotation transform around all three axis.
+        适用于所有三个轴旋转变换。
+    8. void  rotateX(float deg)
+        Applies a rotation transform around the X axis.
+        适用于绕X轴旋转变换。
+    9. void  rotateY(float deg)
+        Applies a rotation transform around the Y axis.
+        适用于绕Y轴旋转变换。
+    10.void  rotateZ(float deg)
+        Applies a rotation transform around the Z axis.
+        适用于绕Z轴旋转变换。
+    11.void  save()
+        Saves the camera state.
+    12.setLocation(float x, float y, float z)
+        Sets the location of the camera.
+        设置摄像头的位置。
+    13.void  translate(float x, float y, float z)
+        Applies a translation transform on all three axis.
+        适用于所有三个轴的翻译转换。
+
+android matrix 最全方法详解与进阶（完整篇） - 文涛的专栏 - CSDN博客
+http://blog.csdn.net/cquwentao/article/details/51445269
+android camera 3d特效 详解与进阶 - 文涛的专栏 - CSDN博客
+http://blog.csdn.net/cquwentao/article/details/51463033
+android.graphics.Camera 仿3D效果 - 少爷 - CSDN博客
+http://blog.csdn.net/imdxt1986/article/details/7023868

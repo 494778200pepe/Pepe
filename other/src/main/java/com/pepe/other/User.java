@@ -1,4 +1,4 @@
-package com.pepe.view;
+package com.pepe.other;
 
 import java.io.Serializable;
 

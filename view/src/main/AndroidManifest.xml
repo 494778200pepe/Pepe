@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".camera.CameraAct" />
+        <activity android:name=".camera.act.TranslateAct" />
+        <activity android:name=".camera.act.RotateAct" />
+
         <activity android:name=".paint.PaintAct" />
         <activity android:name=".paint.act.PaintAlignAct" />
         <activity android:name=".paint.act.PaintAntiAliasAct" />

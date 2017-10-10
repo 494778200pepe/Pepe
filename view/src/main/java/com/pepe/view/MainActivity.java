@@ -2,12 +2,10 @@ package com.pepe.view;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 import com.hencoder.anim.practicedraw6.Practice6Activity;
 import com.hencoder.draw.practicedraw1.Practice1Activity;
@@ -15,6 +13,7 @@ import com.hencoder.draw.practicedraw2.Practice2Activity;
 import com.hencoder.draw.practicedraw3.Practice3Activity;
 import com.hencoder.draw.practicedraw4.Practice4Activity;
 import com.hencoder.draw.practicedraw5.Practice5Activity;
+import com.pepe.view.camera.CameraAct;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
 
@@ -33,6 +32,7 @@ public class MainActivity extends ListActivity {
                 new ItemActivity(Practice4Activity.class, "Practice4"),
                 new ItemActivity(Practice5Activity.class, "Practice5"),
                 new ItemActivity(Practice6Activity.class, "Practice6"),
+                new ItemActivity(CameraAct.class, "Camera"),
                 new ItemActivity(PaintAct.class, "Paint"),
                 new ItemActivity(PaintAct.class, "Canvas"),
                 new ItemActivity(PaintAct.class, "Path"),
