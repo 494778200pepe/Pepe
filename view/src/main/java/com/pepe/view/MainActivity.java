@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.hencoder.anim.practicedraw6.Practice6Activity;
+import com.hencoder.anim.practicedraw7.Practice7Activity;
 import com.hencoder.draw.practicedraw1.Practice1Activity;
 import com.hencoder.draw.practicedraw2.Practice2Activity;
 import com.hencoder.draw.practicedraw3.Practice3Activity;
@@ -32,6 +33,7 @@ public class MainActivity extends ListActivity {
                 new ItemActivity(Practice4Activity.class, "Practice4"),
                 new ItemActivity(Practice5Activity.class, "Practice5"),
                 new ItemActivity(Practice6Activity.class, "Practice6"),
+                new ItemActivity(Practice7Activity.class, "Practice7"),
                 new ItemActivity(CameraAct.class, "Camera"),
                 new ItemActivity(PaintAct.class, "Paint"),
                 new ItemActivity(PaintAct.class, "Canvas"),

@@ -45,6 +45,9 @@
         <activity
             android:name="com.hencoder.anim.practicedraw6.Practice6Activity"
             android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.hencoder.anim.practicedraw7.Practice7Activity"
+            android:theme="@style/Theme.AppCompat" />
     </application>
 
 </manifest>
