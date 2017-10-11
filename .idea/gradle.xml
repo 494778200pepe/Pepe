@@ -8,8 +8,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Glide" />
-            <option value="$PROJECT_DIR$/Handler" />
             <option value="$PROJECT_DIR$/IPCClient" />
             <option value="$PROJECT_DIR$/IPCServer" />
             <option value="$PROJECT_DIR$/MD" />
@@ -19,6 +17,8 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/enum" />
             <option value="$PROJECT_DIR$/generic" />
+            <option value="$PROJECT_DIR$/glide" />
+            <option value="$PROJECT_DIR$/handler" />
             <option value="$PROJECT_DIR$/kenburns" />
             <option value="$PROJECT_DIR$/myplayview" />
             <option value="$PROJECT_DIR$/other" />

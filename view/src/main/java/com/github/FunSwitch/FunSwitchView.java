@@ -16,7 +16,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 
 /**
@@ -38,7 +37,6 @@ public class FunSwitchView extends View implements View.OnClickListener {
     int mainColor = color1;
 
     //face
-    float mOffset = 0;
     int mFaceOffset = 0;
     int mouthHeight = 50;
     int mMouthHeight = 0;
@@ -229,5 +227,25 @@ public class FunSwitchView extends View implements View.OnClickListener {
             }
         });
         animator.start();
+    }
+
+    private float mOffset;
+
+    public void setOffset(float offset) {
+        mOffset = offset;
+    }
+
+    public float getOffset() {
+        return mOffset;
+    }
+
+    private int mColor;
+
+    public void setColor(int color) {
+        mColor = color;
+    }
+
+    public int getColor() {
+        return mColor;
     }
 }
