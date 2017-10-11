@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import com.github.GitHubAct;
 import com.hencoder.anim.practicedraw6.Practice6Activity;
 import com.hencoder.anim.practicedraw7.Practice7Activity;
 import com.hencoder.draw.practicedraw1.Practice1Activity;
@@ -27,6 +28,7 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
+                new ItemActivity(GitHubAct.class, "GitHub"),
                 new ItemActivity(Practice1Activity.class, "Practice1"),
                 new ItemActivity(Practice2Activity.class, "Practice2"),
                 new ItemActivity(Practice3Activity.class, "Practice3"),
