@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/glide/Glide.iml" filepath="$PROJECT_DIR$/glide/Glide.iml" />
-      <module fileurl="file://$PROJECT_DIR$/handler/Handler.iml" filepath="$PROJECT_DIR$/handler/Handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Glide/Glide.iml" filepath="$PROJECT_DIR$/Glide/Glide.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Handler/Handler.iml" filepath="$PROJECT_DIR$/Handler/Handler.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPCClient/IPCClient.iml" filepath="$PROJECT_DIR$/IPCClient/IPCClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPCServer/IPCServer.iml" filepath="$PROJECT_DIR$/IPCServer/IPCServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/MD/MD.iml" filepath="$PROJECT_DIR$/MD/MD.iml" />

@@ -52,6 +52,7 @@
 
         <activity android:name="com.github.GitHubAct" />
         <activity android:name="com.github.FunSwitch.FunSwitchAct" />
+        <activity android:name="com.github.Card.CardAct" />
     </application>
 
 </manifest>

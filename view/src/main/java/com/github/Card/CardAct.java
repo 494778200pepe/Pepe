@@ -1,4 +1,4 @@
-package com.github.FunSwitch;
+package com.github.Card;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,13 +7,13 @@ import android.support.annotation.Nullable;
 import com.pepe.view.R;
 
 /**
- * Created by wang on 2017/10/11.
+ * Created by wang on 2017/10/12.
  */
 
-public class FunSwitchAct extends Activity{
+public class CardAct extends Activity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_github_fun_switch);
+        setContentView(R.layout.act_github_card);
     }
 }
