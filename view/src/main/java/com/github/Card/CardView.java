@@ -75,7 +75,7 @@ public class CardView extends View implements View.OnClickListener {
         Camera camera = new Camera();
         camera.save();
         canvas.save();
-        camera.setLocation(0, 0, -15);
+        camera.setLocation(0, 0, -25);
         canvas.translate(mWidth / 2, mHeight / 2);
         if (mDegree < 90) {
             camera.rotateY(mDegree);

@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 
 import com.github.Card.CardAct;
 import com.github.FunSwitch.FunSwitchAct;
+import com.github.InfiniteCards.InfiniteCardsAct;
+import com.github.SafeView.SafeViewAct;
 import com.pepe.view.ItemActivity;
 
 import java.util.Arrays;
@@ -25,7 +27,9 @@ public class GitHubAct extends ListActivity {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
                 new ItemActivity(FunSwitchAct.class, "FunSwitch"),
-                new ItemActivity(CardAct.class, "Card")
+                new ItemActivity(CardAct.class, "Card"),
+                new ItemActivity(InfiniteCardsAct.class, "InfiniteCards"),
+                new ItemActivity(SafeViewAct.class, "SafeView")
         );
         ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(
                 this,
