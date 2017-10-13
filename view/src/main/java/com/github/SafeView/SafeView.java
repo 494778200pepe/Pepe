@@ -31,6 +31,6 @@ public class SafeView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawCircle(100,100,50,mPaint);
+        mPaint.setStrokeJoin(Paint.Join.BEVEL);
     }
 }
