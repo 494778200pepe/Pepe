@@ -62,29 +62,37 @@ public class FlipboardView extends View {
         Camera camera = new Camera();
         camera.setLocation(0, 0, -25);
 
-        Matrix matrix = new Matrix();
-        camera.save();
-        canvas.translate(mBitmapWidth / 2, mBitmapHeight / 2);
-        camera.rotateY(-mDegree);
-        matrix.reset();
-        camera.getMatrix(matrix);
-        canvas.concat(matrix);
-        camera.restore();
+        if (mDegree <= 45) {
+            Matrix matrix = new Matrix();
+            camera.save();
+            canvas.translate(mBitmapWidth / 2, mBitmapHeight / 2);
+            camera.rotateY(-mRightDegree);
+            matrix.reset();
+            camera.getMatrix(matrix);
+            canvas.concat(matrix);
+            camera.restore();
 
-        canvas.translate(-mBitmapWidth / 2, -mBitmapHeight / 2);
-//        Rect srcRight = new Rect((int) mBitmapWidth / 2, 0, (int) mBitmapWidth , (int) mBitmapHeight);// 图片的显示部分
-//        RectF dstRight = new RectF(mBitmapWidth / 2, 0, mBitmapWidth, mBitmapHeight);// 屏幕位置及尺寸，供图片显示的区域
-        Rect srcRight = new Rect(0, 0, (int) mBitmapWidth , (int) mBitmapHeight);// 图片的显示部分
-        RectF dstRight = new RectF(0, 0, mBitmapWidth, mBitmapHeight);// 屏幕位置及尺寸，供图片显示的区域
-        canvas.drawBitmap(bitmap, srcRight, dstRight, mPaint);
-        canvas.restore();
+            canvas.translate(-mBitmapWidth / 2, -mBitmapHeight / 2);
+            Rect srcRight = new Rect((int) mBitmapWidth / 2 , 0, (int) mBitmapWidth, (int) mBitmapHeight);// 图片的显示部分
+            RectF dstRight = new RectF(mBitmapWidth / 2 -1, 0, mBitmapWidth, mBitmapHeight);// 屏幕位置及尺寸，供图片显示的区域
+            canvas.drawBitmap(bitmap, srcRight, dstRight, mPaint);
+            canvas.restore();
+
+
+            Rect srcLeft = new Rect(0, 0, (int) mBitmapWidth / 2, (int) mBitmapHeight);// 图片的显示部分
+            RectF dstLeft = new RectF(0, 0, (int) mBitmapWidth / 2, mBitmapHeight);// 屏幕位置及尺寸，供图片显示的区域
+            canvas.drawBitmap(bitmap, srcLeft, dstLeft, mPaint);
+
+        }
+
+
     }
 
     /**
      * 开始右边的折叠动画
      */
     public void startAnimation() {
-        ObjectAnimator animator = ObjectAnimator.ofInt(this, "degree", 0, 60,0);
+        ObjectAnimator animator = ObjectAnimator.ofInt(this, "degree", 0, 45);
         animator.setEvaluator(new IntEvaluator());
         animator.setDuration(4000);
         animator.setRepeatCount(-1);
@@ -100,9 +108,19 @@ public class FlipboardView extends View {
     }
 
     int mDegree = 0;
+    int mRightDegree = 0;
+    int mRotateDegree = 0;
 
     public void setDegree(int degree) {
         mDegree = degree;
+        if (mDegree <= 45) {
+            mRightDegree = mDegree;
+        } else {
+            mRotateDegree = mDegree - 45;
+            if (mDegree <= 90) {
+                mRightDegree = 90 - mDegree;
+            }
+        }
         invalidate();
     }
 
