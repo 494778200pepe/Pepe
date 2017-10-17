@@ -1,8 +1,9 @@
-package com.hencoder.task;
+package com.hencoder.task.Flipboard;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
@@ -17,7 +18,9 @@ public class FlipboardAct extends Activity {
         LinearLayout linearLayout =new LinearLayout(FlipboardAct.this);
         linearLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         FlipboardView flipboardView = new FlipboardView(FlipboardAct.this);
-        flipboardView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        lp.gravity = Gravity.CENTER;
+        flipboardView.setLayoutParams(lp);
         linearLayout.addView(flipboardView);
         setContentView(linearLayout);
     }

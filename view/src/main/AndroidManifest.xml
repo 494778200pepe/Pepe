@@ -55,7 +55,10 @@
         <activity android:name="com.github.Card.CardAct" />
         <activity android:name="com.github.InfiniteCards.InfiniteCardsAct" />
         <activity android:name="com.github.SafeView.SafeViewAct" />
-        <activity android:name="com.hencoder.task.FlipboardAct" />
+        <activity android:name="com.hencoder.task.Flipboard.FlipboardAct" />
+        <activity android:name="com.hencoder.task.Like.LikeAct" />
+        <activity android:name="com.hencoder.task.MIMovement.MIMovementAct" />
+        <activity android:name="com.hencoder.task.Ruler.RulerAct" />
     </application>
 
 </manifest>

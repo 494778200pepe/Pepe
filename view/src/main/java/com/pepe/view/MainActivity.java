@@ -15,7 +15,10 @@ import com.hencoder.draw.practicedraw2.Practice2Activity;
 import com.hencoder.draw.practicedraw3.Practice3Activity;
 import com.hencoder.draw.practicedraw4.Practice4Activity;
 import com.hencoder.draw.practicedraw5.Practice5Activity;
-import com.hencoder.task.FlipboardAct;
+import com.hencoder.task.Flipboard.FlipboardAct;
+import com.hencoder.task.Like.LikeAct;
+import com.hencoder.task.MIMovement.MIMovementAct;
+import com.hencoder.task.Ruler.RulerAct;
 import com.pepe.view.camera.CameraAct;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
@@ -31,6 +34,9 @@ public class MainActivity extends ListActivity {
         final List<ItemActivity> acts = Arrays.asList(
                 new ItemActivity(GitHubAct.class, "GitHub"),
                 new ItemActivity(FlipboardAct.class, "Flipboard"),
+                new ItemActivity(LikeAct.class, "Like"),
+                new ItemActivity(MIMovementAct.class, "MIMovement"),
+                new ItemActivity(RulerAct.class, "Ruler"),
                 new ItemActivity(Practice1Activity.class, "Practice1"),
                 new ItemActivity(Practice2Activity.class, "Practice2"),
                 new ItemActivity(Practice3Activity.class, "Practice3"),
