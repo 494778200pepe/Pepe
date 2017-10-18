@@ -120,9 +120,8 @@ public class FlipboardView extends View {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-//
-//                reset();
-//                animatorSet.start();
+                reset();
+                animatorSet.start();
             }
         });
         animatorSet.start();
@@ -152,7 +151,6 @@ public class FlipboardView extends View {
         mRotateDegree = 0;
         mTopDegree = 0;
     }
-
 
     /**
      * tan30 = 0.5773502691896257 = (1/1.732)
