@@ -1,11 +1,22 @@
 package com.pepe.tool;
 
 /**
- * @author wangD
+ * @author wang
  * @date 2017/10/23
  */
 
-public class AngelFunctionTool {
+public class MathTool {
+
+    /**
+     * 开平方
+     *
+     * @param value
+     * @return
+     */
+    public double sqrt(double value) {
+        return Math.sqrt(value);
+    }
+
     /**
      * Sin0 = 0.0
      * Sin30 = 0.49999999999999994 = 0.5
@@ -25,6 +36,7 @@ public class AngelFunctionTool {
      * Sin330 = -0.5000000000000004
      * Sin345 = -0.2588190451025207
      * Sin360 = -2.4492935982947064E-16 无穷小 0
+     *
      * @param angle 角度
      * @return 正弦函数值
      */
@@ -52,8 +64,9 @@ public class AngelFunctionTool {
      * Cos330 = 0.8660254037844384
      * Cos345 = 0.9659258262890683
      * Cos360 = 1.0
+     *
      * @param angle 角度
-     * @return  余弦函数值
+     * @return 余弦函数值
      */
     public static double cos(int angle) {
         return Math.cos(angle * Math.PI / 180);
@@ -77,6 +90,7 @@ public class AngelFunctionTool {
      * tan315 = -1.0000000000000004
      * tan330 = -0.26794919243112264
      * tan360 = -2.4492935982947064E-16
+     *
      * @param angle 角度
      * @return 正切函数值
      */
