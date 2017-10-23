@@ -23,7 +23,9 @@ import com.pepe.view.R;
  * https://github.com/sunnyxibei/HenCoderPractice
  * keyboard3/HencoderKeyboard3: 即刻点赞、薄荷健康尺、小米运动、Fliboard 翻页效果
  * https://github.com/keyboard3/HencoderKeyboard3
- * Created by wang on 2017/10/13.
+ *
+ * @author wang
+ * @date 2017/10/13
  */
 
 public class FlipboardView extends View {
