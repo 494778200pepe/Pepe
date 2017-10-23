@@ -14,7 +14,6 @@ import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 
 import com.pepe.view.R;
@@ -151,54 +150,4 @@ public class FlipboardView extends View {
         mRotateDegree = 0;
         mTopDegree = 0;
     }
-
-    /**
-     * tan30 = 0.5773502691896257 = (1/1.732)
-     * tan60 = 1.7320508075688767
-     * tan90 = 1.633123935319537E16
-     * tan120 = -1.7320508075688783
-     * tan150 = -0.5773502691896257
-     * tan180 = -1.2246467991473532E-16
-     * Sin30 = 0.49999999999999994 = 0.5
-     * Sin60 = 0.8660254037844386 = 1.732/2
-     * Sin90 = 1.0 =
-     * Sin120 = 0.8660254037844387
-     * Sin150 = 0.49999999999999994
-     * Sin180 = 1.2246467991473532E-16
-     */
-    public void test() {
-        Log.d("pepe", "tan30 = " + Tan(30));
-        Log.d("pepe", "tan60 = " + Tan(60));
-        Log.d("pepe", "tan90 = " + Tan(90));
-        Log.d("pepe", "tan120 = " + Tan(120));
-        Log.d("pepe", "tan150 = " + Tan(150));
-        Log.d("pepe", "tan180 = " + Tan(180));
-
-        Log.d("pepe", "Sin30 = " + Sin(30));
-        Log.d("pepe", "Sin60 = " + Sin(60));
-        Log.d("pepe", "Sin90 = " + Sin(90));
-        Log.d("pepe", "Sin120 = " + Sin(120));
-        Log.d("pepe", "Sin150 = " + Sin(150));
-        Log.d("pepe", "Sin180 = " + Sin(180));
-    }
-
-    public double Sin(int i) {
-        double result = 0;
-        //在这里我是写sin函数，其实可以用cos，tan等函数的，不信大家尽管试试
-        //result = Math.cos(i * Math.PI / 180);
-        result = Math.sin(i * Math.PI / 180);
-        //result = Math.tan(i * Math.PI / 180);
-        return result;
-    }
-
-    public float Tan(int i) {
-        float result = 0;
-        //在这里我是写sin函数，其实可以用cos，tan等函数的，不信大家尽管试试
-        //result = Math.cos(i * Math.PI / 180);
-        result = (float) Math.tan(i * Math.PI / 180);
-        //result = Math.tan(i * Math.PI / 180);
-        return result;
-    }
-
-
 }
