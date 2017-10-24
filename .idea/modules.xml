@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/IPCServer/IPCServer.iml" filepath="$PROJECT_DIR$/IPCServer/IPCServer.iml" />
       <module fileurl="file://$PROJECT_DIR$/MD/MD.iml" filepath="$PROJECT_DIR$/MD/MD.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pepe.iml" filepath="$PROJECT_DIR$/Pepe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Retrofit/Retrofit.iml" filepath="$PROJECT_DIR$/Retrofit/Retrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tool/Tool.iml" filepath="$PROJECT_DIR$/Tool/Tool.iml" />
       <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" />
@@ -17,7 +18,6 @@
       <module fileurl="file://$PROJECT_DIR$/kenburns/kenburns.iml" filepath="$PROJECT_DIR$/kenburns/kenburns.iml" />
       <module fileurl="file://$PROJECT_DIR$/myplayview/myplayview.iml" filepath="$PROJECT_DIR$/myplayview/myplayview.iml" />
       <module fileurl="file://$PROJECT_DIR$/other/other.iml" filepath="$PROJECT_DIR$/other/other.iml" />
-      <module fileurl="file://$PROJECT_DIR$/retrofit/retrofit.iml" filepath="$PROJECT_DIR$/retrofit/retrofit.iml" />
       <module fileurl="file://$PROJECT_DIR$/spannablestring/spannablestring.iml" filepath="$PROJECT_DIR$/spannablestring/spannablestring.iml" />
       <module fileurl="file://$PROJECT_DIR$/stacktrace/stacktrace.iml" filepath="$PROJECT_DIR$/stacktrace/stacktrace.iml" />
       <module fileurl="file://$PROJECT_DIR$/stpexecutor/stpexecutor.iml" filepath="$PROJECT_DIR$/stpexecutor/stpexecutor.iml" />

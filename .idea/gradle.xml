@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/IPCClient" />
             <option value="$PROJECT_DIR$/IPCServer" />
             <option value="$PROJECT_DIR$/MD" />
+            <option value="$PROJECT_DIR$/Retrofit" />
             <option value="$PROJECT_DIR$/Tool" />
             <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/annotation" />
@@ -20,9 +21,9 @@
             <option value="$PROJECT_DIR$/enum" />
             <option value="$PROJECT_DIR$/generic" />
             <option value="$PROJECT_DIR$/kenburns" />
+            <option value="$PROJECT_DIR$/menu" />
             <option value="$PROJECT_DIR$/myplayview" />
             <option value="$PROJECT_DIR$/other" />
-            <option value="$PROJECT_DIR$/retrofit" />
             <option value="$PROJECT_DIR$/spannablestring" />
             <option value="$PROJECT_DIR$/stacktrace" />
             <option value="$PROJECT_DIR$/stpexecutor" />
