@@ -26,6 +26,10 @@
         <activity android:name=".paint.act.PaintAntiAliasAct" />
         <activity android:name=".paint.act.PaintCapAct" />
         <activity android:name=".paint.act.PaintStyleAct" />
+
+        <activity android:name=".canvas.CanvasTestAct" />
+        <activity android:name=".canvas.CanvasAct" />
+
         <activity android:name=".touch.EventAct" />
         <activity
             android:name="com.hencoder.draw.practicedraw1.Practice1Activity"

@@ -20,6 +20,7 @@ import com.hencoder.task.Like.LikeAct;
 import com.hencoder.task.MIMovement.MIMovementAct;
 import com.hencoder.task.Ruler.RulerAct;
 import com.pepe.view.camera.CameraAct;
+import com.pepe.view.canvas.CanvasTestAct;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
 
@@ -46,6 +47,7 @@ public class MainActivity extends ListActivity {
                 new ItemActivity(Practice7Activity.class, "Practice7"),
                 new ItemActivity(CameraAct.class, "Camera"),
                 new ItemActivity(PaintAct.class, "Paint"),
+                new ItemActivity(CanvasTestAct.class, "Canvas"),
                 new ItemActivity(PaintAct.class, "Canvas"),
                 new ItemActivity(PaintAct.class, "Path"),
                 new ItemActivity(EventAct.class, "Event")
