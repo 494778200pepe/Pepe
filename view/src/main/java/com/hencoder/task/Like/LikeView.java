@@ -137,9 +137,9 @@ public class LikeView extends View implements View.OnClickListener {
                 canvas.drawText(oldCount.substring(0, oldCount.length() - mOffsetCount), centerX + 25, centerY - textHeight / 2, paint);
 
                 paint.setAlpha(255 - (int) (mOffset * 255));
-                canvas.drawText(oldCount.substring(oldCount.length() - mOffsetCount, oldCount.length()), centerX + 25 + textWidth, centerY - textHeight / 2 - textHeight * 2 * mOffset , paint);
+                canvas.drawText(oldCount.substring(oldCount.length() - mOffsetCount, oldCount.length()), centerX + 25 + textWidth, centerY - textHeight / 2 - textHeight * 2 * mOffset, paint);
                 paint.setAlpha((int) (mOffset * 255));
-                canvas.drawText(newCount.substring(newCount.length() - mOffsetCount, newCount.length()), centerX + 25 + textWidth, centerY - textHeight / 2 + textHeight * 2 - textHeight * 2 * mOffset , paint);
+                canvas.drawText(newCount.substring(newCount.length() - mOffsetCount, newCount.length()), centerX + 25 + textWidth, centerY - textHeight / 2 + textHeight * 2 - textHeight * 2 * mOffset, paint);
             }
         } else if (mLikeStatus == LikeStatus.LIKED) {
             Rect rect = new Rect();
