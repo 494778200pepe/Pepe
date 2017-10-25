@@ -1,10 +1,12 @@
-package com.example.zitech.rxjavademo;
+package com.pepe.rxjava;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.pepe.rxjava.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 

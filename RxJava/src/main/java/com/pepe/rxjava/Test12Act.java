@@ -1,4 +1,4 @@
-package com.example.zitech.rxjavademo;
+package com.pepe.rxjava;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -51,6 +51,8 @@ public class Test12Act extends Activity{
             case R.id.test12_btn10://
                 break;
             case R.id.test12_btn11://
+                break;
+            default:
                 break;
         }
     }

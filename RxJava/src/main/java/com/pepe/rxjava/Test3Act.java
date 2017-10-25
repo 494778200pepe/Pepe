@@ -1,4 +1,4 @@
-package com.example.zitech.rxjavademo;
+package com.pepe.rxjava;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -34,5 +34,5 @@ dependencies {
     compile 'com.android.support:design:23.2.1'
     compile 'io.reactivex:rxjava:1.1.2'
     compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.google.android.gms:play-services-appindexing:9.8.0'
 }

@@ -13,6 +13,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
+import com.pepe.view.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -161,6 +163,8 @@ public class CanvasView extends View {
                 break;
             case BITMAP:
                 drawBitmap(canvas);
+                break;
+            default:
                 break;
         }
     }

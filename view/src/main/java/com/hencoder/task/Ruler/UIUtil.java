@@ -1,4 +1,4 @@
-package com.pepe.tool;
+package com.hencoder.task.Ruler;
 
 import android.content.Context;
 import android.content.res.Resources;

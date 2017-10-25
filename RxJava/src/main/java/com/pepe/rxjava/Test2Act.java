@@ -1,9 +1,11 @@
-package com.example.zitech.rxjavademo;
+package com.pepe.rxjava;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.pepe.rxjava.R;
 
 import rx.Observable;
 import rx.Subscriber;
