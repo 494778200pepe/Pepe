@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 为文本设置前景色，效果和TextView的setTextColor()类似
      *
-     * @return
+     * @return  TextView
      */
     public View foregroundColorSpan() {
         SpannableStringBuilder spannableString = new SpannableStringBuilder("设置文字的前景色为淡蓝色");
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 为文本设置背景色，效果和TextView的setBackground()类似
      *
-     * @return
+     * @return TextView
      */
     public View backgroundColorSpan() {
         SpannableString spannableString = new SpannableString("设置文字的背景色为淡绿色");
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 设置文字相对大小，在TextView原有的文字大小的基础上，相对设置文字大小
      *
-     * @return
+     * @return TextView
      */
     public View relativeSizeSpan() {
         SpannableString spannableString = new SpannableString("万丈高楼平地起");
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 为文本设置中划线，也就是常说的删除线
      *
-     * @return
+     * @return TextView
      */
     public View strikethroughSpan() {
         SpannableString spannableString = new SpannableString("为文字设置删除线");
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 为文本设置下划线
      *
-     * @return
+     * @return TextView
      */
     public View underlineSpan() {
         SpannableString spannableString = new SpannableString("为文字设置下划线");
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 设置上标
      *
-     * @return
+     * @return TextView
      */
     public View superscriptSpan() {
         SpannableString spannableString = new SpannableString("为文字设置上标");
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 设置下标
      *
-     * @return
+     * @return TextView
      */
     public View subscriptSpan() {
         SpannableString spannableString = new SpannableString("为文字设置下标");
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 为文字设置风格（粗体、斜体），和TextView属性textStyle类似
      *
-     * @return
+     * @return TextView
      */
     public View styleSpan() {
         SpannableString spannableString = new SpannableString("为文字设置粗体、斜体风格");
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 设置文本图片
      *
-     * @return
+     * @return TextView
      */
     public View imageSpan() {
         SpannableString spannableString = new SpannableString("在文本中添加表情（表情）");
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
      * 设置可点击的文本，设置这个属性的文本可以相应用户点击事件，至于点击事件用户可以自定义
      * 使用ClickableSpan的文本如果想真正实现点击作用，必须为TextView设置setMovementMethod方法，否则没有点击相应
      *
-     * @return
+     * @return TextView
      */
     public View clickableSpan() {
         SpannableString spannableString = new SpannableString("为文字设置点击事件");
@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 设置超链接文本
      *
-     * @return
+     * @return TextView
      */
     public View URLSpan() {
         SpannableString spannableString = new SpannableString("为文字设置超链接");
@@ -268,7 +268,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView = new TextView(this);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
-        textView.setHighlightColor(Color.parseColor("#36969696"));//setHighlightColor方法则是控制点击是的背景色
+        //setHighlightColor方法则是控制点击是的背景色
+        textView.setHighlightColor(Color.parseColor("#36969696"));
         textView.setText(spannableString);
         return textView;
     }
