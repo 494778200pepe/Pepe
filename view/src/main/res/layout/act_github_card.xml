@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pepe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.github.Card.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        pepe:backColor="#FF00FFFF"
+        pepe:frontColor="@color/colorPrimary"
+        pepe:backText="@color/colorPrimary"
+        pepe:frontText="zhengmian"
+        pepe:textColor="@android:color/white"
+        pepe:textSize="40sp"
+        />
+
+</LinearLayout>

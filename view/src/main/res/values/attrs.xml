@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CardView">
+        <attr name= "backColor" format ="reference|color" />
+        <attr name= "frontColor" format ="reference|color" />
+        <attr name= "backText" format ="reference|string" />
+        <attr name= "frontText" format ="reference|string" />
+        <attr name= "textColor" format ="reference|color" />
+        <attr name= "textSize" format ="reference|dimension" />
+    </declare-styleable >
+
+
+    <!--<declare-styleable name="example">-->
+        <!--<attr name= "back_ground" format ="reference|color" />-->
+        <!--<attr name= "name" format ="string" />-->
+        <!--<attr name= "nameColor" format ="color" />-->
+        <!--<attr name= "nameSize" format ="dimension" />-->
+        <!--<attr name= "isShowShadow" format ="boolean" />-->
+        <!--<attr name="age" format="integer" />-->
+        <!--<attr name="percentage" format="fraction" />-->
+        <!--<attr name="shadowX" format="float" />-->
+        <!--<attr name="style">-->
+            <!--<enum name="STROKE" value="0"></enum>-->
+            <!--<enum name="FILL" value="1"></enum>-->
+        <!--</attr>-->
+        <!--<attr name="position">-->
+            <!--<flag name="boss" value="0" />-->
+            <!--<flag name="manager" value="1" />-->
+            <!--<flag name="employee" value="2" />-->
+        <!--</attr>-->
+    <!--</declare-styleable >-->
+
+</resources>

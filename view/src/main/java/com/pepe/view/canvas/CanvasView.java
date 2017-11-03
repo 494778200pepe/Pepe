@@ -129,7 +129,12 @@ public class CanvasView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
+        //清屏方法一：
+//        mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+        //清屏方法二：
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+//        mCanvas.drawPaint(paint);
+//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
         switch (drawMode){
             case AXIS:
                 drawAxis(canvas);

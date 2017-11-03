@@ -23,13 +23,22 @@ import android.view.animation.OvershootInterpolator;
  * https://github.com/ztelur/FunSwitch
  * 自定义Switch过程详解 - CSDN博客
  * http://blog.csdn.net/u012422440/article/details/51921498
- * Created by wang on 2017/10/11.
+ * Created on 2017/10/11.
+ * @author wang
  */
-
 public class FunSwitchView extends View implements View.OnClickListener {
+    /**
+     * 开关
+     */
     boolean isLaugh = false;
-
-    Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    /**
+     * 背景画笔
+     */
+    Paint mBackgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    /**
+     * 面部画笔
+     */
+    Paint mFacePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     int left, top;
     int mWidth, mHeight;
     int mRadius;
@@ -40,7 +49,6 @@ public class FunSwitchView extends View implements View.OnClickListener {
     int color2 = Color.GREEN;
     int mainColor = color1;
 
-    //face
     int mFaceOffset = 0;
     int mouthHeight = 50;
     int mMouthHeight = 0;
@@ -57,6 +65,11 @@ public class FunSwitchView extends View implements View.OnClickListener {
         super(context, attrs, defStyleAttr);
     }
 
+    {
+        //非静态代码块
+        mFacePaint.setStrokeWidth(mStrokeWidth);
+    }
+
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
@@ -66,7 +79,6 @@ public class FunSwitchView extends View implements View.OnClickListener {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setStrokeWidth(mStrokeWidth);
         left = getLeft();
         top = getTop();
         int width = getWidth();
@@ -89,28 +101,31 @@ public class FunSwitchView extends View implements View.OnClickListener {
 
     /**
      * 画背景
-     *
-     * @param canvas
+     * @param canvas 画布
      */
     private void drawBackground(Canvas canvas) {
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setColor(mainColor);
-        canvas.drawArc(new RectF(left, top, left + mHeight, top + mHeight), 90, 180, true, mPaint);
-        canvas.drawRect(new RectF(left + mRadius, top, left + mRadius + mHeight, top + mHeight), mPaint);
-        canvas.drawArc(new RectF(left + mHeight, top, left + mHeight * 2, top + mHeight), -90, 180, true, mPaint);
+        mBackgroundPaint.setStyle(Paint.Style.FILL);
+        mBackgroundPaint.setColor(mainColor);
+        canvas.drawArc(new RectF(left, top, left + mHeight, top + mHeight), 90, 180, true, mBackgroundPaint);
+        canvas.drawRect(new RectF(left + mRadius, top, left + mRadius + mHeight, top + mHeight), mBackgroundPaint);
+        canvas.drawArc(new RectF(left + mHeight, top, left + mHeight * 2, top + mHeight), -90, 180, true, mBackgroundPaint);
     }
 
+    /**
+     * 绘制面部信息
+     * @param canvas 画布
+     */
     private void drawFace(Canvas canvas) {
         mCenterPoint.x = left + mRadius + mFaceOffset;
         mCenterPoint.y = top + mRadius;
 
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setColor(Color.WHITE);
-        canvas.drawCircle(mCenterPoint.x, mCenterPoint.y, mRadius - mStrokeWidth, mPaint);
+        mFacePaint.setStyle(Paint.Style.FILL);
+        mFacePaint.setColor(Color.WHITE);
+        canvas.drawCircle(mCenterPoint.x, mCenterPoint.y, mRadius - mStrokeWidth, mFacePaint);
 
-        mPaint.setColor(mainColor);
+        mFacePaint.setColor(mainColor);
         int mouthLength = mRadius / 3;
-        mPaint.setStrokeWidth(5);
+        mFacePaint.setStrokeWidth(5);
 
         int beishu = 5;
         int bb = 3;
@@ -125,11 +140,11 @@ public class FunSwitchView extends View implements View.OnClickListener {
             canvas.translate(-mRadius - mRadius * mOffset, -mRadius);
             camera.restore();
 
-            canvas.drawLine(mCenterPoint.x - mouthLength + mRadius * mOffset * beishu, mCenterPoint.y + mouthLength, mCenterPoint.x + mouthLength + mRadius * mOffset * beishu, mCenterPoint.y + mouthLength, mPaint);
+            canvas.drawLine(mCenterPoint.x - mouthLength + mRadius * mOffset * beishu, mCenterPoint.y + mouthLength, mCenterPoint.x + mouthLength + mRadius * mOffset * beishu, mCenterPoint.y + mouthLength, mFacePaint);
             int eyeWidth = mRadius / 4, eyeHeight = mRadius / 3;
-            canvas.drawArc(new RectF(mCenterPoint.x - mouthLength - eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x - mouthLength + eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mPaint);
+            canvas.drawArc(new RectF(mCenterPoint.x - mouthLength - eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x - mouthLength + eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mFacePaint);
 
-            canvas.drawArc(new RectF(mCenterPoint.x + mouthLength - eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x + mouthLength + eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mPaint);
+            canvas.drawArc(new RectF(mCenterPoint.x + mouthLength - eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x + mouthLength + eyeWidth / 2 + mRadius * mOffset * beishu, mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mFacePaint);
             canvas.restore();
         } else if (mOffset >= 0.75) {
             Camera camera = new Camera();
@@ -156,13 +171,11 @@ public class FunSwitchView extends View implements View.OnClickListener {
             path.moveTo(mCenterPoint.x - mouthLength - 2 * (mRadius - (mouthOffset - 0.5f) * 2 * mRadius), mCenterPoint.y + mouthLength);
             path.quadTo(mCenterPoint.x - 2 * (mRadius - (mouthOffset - 0.5f) * 2 * mRadius), mCenterPoint.y + mouthLength + mMouthHeight, mCenterPoint.x + mouthLength - bb * (mRadius - (mouthOffset - 0.5f) * 2 * mRadius), mCenterPoint.y + mouthLength);
             path.close();
-            canvas.drawPath(path, mPaint);
+            canvas.drawPath(path, mFacePaint);
 
-//            canvas.drawArc(new RectF(mCenterPoint.x - mouthLength - eyeWidth / 2 , mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x - mouthLength + eyeWidth / 2 , mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mPaint);
-            canvas.drawArc(new RectF(mCenterPoint.x - mouthLength - eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x - mouthLength + eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mPaint);
+            canvas.drawArc(new RectF(mCenterPoint.x - mouthLength - eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x - mouthLength + eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mFacePaint);
 
-//            canvas.drawArc(new RectF(mCenterPoint.x + mouthLength - eyeWidth / 2 , mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x + mouthLength + eyeWidth / 2 , mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mPaint);
-            canvas.drawArc(new RectF(mCenterPoint.x + mouthLength - eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x + mouthLength + eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mPaint);
+            canvas.drawArc(new RectF(mCenterPoint.x + mouthLength - eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength - eyeHeight / 2, mCenterPoint.x + mouthLength + eyeWidth / 2 - bb * (mRadius - (eyeOffset - 0.5f) * 2 * mRadius), mCenterPoint.y - mouthLength + eyeHeight / 2), 0, 360, true, mFacePaint);
             canvas.restore();
         }
     }
@@ -191,16 +204,6 @@ public class FunSwitchView extends View implements View.OnClickListener {
 
     private void changeFaceLocation() {
         ObjectAnimator animator;
-//        if (isLaugh) {
-//            animator = ObjectAnimator.ofFloat(this, "offset", 0.5f, 0);
-//        } else {
-//            animator = ObjectAnimator.ofFloat(this, "offset", 0, 0.5f);
-//        }
-//        if (isLaugh) {
-//            animator = ObjectAnimator.ofFloat(this, "offset", 1, 0.5f);
-//        } else {
-//            animator = ObjectAnimator.ofFloat(this, "offset", 0.5f, 1);
-//        }
         if (isLaugh) {
             animator = ObjectAnimator.ofFloat(this, "offset", 1, 0);
             animator.setInterpolator(null);
@@ -211,7 +214,6 @@ public class FunSwitchView extends View implements View.OnClickListener {
             animator.setDuration(700);
         }
         animator.setEvaluator(new FloatEvaluator());
-
 
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
