@@ -43,11 +43,33 @@ public class Practice11CameraRotateView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        //applyToCanvas 写法
+//        canvas.save();
+//        camera.save();
+//        camera.rotateX(30);
+//        camera.applyToCanvas(canvas);
+//        camera.restore();
+//        canvas.drawBitmap(bitmap, point1.x, point1.y, paint);
+//        canvas.restore();
+//
+//
+//        canvas.save();
+//        camera.save();
+//        camera.rotateY(30);
+//        camera.applyToCanvas(canvas);
+//        camera.restore();
+//        canvas.drawBitmap(bitmap, point2.x, point2.y, paint);
+//        canvas.restore();
+
+
+        //setMatrix 写法
         canvas.save();
         camera.save();
         camera.rotateX(30);
-        camera.applyToCanvas(canvas);
+        matrix.reset();
+        camera.getMatrix(matrix);
         camera.restore();
+        canvas.concat(matrix);
         canvas.drawBitmap(bitmap, point1.x, point1.y, paint);
         canvas.restore();
 
@@ -55,20 +77,11 @@ public class Practice11CameraRotateView extends View {
         canvas.save();
         camera.save();
         camera.rotateY(30);
-        camera.applyToCanvas(canvas);
+        matrix.reset();
+        camera.getMatrix(matrix);
         camera.restore();
+        canvas.concat(matrix);
         canvas.drawBitmap(bitmap, point2.x, point2.y, paint);
         canvas.restore();
-
-
-//        canvas.save();
-//        camera.save();
-//        camera.rotateY(30);
-//        matrix.reset();
-//        camera.getMatrix(matrix);
-//        camera.restore();
-//        canvas.concat(matrix);
-//        canvas.drawBitmap(bitmap, point2.x, point2.y, paint);
-//        canvas.restore();
     }
 }

@@ -9,7 +9,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import static com.hencoder.anim.practicedraw6.Utils.dpToPixel;
+import static com.hencoder.Utils.dpToPixel;
+
 
 public class Practice08ObjectAnimatorView extends View {
     final float radius = dpToPixel(80);

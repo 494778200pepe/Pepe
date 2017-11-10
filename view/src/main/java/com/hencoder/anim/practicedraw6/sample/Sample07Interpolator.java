@@ -24,7 +24,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
-import com.hencoder.anim.practicedraw6.Utils;
+import com.hencoder.Utils;
 import com.pepe.view.R;
 
 

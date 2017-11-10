@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.github.GitHubAct;
+import com.hencoder.HenCoderAct;
 import com.hencoder.anim.practicedraw6.Practice6Activity;
 import com.hencoder.anim.practicedraw7.Practice7Activity;
 import com.hencoder.draw.practicedraw1.Practice1Activity;
@@ -15,6 +16,7 @@ import com.hencoder.draw.practicedraw2.Practice2Activity;
 import com.hencoder.draw.practicedraw3.Practice3Activity;
 import com.hencoder.draw.practicedraw4.Practice4Activity;
 import com.hencoder.draw.practicedraw5.Practice5Activity;
+import com.hencoder.layout.hencoderpracticelayout1.LayoutPractice1Activity;
 import com.hencoder.task.Flipboard.FlipboardAct;
 import com.hencoder.task.Like.LikeAct;
 import com.hencoder.task.MIMovement.MIMovementAct;
@@ -33,18 +35,8 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
+                new ItemActivity(HenCoderAct.class, "HenCoder"),
                 new ItemActivity(GitHubAct.class, "GitHub"),
-                new ItemActivity(FlipboardAct.class, "Flipboard"),
-                new ItemActivity(LikeAct.class, "Like"),
-                new ItemActivity(MIMovementAct.class, "MIMovement"),
-                new ItemActivity(RulerAct.class, "Ruler"),
-                new ItemActivity(Practice1Activity.class, "Practice1"),
-                new ItemActivity(Practice2Activity.class, "Practice2"),
-                new ItemActivity(Practice3Activity.class, "Practice3"),
-                new ItemActivity(Practice4Activity.class, "Practice4"),
-                new ItemActivity(Practice5Activity.class, "Practice5"),
-                new ItemActivity(Practice6Activity.class, "Practice6"),
-                new ItemActivity(Practice7Activity.class, "Practice7"),
                 new ItemActivity(CameraAct.class, "Camera"),
                 new ItemActivity(PaintAct.class, "Paint"),
                 new ItemActivity(CanvasTestAct.class, "Canvas"),

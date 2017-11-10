@@ -9,7 +9,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.hencoder.anim.practicedraw7.Utils;
+import com.hencoder.Utils;
 
 
 public class Practice03OfObjectView extends View {

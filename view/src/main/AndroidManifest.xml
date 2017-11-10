@@ -31,6 +31,9 @@
         <activity android:name=".canvas.CanvasAct" />
 
         <activity android:name=".touch.EventAct" />
+
+        <activity android:name="com.hencoder.HenCoderAct" />
+        <activity android:name="com.hencoder.draw.HenCoderDrawAct" />
         <activity
             android:name="com.hencoder.draw.practicedraw1.Practice1Activity"
             android:theme="@style/Theme.AppCompat" />
@@ -46,12 +49,24 @@
         <activity
             android:name="com.hencoder.draw.practicedraw5.Practice5Activity"
             android:theme="@style/Theme.AppCompat" />
+        <activity android:name="com.hencoder.anim.HenCoderAnimAct" />
         <activity
             android:name="com.hencoder.anim.practicedraw6.Practice6Activity"
             android:theme="@style/Theme.AppCompat" />
         <activity
             android:name="com.hencoder.anim.practicedraw7.Practice7Activity"
             android:theme="@style/Theme.AppCompat" />
+        <activity android:name="com.hencoder.task.HenCoderTaskAct" />
+        <activity android:name="com.hencoder.task.Flipboard.FlipboardAct" />
+        <activity android:name="com.hencoder.task.Like.LikeAct" />
+        <activity android:name="com.hencoder.task.MIMovement.MIMovementAct" />
+        <activity android:name="com.hencoder.task.Ruler.RulerAct" />
+        <activity android:name="com.hencoder.layout.HenCoderLayoutAct" />
+        <activity
+            android:name="com.hencoder.layout.hencoderpracticelayout1.LayoutPractice1Activity"
+            android:theme="@style/Theme.AppCompat" />
+
+        <activity android:name="com.hencoder.HenCoderTestAct" />
 
 
         <activity android:name="com.github.GitHubAct" />
@@ -59,10 +74,7 @@
         <activity android:name="com.github.Card.CardAct" />
         <activity android:name="com.github.InfiniteCards.InfiniteCardsAct" />
         <activity android:name="com.github.SafeView.SafeViewAct" />
-        <activity android:name="com.hencoder.task.Flipboard.FlipboardAct" />
-        <activity android:name="com.hencoder.task.Like.LikeAct" />
-        <activity android:name="com.hencoder.task.MIMovement.MIMovementAct" />
-        <activity android:name="com.hencoder.task.Ruler.RulerAct" />
+
     </application>
 
 </manifest>

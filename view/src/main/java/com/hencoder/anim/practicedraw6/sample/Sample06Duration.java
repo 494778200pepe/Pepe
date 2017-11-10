@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.hencoder.anim.practicedraw6.Utils;
+import com.hencoder.Utils;
 import com.pepe.view.R;
 
 
