@@ -25,7 +25,7 @@ public class AnimatorSetAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_animator_set);
-        image = (ImageView) findViewById(R.id.image);
+        image = (ImageView) findViewById(R.id.image_xml);
     }
     @Override
     /**

@@ -12,14 +12,6 @@
         style="@style/CommonButton"
         android:text="Tween animation" />
 
-    <Button
-        android:id="@+id/main_btn1"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="Frame animation" />
-
-
-
 
 
 </LinearLayout>

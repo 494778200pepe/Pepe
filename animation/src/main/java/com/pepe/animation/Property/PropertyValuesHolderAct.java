@@ -22,7 +22,7 @@ public class PropertyValuesHolderAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_property_value_holder);
-        image = (ImageView) findViewById(R.id.image);
+        image = (ImageView) findViewById(R.id.image_xml);
     }
     @Override
     /**

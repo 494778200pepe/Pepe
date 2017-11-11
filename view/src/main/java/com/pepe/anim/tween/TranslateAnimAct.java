@@ -1,6 +1,5 @@
-package com.pepe.animation.View.tween;
+package com.pepe.anim.tween;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -10,20 +9,19 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
  * Created by pepe on 2016/8/20 0020.
  */
-public class TranslateAnimationAct extends AppCompatActivity {
-    Context mContext=TranslateAnimationAct.this;
+public class TranslateAnimAct extends AppCompatActivity {
     ImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_rotate_animation);
-        image = (ImageView) findViewById(R.id.image);
+        setContentView(R.layout.act_anim_rotate);
+        image = (ImageView) findViewById(R.id.image_xml);
     }
 
     @Override
@@ -34,11 +32,6 @@ public class TranslateAnimationAct extends AppCompatActivity {
         menu.add(Menu.NONE, 0, 0, "constructor1");    //添加选项
         menu.add(Menu.NONE, 1, 0, "constructor2");    //添加选项
         menu.add(Menu.NONE, 2, 0, "AnimationUtils");    //添加选项
-        menu.add(Menu.NONE, 3, 0, "");    //添加选项
-        menu.add(Menu.NONE, 5, 0, "");    //添加选项
-        menu.add(Menu.NONE, 6, 0, "");    //添加选项
-        menu.add(Menu.NONE, 7, 0, "");    //添加选项
-        menu.add(Menu.NONE, 8, 0, "");    //添加选项
         return true;
     }
 
@@ -49,34 +42,22 @@ public class TranslateAnimationAct extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case 0:
+                //默认mPivotXType = ABSOLUTE
                 TranslateAnimation aa0 = new TranslateAnimation(0, 200,0,150);
                 aa0.setDuration(3000);
                 image.startAnimation(aa0);
                 break;
-            case 1://默认mPivotXType = ABSOLUTE;两个点四个type
+            case 1:
+                //两个点(x,y)四个type
                 TranslateAnimation aa1 = new TranslateAnimation(0,0,1,0.5f,0,0,1,0.5f);
                 aa1.setDuration(3000);
                 image.startAnimation(aa1);
                 break;
             case 2:
-                Animation aa3 = AnimationUtils.loadAnimation(this, R.anim.translateanim);
+                Animation aa3 = AnimationUtils.loadAnimation(this, R.anim.anim_translate);
                 image.startAnimation(aa3);
                 break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-
             default:
-
                 break;
         }
         return super.onOptionsItemSelected(item);

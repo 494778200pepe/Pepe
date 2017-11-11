@@ -1,4 +1,4 @@
-package com.pepe.animation.View.tween;
+package com.pepe.anim.custom;
 
 import android.graphics.Matrix;
 import android.view.animation.AccelerateInterpolator;
@@ -11,7 +11,9 @@ import android.view.animation.Transformation;
  */
 public class TVAnimation extends Animation {
 
-    //缩放的中心点，设置为图片的中心即可
+    /**
+     * 缩放的中心点，设置为图片的中心即可
+     */
     private int mCenterWidth;
     private int mCenterHeight;
 

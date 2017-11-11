@@ -1,6 +1,5 @@
-package com.pepe.animation.View.tween;
+package com.pepe.anim.tween;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -12,21 +11,20 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
  * Created by pepe on 2016/8/20 0020.
  */
-public class AnimationSetAct  extends AppCompatActivity {
+public class AnimSetAct extends AppCompatActivity {
 
-    Context mContext=AnimationSetAct.this;
     ImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_set_animation);
-        image = (ImageView) findViewById(R.id.image);
+        setContentView(R.layout.act_anim_set);
+        image = (ImageView) findViewById(R.id.image_xml);
     }
     @Override
     /**
@@ -57,15 +55,10 @@ public class AnimationSetAct  extends AppCompatActivity {
                 image.startAnimation(as);
                 break;
             case 1:
-                Animation aa0 = AnimationUtils.loadAnimation(this, R.anim.setanim);
+                Animation aa0 = AnimationUtils.loadAnimation(this, R.anim.anim_set);
                 image.startAnimation(aa0);
                 break;
-            case 2:
-                break;
-            case 3:
-                break;
             default:
-
                 break;
         }
         return super.onOptionsItemSelected(item);

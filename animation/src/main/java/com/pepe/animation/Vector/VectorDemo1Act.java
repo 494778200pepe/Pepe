@@ -20,9 +20,9 @@ public class VectorDemo1Act extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_vector_demo1);
-        imageView1 = (ImageView) findViewById(R.id.image1);
+        imageView1 = (ImageView) findViewById(R.id.image_xml);
         imageView1.setOnClickListener(this);
-        imageView2 = (ImageView) findViewById(R.id.image2);
+        imageView2 = (ImageView) findViewById(R.id.image_java);
         imageView2.setOnClickListener(this);
         imageView3 = (ImageView) findViewById(R.id.image3);
         imageView3.setOnClickListener(this);

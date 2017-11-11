@@ -21,7 +21,9 @@ import com.hencoder.task.Flipboard.FlipboardAct;
 import com.hencoder.task.Like.LikeAct;
 import com.hencoder.task.MIMovement.MIMovementAct;
 import com.hencoder.task.Ruler.RulerAct;
+import com.pepe.anim.AnimAct;
 import com.pepe.view.camera.CameraAct;
+import com.pepe.view.canvas.CanvasAct;
 import com.pepe.view.canvas.CanvasTestAct;
 import com.pepe.view.paint.PaintAct;
 import com.pepe.view.touch.EventAct;
@@ -36,11 +38,12 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
                 new ItemActivity(HenCoderAct.class, "HenCoder"),
+                new ItemActivity(AnimAct.class, "Anim"),
                 new ItemActivity(GitHubAct.class, "GitHub"),
                 new ItemActivity(CameraAct.class, "Camera"),
                 new ItemActivity(PaintAct.class, "Paint"),
-                new ItemActivity(CanvasTestAct.class, "Canvas"),
-                new ItemActivity(PaintAct.class, "Canvas"),
+                new ItemActivity(CanvasAct.class, "Canvas"),
+                new ItemActivity(CanvasTestAct.class, "CanvasTest"),
                 new ItemActivity(PaintAct.class, "Path"),
                 new ItemActivity(EventAct.class, "Event")
         );

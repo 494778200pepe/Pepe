@@ -26,7 +26,7 @@ public class ObjectAnimatorAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_object_animator);
-        image = (ImageView) findViewById(R.id.image);
+        image = (ImageView) findViewById(R.id.image_xml);
     }
 
     @Override

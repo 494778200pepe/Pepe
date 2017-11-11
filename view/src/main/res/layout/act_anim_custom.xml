@@ -23,7 +23,7 @@
         android:layout_height="200dp"
         android:id="@+id/imageView"
         android:onClick="imgClose"
-        android:background="@mipmap/girl"
+        android:background="@drawable/batman"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

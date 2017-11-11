@@ -24,7 +24,7 @@ public class KeyframeAct extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_keyframe);
-        image = (ImageView) findViewById(R.id.image);
+        image = (ImageView) findViewById(R.id.image_xml);
 
         DisplayMetrics outMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(outMetrics);

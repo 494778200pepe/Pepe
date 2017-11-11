@@ -10,14 +10,14 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/image1"
+        android:id="@+id/image_xml"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/vector_searchbar" />
 
     <ImageView
-        android:id="@+id/image2"
+        android:id="@+id/image_java"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

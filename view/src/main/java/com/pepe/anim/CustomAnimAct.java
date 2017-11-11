@@ -1,21 +1,23 @@
-package com.pepe.animation.View.tween;
+package com.pepe.anim;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.pepe.animation.R;
+import com.pepe.anim.custom.CustomAnimation;
+import com.pepe.anim.custom.TVAnimation;
+import com.pepe.view.R;
 
 
 /**
  * Created by pepe on 2016/9/12.
  */
-public class CustomAnimationAct extends AppCompatActivity {
+public class CustomAnimAct extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_custom_animation);
+        setContentView(R.layout.act_anim_custom);
     }
 
     public void btnAnim(View view) {

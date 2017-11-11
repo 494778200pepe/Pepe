@@ -1,4 +1,4 @@
-package com.pepe.animation.View.tween;
+package com.pepe.anim.custom;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;
@@ -44,7 +44,10 @@ public class CustomAnimation extends Animation {
         matrix.postTranslate(-mCenterWidth, -mCenterHeight);
     }
 
-    // 暴露接口-设置旋转角度
+    /**
+     * 设置旋转角度
+     * @param rotateY 旋转角度
+     */
     public void setRotateY(float rotateY) {
         mRotateY = rotateY;
     }
