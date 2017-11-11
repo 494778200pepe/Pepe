@@ -110,6 +110,8 @@
             android:name="com.pepe.anim.CustomAnimAct"
             android:theme="@style/Theme.AppCompat" />
 
+        <activity android:name="com.pepe.anim.PropertyAnimAct" />
+
     </application>
 
 </manifest>

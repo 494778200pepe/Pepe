@@ -27,7 +27,7 @@ public class PropertyAnimationAct extends AppCompatActivity implements View.OnCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_property_animation);
+        setContentView(R.layout.act_anim_property);
     }
     @Override
     public void onClick(View view){

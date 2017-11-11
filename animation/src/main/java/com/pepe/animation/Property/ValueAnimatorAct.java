@@ -44,7 +44,6 @@ public class ValueAnimatorAct extends AppCompatActivity {
         menu.add(Menu.NONE, 0, 0, "ValueAnimator");    //添加选项
         menu.add(Menu.NONE, 1, 0, "自由落体");    //添加选项
         menu.add(Menu.NONE, 2, 0, "抛物线");    //添加选项
-        menu.add(Menu.NONE, 3, 0, "淡出且删除");    //添加选项
         return true;
     }
 
@@ -119,43 +118,6 @@ public class ValueAnimatorAct extends AppCompatActivity {
                     }
                 });
                 break; 
-            case 3://淡出且删除
-                ObjectAnimator anim3 = ObjectAnimator.ofFloat(image, "alpha", 0.5f);
-
-                anim3.addListener(new Animator.AnimatorListener()
-                {
-
-                    @Override
-                    public void onAnimationStart(Animator animation)
-                    {
-                        Log.e("pepe", "onAnimationStart");
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animator animation)
-                    {
-                        // TODO Auto-generated method stub  
-                        Log.e("pepe", "onAnimationRepeat");
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animator animation)
-                    {
-                        Log.e("pepe", "onAnimationEnd");
-                        ViewGroup parent = (ViewGroup) image.getParent();
-                        if (parent != null)
-                            parent.removeView(image);
-                    }
-
-                    @Override
-                    public void onAnimationCancel(Animator animation)
-                    {
-                        // TODO Auto-generated method stub  
-                        Log.e("pepe", "onAnimationCancel");
-                    }
-                });
-                anim3.start();
-                break;
             default:
 
                 break;
