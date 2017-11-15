@@ -1,5 +1,6 @@
 package com.pepe.switcher;
 
+import android.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -101,8 +102,6 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory,
         Intent intent = new Intent(this, GalleryActivity.class);
         // 如果设置这个标志，新的Activity就不会在历史栈中保存。用户一旦离开，这个Activity就会finish掉。也可以使用noHistory属性设置。
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        // 设置这个标志之后，如果被启动的Activity已经在栈顶，那它就不会被再次启动。
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         // 设置这个标志可以为待启动的Activity创建一个新的任务。一个任务（从启动它的Activity到任务中的下一个Activity）就是用户可以跳转到的Activity的原子群。
         // 任务可以在前台与后台之间切换；在某一特定任务之中的所有Activity一直会保持同样的顺序。
         // 这个标志通常被用来呈现一种"laucher"类型的行为：为用户提供一个可单独解决的事情列表，完全独立于启动他们的Activity之外运行。
@@ -186,5 +185,10 @@ public class MainActivity extends Activity implements ViewSwitcher.ViewFactory,
 
         startActivity(new Intent(this, GalleryActivity.class));
     }
+    /**
+     // 设置这个标志之后，如果被启动的Activity已经在栈顶，那它就不会被再次启动。
+     intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+     */
 }
 

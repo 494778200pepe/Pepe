@@ -108,7 +108,20 @@
             android:name="com.pepe.anim.custom.CustomAnimAct"
             android:theme="@style/Theme.AppCompat" />
 
-        <activity android:name="com.pepe.anim.property.PropertyAnimAct" />
+        <activity android:name="com.pepe.anim.PropertyAnimAct" />
+        <activity android:name="com.pepe.anim.property.ObjectAnimatorAct"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.pepe.anim.property.ValueAnimatorAct"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.pepe.anim.property.AnimatorSetAct"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.pepe.anim.property.PropertyValuesHolderAct"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.pepe.anim.property.KeyframeAct"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.pepe.anim.property.DropActivity" />
+        <activity android:name="com.pepe.anim.property.MenuAct" />
+        <activity android:name="com.pepe.anim.property.TimerActivity" />
 
     </application>
 

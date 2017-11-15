@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
@@ -10,7 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -23,7 +23,7 @@ public class KeyframeAct extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_keyframe);
+        setContentView(R.layout.act_anim_prop_keyframe);
         image = (ImageView) findViewById(R.id.image_xml);
 
         DisplayMetrics outMetrics = new DisplayMetrics();

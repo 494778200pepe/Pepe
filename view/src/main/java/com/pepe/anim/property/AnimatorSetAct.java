@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -24,7 +24,7 @@ public class AnimatorSetAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_animator_set);
+        setContentView(R.layout.act_anim_prop_set);
         image = (ImageView) findViewById(R.id.image_xml);
     }
     @Override
@@ -94,7 +94,7 @@ public class AnimatorSetAct extends AppCompatActivity {
                 break;
             case 3:
                 // 加载动画
-                Animator anim3 = AnimatorInflater.loadAnimator(this, R.animator.scale_anim);
+                Animator anim3 = AnimatorInflater.loadAnimator(this, R.animator.anim_prop_scale);
                 image.setPivotX(0);
                 image.setPivotY(0);
                 //显示的调用invalidate

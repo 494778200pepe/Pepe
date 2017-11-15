@@ -1,7 +1,5 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.graphics.PointF;
@@ -11,11 +9,10 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -28,7 +25,7 @@ public class ValueAnimatorAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_value_animator);
+        setContentView(R.layout.act_anim_prop_value);
         image = (ImageView) findViewById(R.id.image_xml);
 
         DisplayMetrics outMetrics = new DisplayMetrics();

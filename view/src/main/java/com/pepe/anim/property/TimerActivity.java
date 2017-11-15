@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.ValueAnimator;
 import android.app.Activity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -20,7 +20,7 @@ public class TimerActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_timer);
+        setContentView(R.layout.act_anim_prop_timer);
         mTimerTextView = (TextView) findViewById(R.id.tv_timer);
         mTimerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +32,7 @@ public class TimerActivity extends Activity {
                         mTimerTextView.setText("$" + valueAnimator.getAnimatedValue());
                     }
                 });
-                animator.setTarget(view);
+//                animator.setTarget(view);
                 animator.setDuration(3000);
                 animator.start();
             }

@@ -14,7 +14,7 @@ public class Practice13GetTextBoundsView extends View {
     Paint paint1 = new Paint(Paint.ANTI_ALIAS_FLAG);
     Paint paint2 = new Paint(Paint.ANTI_ALIAS_FLAG);
     String text1 = "A";
-    String text2 = "a";
+    String text2 = "anim_prop_menu1";
     String text3 = "J";
     String text4 = "j";
     String text5 = "Â";

@@ -1,9 +1,11 @@
 package com.hencoder.anim.practicedraw6.practice;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.ViewPropertyAnimator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -48,7 +50,7 @@ public class Practice02Rotation extends RelativeLayout {
                 } else if (rotateState == 4) {
                     imageView.animate().rotationY(180);
                 } else if (rotateState == 5) {
-                    imageView.animate().rotationY(0);
+                    ViewPropertyAnimator viewAnimator= imageView.animate().rotationY(0);
                 }
                 rotateState++;
                 if (rotateState == 6) rotateState = 0;

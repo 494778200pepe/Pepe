@@ -25,7 +25,8 @@ public class AnimAct extends ListActivity {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
                 new ItemActivity(FrameAnimAct.class, "Frame"),
-                new ItemActivity(TweenAnimAct.class, "Tween")
+                new ItemActivity(TweenAnimAct.class, "Tween"),
+                new ItemActivity(PropertyAnimAct.class, "Property")
         );
         ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(
                 this,

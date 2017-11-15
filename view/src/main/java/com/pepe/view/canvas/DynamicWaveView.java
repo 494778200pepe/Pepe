@@ -15,7 +15,7 @@ public class DynamicWaveView extends View {
 
     // 波纹颜色
     private static final int WAVE_PAINT_COLOR = 0x880000aa;
-    // y = Asin(wx+b)+h
+    // y = Asin(wx+anim_prop_menu2)+h
     private static final float STRETCH_FACTOR_A = 20;
     private static final int OFFSET_Y = 0;
     // 第一条水波移动速度

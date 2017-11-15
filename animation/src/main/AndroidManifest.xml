@@ -16,16 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PropertyAnimationAct"/>
-        <activity android:name=".Property.ObjectAnimatorAct"/>
-        <activity android:name=".Property.ValueAnimatorAct"/>
-        <activity android:name=".Property.AnimatorSetAct"/>
-        <activity android:name=".Property.PropertyValuesHolderAct"/>
         <activity android:name=".Property.LayoutAnimaAct"/>
-        <activity android:name=".Property.KeyframeAct"/>
-        <activity android:name=".Property.ViewAnimateAct"/>
-        <activity android:name=".Property.DropActivity"/>
-        <activity android:name=".Property.PropertyActivity"/>
-        <activity android:name=".Property.TimerActivity"/>
         <activity android:name=".Property.MojiDemoAct"/>
         <activity android:name=".VectorAnimationAct"/>
         <activity android:name=".Vector.VectorDemo1Act"/>

@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_b"
-        android:src="@mipmap/b"
+        android:src="@mipmap/anim_prop_menu2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_c"
-        android:src="@mipmap/c"
+        android:src="@mipmap/anim_prop_menu3"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_d"
-        android:src="@mipmap/d"
+        android:src="@mipmap/anim_prop_menu4"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_e"
-        android:src="@mipmap/e"
+        android:src="@mipmap/anim_prop_menu5"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView_a"
-        android:src="@mipmap/a"
+        android:src="@mipmap/anim_prop_menu1"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

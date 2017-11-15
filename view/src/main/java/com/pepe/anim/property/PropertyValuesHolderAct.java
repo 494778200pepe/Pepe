@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -21,7 +21,7 @@ public class PropertyValuesHolderAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_property_value_holder);
+        setContentView(R.layout.act_anim_prop_holder);
         image = (ImageView) findViewById(R.id.image_xml);
     }
     @Override

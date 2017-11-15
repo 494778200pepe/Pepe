@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -25,7 +25,7 @@ public class DropActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_drop);
+        setContentView(R.layout.act_anim_prop_drop);
         mHiddenView = (LinearLayout) findViewById(R.id.hidden_view);
         // 获取像素密度
         mDensity = getResources().getDisplayMetrics().density;

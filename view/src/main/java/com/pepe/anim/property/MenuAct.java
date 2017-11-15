@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -9,7 +9,7 @@ import android.view.animation.BounceInterpolator;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  * Created by Administrator on 2016/6/3.
  * 灵动菜单
  */
-public class PropertyActivity extends Activity implements View.OnClickListener {
+public class MenuAct extends Activity implements View.OnClickListener {
 
     private int[] mRes = {R.id.imageView_a, R.id.imageView_b, R.id.imageView_c,
             R.id.imageView_d, R.id.imageView_e};
@@ -28,7 +28,7 @@ public class PropertyActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_property);
+        setContentView(R.layout.act_anim_prop_menu);
         for (int i = 0; i < mRes.length; i++) {
             ImageView imageView = (ImageView) findViewById(mRes[i]);
             imageView.setOnClickListener(this);

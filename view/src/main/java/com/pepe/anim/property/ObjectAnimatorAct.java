@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
@@ -25,7 +25,7 @@ public class ObjectAnimatorAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_object_animator);
+        setContentView(R.layout.act_anim_prop_object);
         image = (ImageView) findViewById(R.id.image_xml);
     }
 

@@ -11,7 +11,7 @@ import android.view.View;
 public class Sample14GetFontMetricsView extends View {
     Paint paint1 = new Paint(Paint.ANTI_ALIAS_FLAG);
     Paint paint2 = new Paint(Paint.ANTI_ALIAS_FLAG);
-    String[] texts = {"A", "a", "J", "j", "Â", "â"};
+    String[] texts = {"A", "anim_prop_menu1", "J", "j", "Â", "â"};
     float yOffset;
     int top = 200;
     int bottom = 400;

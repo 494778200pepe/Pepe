@@ -7,66 +7,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
-    <Button
-        android:id="@+id/main_btn0"
-        style="@style/CommonButton"
-        android:text="ObjectAnimator " />
 
-    <Button
-        android:id="@+id/main_btn1"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="ValueAnimator" />
-    <Button
-        android:id="@+id/main_btn2"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="AnimatorSet" />
-    <Button
-        android:id="@+id/main_btn3"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="PropertyValuesHolder" />
     <Button
         android:id="@+id/main_btn4"
         style="@style/CommonButton"
         android:layout_marginTop="10dp"
         android:text="Layout Animations" />
-    <Button
-        android:id="@+id/main_btn5"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="Keyframe" />
-    <Button
-        android:id="@+id/main_btn6"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="ViewAnimate" />
-    <Button
-        android:id="@+id/main_btn7"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="Drop" />
 
-    <Button
-        android:id="@+id/main_btn8"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="Menu" />
-
-    <Button
-        android:id="@+id/main_btn9"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="Timer" />
     <Button
         android:id="@+id/main_btn10"
         style="@style/CommonButton"
         android:layout_marginTop="10dp"
         android:text="MojiDemo" />
-
-
-
 
 
 
