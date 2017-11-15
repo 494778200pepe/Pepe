@@ -1,5 +1,6 @@
-package com.pepe.view.paint;
+package com.pepe.view.path;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
@@ -8,27 +9,34 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 import com.pepe.view.ItemFragment;
 import com.pepe.view.R;
+import com.pepe.view.canvas.CanvasAct;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.pepe.view.path.PathView.CONTENTS;
+
 
 /**
- * Created by wang on 2017/7/11.
+ * @author wang
+ * @date 2017/11/13.
  */
 
-public class PaintAct extends AppCompatActivity {
+public class PathAct extends AppCompatActivity implements View.OnClickListener {
     TabLayout tabLayout;
     ViewPager pager;
     List<PageModel> pageModels = new ArrayList<>();
 
     {
-        pageModels.add(new PageModel(R.layout.item_view_paint_align, R.string.str_view_paint_align));
-        pageModels.add(new PageModel(R.layout.item_view_paint_antialias, R.string.str_view_paint_antialias));
-        pageModels.add(new PageModel(R.layout.item_view_paint_cap, R.string.str_view_paint_cap));
-        pageModels.add(new PageModel(R.layout.item_view_paint_style, R.string.str_view_paint_style));
+        pageModels.add(new PageModel(R.layout.item_view_path_path, R.string.str_view_canvas_canvas));
+        pageModels.add(new PageModel(R.layout.item_view_path_clip_path, R.string.str_view_path_clip_path));
+        pageModels.add(new PageModel(R.layout.item_view_path_clip_rect, R.string.str_view_path_clip_rect));
+        pageModels.add(new PageModel(R.layout.item_view_path_show_hide, R.string.str_view_path_show_hide));
     }
 
     @Override
@@ -71,5 +79,22 @@ public class PaintAct extends AppCompatActivity {
             this.titleRes = titleRes;
         }
     }
-
+    
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_path:
+                PathView pathView = ((PathView) findViewById(R.id.path_view));
+                int mode = pathView.getDrawMode();
+                if (mode == 7) {
+                    mode = -1;
+                }
+                pathView.setDrawMode(++mode);
+                Button btn_path = ((Button) findViewById(R.id.btn_path));
+                btn_path.setText(CONTENTS[mode]);
+                break;
+            default:
+                break;
+        }
+    }
 }

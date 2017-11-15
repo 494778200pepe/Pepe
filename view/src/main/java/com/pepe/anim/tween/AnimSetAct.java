@@ -51,7 +51,8 @@ public class AnimSetAct extends AppCompatActivity {
                 ScaleAnimation sa = new ScaleAnimation(0, 1,0,1);
                 as.addAnimation(aa);
                 as.addAnimation(sa);
-                as.setDuration(3000);//默认duration为0
+                //默认duration为0
+                as.setDuration(3000);
                 image.startAnimation(as);
                 break;
             case 1:

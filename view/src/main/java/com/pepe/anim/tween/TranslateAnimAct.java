@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.pepe.view.R;
 
@@ -22,6 +24,13 @@ public class TranslateAnimAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_anim_rotate);
         image = (ImageView) findViewById(R.id.image_xml);
+        image.setClickable(true);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(TranslateAnimAct.this,"hehe",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -45,6 +54,8 @@ public class TranslateAnimAct extends AppCompatActivity {
                 //默认mPivotXType = ABSOLUTE
                 TranslateAnimation aa0 = new TranslateAnimation(0, 200,0,150);
                 aa0.setDuration(3000);
+                aa0.setFillBefore(false);
+                aa0.setFillAfter(true);
                 image.startAnimation(aa0);
                 break;
             case 1:

@@ -1,0 +1,28 @@
+<resources>
+    <!--canvas-->
+    <string name="str_view_canvas_canvas">canvas</string>
+    <string name="str_view_canvas_load_text">load_text</string>
+    <string name="str_view_canvas_circle_image">circle_image</string>
+    <string name="str_view_canvas_porter_duff_xfer_mode">porter_duff_xfer_mode</string>
+    <string name="str_view_canvas_reflection_image">reflection_image</string>
+    <string name="str_view_canvas_shimmer_text">shimmer_text</string>
+    <string name="str_view_canvas_wave">wave</string>
+    <string name="str_view_canvas_inverted_image">inverted</string>
+
+    <!--paint-->
+    <string name="str_view_paint_align">align</string>
+    <string name="str_view_paint_antialias">antialias</string>
+    <string name="str_view_paint_cap">cap</string>
+    <string name="str_view_paint_style">style</string>
+
+    <!--camera-->
+    <string name="str_view_camera_translate">translate</string>
+    <string name="str_view_camera_rotate">rotate</string>
+
+    <!--path-->
+    <string name="str_view_path_path">path</string>
+    <string name="str_view_path_clip_path">clipPath</string>
+    <string name="str_view_path_clip_rect">clipRect</string>
+    <string name="str_view_path_show_hide">showHide</string>
+
+</resources>

@@ -11,6 +11,14 @@
     </declare-styleable >
 
 
+    <declare-styleable name="CircleImageView">
+        <attr name="Radius" format="dimension"/>
+        <attr name="type">
+            <enum name="circle" value="0"/>
+            <enum name="round" value="1"/>
+        </attr>
+    </declare-styleable>
+
     <!--<declare-styleable name="example">-->
         <!--<attr name= "back_ground" format ="reference|color" />-->
         <!--<attr name= "name" format ="string" />-->

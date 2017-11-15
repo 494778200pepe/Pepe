@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.pepe.view.camera.View_Camera_Rotate xmlns:android="http://schemas.android.com/apk/res/android"
+<com.pepe.view.camera.CameraRotateView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />

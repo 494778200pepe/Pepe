@@ -1,48 +1,103 @@
 package com.pepe.view.canvas;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.StringRes;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
+import com.pepe.view.ItemFragment;
 import com.pepe.view.R;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class CanvasAct extends Activity {
+import static com.pepe.view.canvas.CanvasView.CONTENTS;
 
-    private CanvasView myView = null;
+/**
+ * @author wang
+ * @date 2017/11/13.
+ */
+
+public class CanvasAct extends AppCompatActivity implements View.OnClickListener {
+    TabLayout tabLayout;
+    ViewPager pager;
+    List<PageModel> pageModels = new ArrayList<>();
+
+    {
+        pageModels.add(new PageModel(R.layout.item_view_canvas_canvas, R.string.str_view_canvas_canvas));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_loadtext, R.string.str_view_canvas_load_text));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_circle_image, R.string.str_view_canvas_circle_image));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_porter_duff_xfermode, R.string.str_view_canvas_porter_duff_xfer_mode));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_reflection_image, R.string.str_view_canvas_reflection_image));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_shimmer_text, R.string.str_view_canvas_shimmer_text));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_wave, R.string.str_view_canvas_wave));
+        pageModels.add(new PageModel(R.layout.item_view_canvas_inverted, R.string.str_view_canvas_inverted_image));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_view_canvas);
-        myView = (CanvasView)findViewById(R.id.myView);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-        myView.setBitmap(bitmap);
+        setContentView(R.layout.act_practice);
 
-        Intent intent = getIntent();
-        if(intent != null){
-            CanvasView.DrawMode drawMode = CanvasView.DrawMode.valueOf(intent.getIntExtra("drawMode", 0));
-            myView.setDrawMode(drawMode);
-        }
+        pager = (ViewPager) findViewById(R.id.pager);
+        pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
 
-        //清屏方法一：
-//        mCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
-        //清屏方法二：
-//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
-//        mCanvas.drawPaint(paint);
-//        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC));
+            @Override
+            public Fragment getItem(int position) {
+                PageModel pageModel = pageModels.get(position);
+                return ItemFragment.newInstance(pageModel.sampleLayoutRes);
+            }
+
+            @Override
+            public int getCount() {
+                return pageModels.size();
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return getString(pageModels.get(position).titleRes);
+            }
+        });
+
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(pager);
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if(myView != null){
-            myView.destroy();
-            myView = null;
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_canvas:
+                CanvasView canvasView = ((CanvasView) findViewById(R.id.canvas_view));
+                int mode = canvasView.getDrawmode();
+                if (mode == 18) {
+                    mode = -1;
+                }
+                canvasView.setDrawMode(++mode);
+                Button btn_canvas = ((Button) findViewById(R.id.btn_canvas));
+                btn_canvas.setText(CONTENTS[mode]);
+                break;
+            default:
+                break;
         }
     }
+
+    private class PageModel {
+        @LayoutRes
+        int sampleLayoutRes;
+        @StringRes
+        int titleRes;
+
+        PageModel(@LayoutRes int sampleLayoutRes, @StringRes int titleRes) {
+            this.sampleLayoutRes = sampleLayoutRes;
+            this.titleRes = titleRes;
+        }
+    }
+
 }

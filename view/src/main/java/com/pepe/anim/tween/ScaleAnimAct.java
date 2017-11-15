@@ -47,8 +47,9 @@ public class ScaleAnimAct extends AppCompatActivity {
                 aa0.setDuration(3000);
                 image.startAnimation(aa0);
                 break;
-            case 1://默认mPivotXType = ABSOLUTE;
-                ScaleAnimation aa1 = new ScaleAnimation(0, 1,0,1);
+            case 1:
+                //默认mPivotXType = ABSOLUTE;
+                ScaleAnimation aa1 = new ScaleAnimation(0, 1,0,1,1,1);
                 aa1.setDuration(3000);
                 image.startAnimation(aa1);
                 break;

@@ -27,18 +27,17 @@
 
 
         <!--View_camera-->
-        <activity android:name=".camera.CameraAct" />
-        <activity android:name=".camera.act.TranslateAct" />
-        <activity android:name=".camera.act.RotateAct" />
+        <activity android:name=".camera.CameraAct"
+            android:theme="@style/Theme.AppCompat"/>
         <!--View_paint-->
-        <activity android:name=".paint.PaintAct" />
-        <activity android:name=".paint.act.PaintAlignAct" />
-        <activity android:name=".paint.act.PaintAntiAliasAct" />
-        <activity android:name=".paint.act.PaintCapAct" />
-        <activity android:name=".paint.act.PaintStyleAct" />
+        <activity android:name=".paint.PaintAct"
+            android:theme="@style/Theme.AppCompat"/>
         <!--View_canvas-->
-        <activity android:name=".canvas.CanvasTestAct" />
-        <activity android:name=".canvas.CanvasAct" />
+        <activity android:name=".canvas.CanvasAct"
+            android:theme="@style/Theme.AppCompat"/>
+        <!--View_path-->
+        <activity android:name=".path.PathAct"
+            android:theme="@style/Theme.AppCompat"/>
         <!--View_touch-->
         <activity android:name=".touch.EventAct" />
 
@@ -81,7 +80,6 @@
             android:name="com.hencoder.layout.hencoderpracticelayout1.LayoutPractice1Activity"
             android:theme="@style/Theme.AppCompat" />
         <!--HenCoder_test-->
-        <activity android:name="com.hencoder.HenCoderTestAct" />
 
 
         <!--Anim_frame-->
@@ -90,7 +88,7 @@
             android:name="com.pepe.anim.FrameAnimAct"
             android:theme="@style/Theme.AppCompat" />
         <!--Anim_tween-->
-        <activity android:name="com.pepe.anim.TweenAnimAct" />
+        <activity android:name="com.pepe.anim.tween.TweenAnimAct" />
         <activity
             android:name="com.pepe.anim.tween.AlphaAnimAct"
             android:theme="@style/Theme.AppCompat" />
@@ -107,10 +105,10 @@
             android:name="com.pepe.anim.tween.AnimSetAct"
             android:theme="@style/Theme.AppCompat" />
         <activity
-            android:name="com.pepe.anim.CustomAnimAct"
+            android:name="com.pepe.anim.custom.CustomAnimAct"
             android:theme="@style/Theme.AppCompat" />
 
-        <activity android:name="com.pepe.anim.PropertyAnimAct" />
+        <activity android:name="com.pepe.anim.property.PropertyAnimAct" />
 
     </application>
 

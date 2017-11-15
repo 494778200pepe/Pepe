@@ -31,8 +31,7 @@ public class HenCoderAct extends ListActivity {
                 new ItemActivity(HenCoderDrawAct.class, "Draw"),
                 new ItemActivity(HenCoderAnimAct.class, "Anim"),
                 new ItemActivity(HenCoderTaskAct.class, "Task"),
-                new ItemActivity(HenCoderLayoutAct.class, "Layout"),
-                new ItemActivity(HenCoderTestAct.class, "Test")
+                new ItemActivity(HenCoderLayoutAct.class, "Layout")
         );
         ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(
                 this,

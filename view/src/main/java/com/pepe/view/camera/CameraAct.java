@@ -3,43 +3,73 @@ package com.pepe.view.camera;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.support.annotation.StringRes;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 
-import com.pepe.view.ItemActivity;
-import com.pepe.view.camera.act.RotateAct;
-import com.pepe.view.camera.act.TranslateAct;
+import com.pepe.view.ItemFragment;
+import com.pepe.view.R;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by wang on 2017/10/10.
  */
+public class CameraAct extends AppCompatActivity {
+    TabLayout tabLayout;
+    ViewPager pager;
+    List<PageModel> pageModels = new ArrayList<>();
 
-public class CameraAct extends ListActivity {
+    {
+        pageModels.add(new PageModel(R.layout.act_camera_translate, R.string.str_view_camera_translate));
+        pageModels.add(new PageModel(R.layout.act_camera_rotate, R.string.str_view_camera_rotate));
+    }
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final List<ItemActivity> acts = Arrays.asList(
-                new ItemActivity(TranslateAct.class, "Translate"),
-                new ItemActivity(RotateAct.class, "Rotate")
-        );
-        ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                acts);
-        getListView().setAdapter(adapter);
+        setContentView(R.layout.act_practice);
 
-        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        pager = (ViewPager) findViewById(R.id.pager);
+        pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
+
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                ItemActivity act = acts.get(position);
-                startActivity(new Intent(CameraAct.this, act.activityClass));
+            public Fragment getItem(int position) {
+                PageModel pageModel = pageModels.get(position);
+                return ItemFragment.newInstance(pageModel.sampleLayoutRes);
+            }
+
+            @Override
+            public int getCount() {
+                return pageModels.size();
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return getString(pageModels.get(position).titleRes);
             }
         });
+
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(pager);
     }
+
+    private class PageModel {
+        @LayoutRes
+        int sampleLayoutRes;
+        @StringRes
+        int titleRes;
+
+        PageModel(@LayoutRes int sampleLayoutRes, @StringRes int titleRes) {
+            this.sampleLayoutRes = sampleLayoutRes;
+            this.titleRes = titleRes;
+        }
+    }
+
 }
