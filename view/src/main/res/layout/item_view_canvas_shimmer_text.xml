@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@android:color/background_dark"
-    tools:context=".MainActivity">
+    tools:context="com.pepe.MainActivity">
 
     <com.pepe.view.canvas.ShimmerTextView
         android:text="shimmer"

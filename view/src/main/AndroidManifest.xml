@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.pepe.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,21 +25,29 @@
         <activity android:name="com.github.SafeView.SafeViewAct" />
         <!--GitHub-->
 
-
+        <activity android:name="com.pepe.view.DrawAct" />
         <!--View_camera-->
-        <activity android:name=".camera.CameraAct"
-            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".camera.CameraAct"
+            android:theme="@style/Theme.AppCompat" />
         <!--View_paint-->
-        <activity android:name=".paint.PaintAct"
-            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".paint.PaintAct"
+            android:theme="@style/Theme.AppCompat" />
         <!--View_canvas-->
-        <activity android:name=".canvas.CanvasAct"
-            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".canvas.CanvasAct"
+            android:theme="@style/Theme.AppCompat" />
         <!--View_path-->
-        <activity android:name=".path.PathAct"
-            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".path.PathAct"
+            android:theme="@style/Theme.AppCompat" />
         <!--View_touch-->
         <activity android:name=".touch.EventAct" />
+        <!--ViewGroup_drag-->
+        <activity android:name="com.pepe.viewgroup.ViewGroupAct" />
+        <activity android:name="com.pepe.viewgroup.drag.DragAct"
+            android:theme="@style/Theme.AppCompat"/>
 
 
         <!--HenCoder_draw-->
@@ -88,7 +96,7 @@
             android:name="com.pepe.anim.FrameAnimAct"
             android:theme="@style/Theme.AppCompat" />
         <!--Anim_tween-->
-        <activity android:name="com.pepe.anim.tween.TweenAnimAct" />
+        <activity android:name="com.pepe.anim.TweenAnimAct" />
         <activity
             android:name="com.pepe.anim.tween.AlphaAnimAct"
             android:theme="@style/Theme.AppCompat" />
@@ -109,17 +117,26 @@
             android:theme="@style/Theme.AppCompat" />
 
         <activity android:name="com.pepe.anim.PropertyAnimAct" />
-        <activity android:name="com.pepe.anim.property.ObjectAnimatorAct"
-            android:theme="@style/Theme.AppCompat"/>
-        <activity android:name="com.pepe.anim.property.ValueAnimatorAct"
-            android:theme="@style/Theme.AppCompat"/>
-        <activity android:name="com.pepe.anim.property.AnimatorSetAct"
-            android:theme="@style/Theme.AppCompat"/>
-        <activity android:name="com.pepe.anim.property.PropertyValuesHolderAct"
-            android:theme="@style/Theme.AppCompat"/>
-        <activity android:name="com.pepe.anim.property.KeyframeAct"
-            android:theme="@style/Theme.AppCompat"/>
-        <activity android:name="com.pepe.anim.property.DropActivity" />
+        <activity
+            android:name="com.pepe.anim.property.ObjectAnimatorAct"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.pepe.anim.property.ValueAnimatorAct"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.pepe.anim.property.AnimatorSetAct"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.pepe.anim.property.PropertyValuesHolderAct"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name="com.pepe.anim.property.KeyframeAct"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name="com.pepe.anim.property.LayoutInitAct" />
+        <activity
+            android:name="com.pepe.anim.property.LayoutChangeAct"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name="com.pepe.anim.property.DropAct" />
         <activity android:name="com.pepe.anim.property.MenuAct" />
         <activity android:name="com.pepe.anim.property.TimerActivity" />
 

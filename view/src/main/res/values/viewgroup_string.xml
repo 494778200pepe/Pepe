@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--canvas-->
+    <string name="str_view_group_drag">drag</string>
+    <string name="str_view_group_drag_edge_limit">edge_limit</string>
+    <string name="str_view_group_drag_release">release</string>
+    <string name="str_view_group_drag_edge_control">edge_control</string>
+    <string name="str_view_group_drag_test">test</string>
+    <string name="str_view_group_vertical_drawer">VerticalDrawerLayout</string>
+
+
+</resources>

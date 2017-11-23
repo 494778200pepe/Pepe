@@ -15,3 +15,9 @@ android:valueType	    关键参数，如果该value是一个颜色，那么就�
 
 <objectAnimator>属性解释：
 同上<objectAnimator>属性，不多介绍。
+
+
+ValueAnimator和ObjectAnimator没啥区别，
+实际上正是由于ValueAnimator不直接操作属性值，
+所以要操作对象的属性可以不需要setXXX与getXXX方法，
+你完全可以通过当前动画的计算去修改任何属性。

@@ -1,0 +1,40 @@
+这里有几点注意事项：
+    1、LayoutTransition.CHANGE_APPEARING和LayoutTransition.CHANGE_DISAPPEARING必须使用PropertyValuesHolder所构造的动画才会有效果，
+        不然无效！也就是说使用ObjectAnimator构造的动画，在这里是不会有效果的！
+    2、在构造PropertyValuesHolder动画时，”left”、”top”属性的变动是必写的。如果不需要变动，则直接写为：
+        PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",0,0);
+        PropertyValuesHolder pvhTop = PropertyValuesHolder.ofInt("top",0,0);
+    3、在构造PropertyValuesHolder时，所使用的ofInt,ofFloat中的参数值，第一个值和最后一个值必须相同，
+        不然此属性所对应的的动画将被放弃，在此属性值上将不会有效果；
+        PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",0,100,0);
+        比如，这里ofInt(“left”,0,100,0)第一个值和最后一个值都是0，所以这里会有效果的，
+        如果我们改为ofInt(“left”,0,100);那么由于首尾值不一致，则将被视为无效参数，将不会有效果！
+    4、在构造PropertyValuesHolder时，所使用的ofInt,ofFloat中，如果所有参数值都相同，也将不会有动画效果。
+        比如：
+        PropertyValuesHolder pvhLeft = PropertyValuesHolder.ofInt("left",100,100);
+
+
+LayoutTransition中的一些其它方法：
+/**
+ * 设置所有动画完成所需要的时长
+ */
+public void setDuration(long duration)
+/**
+ * 针对单个type，设置动画时长；
+ * transitionType取值为：APPEARING、DISAPPEARING、CHANGE_APPEARING、CHANGE_DISAPPEARING
+ */
+public void setDuration(int transitionType, long duration)
+/**
+ * 针对单个type设置插值器
+ * transitionType取值为：APPEARING、DISAPPEARING、CHANGE_APPEARING、CHANGE_DISAPPEARING
+ */
+public void setInterpolator(int transitionType, TimeInterpolator interpolator)
+/**
+ * 针对单个type设置动画延时
+ * transitionType取值为：APPEARING、DISAPPEARING、CHANGE_APPEARING、CHANGE_DISAPPEARING
+ */
+public void setStartDelay(int transitionType, long delay)
+/**
+ * 针对单个type设置，每个子item动画的时间间隔
+ */
+public void setStagger(int transitionType, long duration)

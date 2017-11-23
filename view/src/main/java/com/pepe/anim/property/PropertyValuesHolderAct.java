@@ -44,7 +44,6 @@ public class PropertyValuesHolderAct extends AppCompatActivity {
                 PropertyValuesHolder pvh2= PropertyValuesHolder.ofFloat("scaleX",1f,0.5f);
                 PropertyValuesHolder pvh3= PropertyValuesHolder.ofFloat("scaleY",1f,0.5f);
                 ObjectAnimator.ofPropertyValuesHolder(image,pvh1,pvh2,pvh3).setDuration(1000).start();
-
                 break;
 
             default:

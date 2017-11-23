@@ -13,7 +13,7 @@ import com.hencoder.draw.practicedraw2.Practice2Activity;
 import com.hencoder.draw.practicedraw3.Practice3Activity;
 import com.hencoder.draw.practicedraw4.Practice4Activity;
 import com.hencoder.draw.practicedraw5.Practice5Activity;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;

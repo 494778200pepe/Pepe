@@ -8,14 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import com.github.GitHubAct;
 import com.hencoder.layout.hencoderpracticelayout1.LayoutPractice1Activity;
-import com.hencoder.task.Flipboard.FlipboardAct;
-import com.hencoder.task.HenCoderTaskAct;
-import com.hencoder.task.Like.LikeAct;
-import com.hencoder.task.MIMovement.MIMovementAct;
-import com.hencoder.task.Ruler.RulerAct;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;

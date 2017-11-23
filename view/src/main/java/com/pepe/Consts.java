@@ -1,9 +1,9 @@
-package com.pepe.view;
+package com.pepe;
 
 /**
- * Created by wang on 2017/7/15.
+ * @author wang
+ * @date 2017/7/15
  */
-
 public class Consts {
     public static final String TAG = "pepe";
 }

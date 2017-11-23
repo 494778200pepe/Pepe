@@ -141,8 +141,9 @@ public class ObjectAnimatorAct extends AppCompatActivity {
                     {
                         Log.e("pepe", "onAnimationEnd");
                         ViewGroup parent = (ViewGroup) image.getParent();
-                        if (parent != null)
+                        if (parent != null){
                             parent.removeView(image);
+                        }
                     }
 
                     @Override
@@ -163,8 +164,9 @@ public class ObjectAnimatorAct extends AppCompatActivity {
                     {
                         Log.e("pepe", "onAnimationEnd");
                         ViewGroup parent = (ViewGroup) image.getParent();
-                        if (parent != null)
+                        if (parent != null){
                             parent.removeView(image);
+                        }
                     }
                 });
                 anim14.start();

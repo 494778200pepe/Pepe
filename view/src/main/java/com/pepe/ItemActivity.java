@@ -1,9 +1,9 @@
-package com.pepe.view;
+package com.pepe;
 
 /**
- * Created by wang on 2017/7/11.
+ * @author wang
+ * @date 2017/7/11
  */
-
 public class ItemActivity {
     public final Class<?> activityClass;
     public final String title;

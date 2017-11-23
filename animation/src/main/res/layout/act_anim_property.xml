@@ -9,12 +9,6 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
     <Button
-        android:id="@+id/main_btn4"
-        style="@style/CommonButton"
-        android:layout_marginTop="10dp"
-        android:text="Layout Animations" />
-
-    <Button
         android:id="@+id/main_btn10"
         style="@style/CommonButton"
         android:layout_marginTop="10dp"

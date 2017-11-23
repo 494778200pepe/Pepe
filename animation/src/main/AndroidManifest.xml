@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".PropertyAnimationAct"/>
-        <activity android:name=".Property.LayoutAnimaAct"/>
         <activity android:name=".Property.MojiDemoAct"/>
         <activity android:name=".VectorAnimationAct"/>
         <activity android:name=".Vector.VectorDemo1Act"/>

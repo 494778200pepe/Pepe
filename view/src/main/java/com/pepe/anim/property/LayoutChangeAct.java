@@ -1,4 +1,4 @@
-package com.pepe.animation.Property;
+package com.pepe.anim.property;
 
 import android.animation.LayoutTransition;
 import android.animation.ObjectAnimator;
@@ -11,13 +11,14 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.GridLayout;
 
-import com.pepe.animation.R;
+import com.pepe.view.R;
 
 
 /**
- * Created by pepe on 2016/8/21 0021.
+ * @author wang
+ * @date 2016/8/21
  */
-public class LayoutAnimaAct extends AppCompatActivity implements
+public class LayoutChangeAct extends AppCompatActivity implements
         CompoundButton.OnCheckedChangeListener
 {
     private ViewGroup viewGroup;
@@ -31,7 +32,7 @@ public class LayoutAnimaAct extends AppCompatActivity implements
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_layout_anim);
+        setContentView(R.layout.act_anim_prop_layout_change);
         viewGroup = (ViewGroup) findViewById(R.id.id_container);
 
         mAppear = (CheckBox) findViewById(R.id.id_appear);

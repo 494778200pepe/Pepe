@@ -12,6 +12,7 @@ import android.view.ViewOutlineProvider;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.pepe.view.R;
 
@@ -22,6 +23,7 @@ public class Practice01Translation extends RelativeLayout {
     Button animateBt;
     ImageView imageView;
     int translationState = 0;
+    Context mContext;
 
     public Practice01Translation(Context context) {
         super(context);
@@ -29,6 +31,7 @@ public class Practice01Translation extends RelativeLayout {
 
     public Practice01Translation(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
     }
 
     public Practice01Translation(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -62,6 +65,13 @@ public class Practice01Translation extends RelativeLayout {
                     translationState = 0;
                 }
                 // TODO 在这里处理点击事件，通过 View.animate().translationX/Y/Z() 来让 View 平移
+            }
+        });
+        imageView.setClickable(true);
+        imageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext,"hehe", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -1,4 +1,4 @@
-package com.pepe.view.path;
+package com.pepe.viewgroup.drag;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -8,8 +8,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 
 import com.pepe.ItemFragment;
 import com.pepe.view.R;
@@ -17,24 +15,23 @@ import com.pepe.view.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.pepe.view.path.PathView.CONTENTS;
-
 
 /**
  * @author wang
- * @date 2017/11/13.
+ * @date 2017/11/22.
  */
-
-public class PathAct extends AppCompatActivity implements View.OnClickListener {
+public class DragAct  extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager pager;
     List<PageModel> pageModels = new ArrayList<>();
 
     {
-        pageModels.add(new PageModel(R.layout.item_view_path_path, R.string.str_view_canvas_canvas));
-        pageModels.add(new PageModel(R.layout.item_view_path_clip_path, R.string.str_view_path_clip_path));
-        pageModels.add(new PageModel(R.layout.item_view_path_clip_rect, R.string.str_view_path_clip_rect));
-        pageModels.add(new PageModel(R.layout.item_view_path_show_hide, R.string.str_view_path_show_hide));
+        pageModels.add(new PageModel(R.layout.item_viewgroup_drag, R.string.str_view_group_drag));
+        pageModels.add(new PageModel(R.layout.item_viewgroup_drag_edge_limit, R.string.str_view_group_drag_edge_limit));
+        pageModels.add(new PageModel(R.layout.item_viewgroup_drag_release, R.string.str_view_group_drag_release));
+        pageModels.add(new PageModel(R.layout.item_viewgroup_drag_edge_control, R.string.str_view_group_drag_edge_control));
+        pageModels.add(new PageModel(R.layout.item_viewgroup_drag_test, R.string.str_view_group_drag_test));
+        pageModels.add(new PageModel(R.layout.item_viewgroup_vertical_drawer, R.string.str_view_group_drag));
     }
 
     @Override
@@ -77,22 +74,6 @@ public class PathAct extends AppCompatActivity implements View.OnClickListener {
             this.titleRes = titleRes;
         }
     }
-    
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_path:
-                PathView pathView = ((PathView) findViewById(R.id.path_view));
-                int mode = pathView.getDrawMode();
-                if (mode == 7) {
-                    mode = -1;
-                }
-                pathView.setDrawMode(++mode);
-                Button btn_path = ((Button) findViewById(R.id.btn_path));
-                btn_path.setText(CONTENTS[mode]);
-                break;
-            default:
-                break;
-        }
-    }
 }
+
+

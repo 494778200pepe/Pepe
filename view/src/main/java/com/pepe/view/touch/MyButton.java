@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.pepe.view.Consts;
+import com.pepe.Consts;
 
 
 /**

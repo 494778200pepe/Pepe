@@ -7,8 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import com.pepe.anim.tween.TweenAnimAct;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;

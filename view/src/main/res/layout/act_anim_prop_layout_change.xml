@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:animateLayoutChanges="true"
-    android:layoutAnimation="@anim/layoutanim">
+    android:layoutAnimation="@anim/anim_prop_layout_init">
 
     <Button
         android:layout_width="wrap_content"

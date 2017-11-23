@@ -8,14 +8,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.pepe.anim.property.AnimatorSetAct;
-import com.pepe.anim.property.DropActivity;
+import com.pepe.anim.property.DropAct;
 import com.pepe.anim.property.KeyframeAct;
+import com.pepe.anim.property.LayoutChangeAct;
+import com.pepe.anim.property.LayoutInitAct;
 import com.pepe.anim.property.MenuAct;
 import com.pepe.anim.property.ObjectAnimatorAct;
 import com.pepe.anim.property.PropertyValuesHolderAct;
 import com.pepe.anim.property.TimerActivity;
 import com.pepe.anim.property.ValueAnimatorAct;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,7 +38,9 @@ public class PropertyAnimAct extends ListActivity {
                 new ItemActivity(AnimatorSetAct.class, "Set"),
                 new ItemActivity(PropertyValuesHolderAct.class, "Holder"),
                 new ItemActivity(KeyframeAct.class, "Keyframe"),
-                new ItemActivity(DropActivity.class, "Drop"),
+                new ItemActivity(LayoutInitAct.class, "Layout_init"),
+                new ItemActivity(LayoutChangeAct.class, "Layout_change"),
+                new ItemActivity(DropAct.class, "Drop"),
                 new ItemActivity(MenuAct.class, "Menu"),
                 new ItemActivity(TimerActivity.class, "Timer")
         );

@@ -1,4 +1,4 @@
-package com.pepe.view;
+package com.pepe;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -10,11 +10,9 @@ import android.widget.ArrayAdapter;
 import com.github.GitHubAct;
 import com.hencoder.HenCoderAct;
 import com.pepe.anim.AnimAct;
-import com.pepe.view.camera.CameraAct;
-import com.pepe.view.canvas.CanvasAct;
-import com.pepe.view.paint.PaintAct;
-import com.pepe.view.path.PathAct;
+import com.pepe.view.DrawAct;
 import com.pepe.view.touch.EventAct;
+import com.pepe.viewgroup.ViewGroupAct;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,10 +26,8 @@ public class MainActivity extends ListActivity {
                 new ItemActivity(HenCoderAct.class, "HenCoder"),
                 new ItemActivity(AnimAct.class, "Animation"),
                 new ItemActivity(GitHubAct.class, "GitHub"),
-                new ItemActivity(CanvasAct.class, "Canvas"),
-                new ItemActivity(CameraAct.class, "Camera"),
-                new ItemActivity(PaintAct.class, "Paint"),
-                new ItemActivity(PathAct.class, "Path"),
+                new ItemActivity(DrawAct.class, "Draw"),
+                new ItemActivity(ViewGroupAct.class, "ViewGroup"),
                 new ItemActivity(EventAct.class, "Event")
         );
         ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(

@@ -16,7 +16,7 @@ import com.pepe.view.R;
  * Created by Administrator on 2016/6/3.
  * 下拉展开动画
  */
-public class DropActivity extends Activity {
+public class DropAct extends Activity {
 
     private LinearLayout mHiddenView;
     private float mDensity;

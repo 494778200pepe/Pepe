@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 
 import com.hencoder.anim.practicedraw6.Practice6Activity;
 import com.hencoder.anim.practicedraw7.Practice7Activity;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;

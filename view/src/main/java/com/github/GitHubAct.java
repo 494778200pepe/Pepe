@@ -11,7 +11,7 @@ import com.github.Card.CardAct;
 import com.github.FunSwitch.FunSwitchAct;
 import com.github.InfiniteCards.InfiniteCardsAct;
 import com.github.SafeView.SafeViewAct;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;

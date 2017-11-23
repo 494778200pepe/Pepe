@@ -12,7 +12,7 @@ import com.hencoder.anim.HenCoderAnimAct;
 import com.hencoder.draw.HenCoderDrawAct;
 import com.hencoder.layout.HenCoderLayoutAct;
 import com.hencoder.task.HenCoderTaskAct;
-import com.pepe.view.ItemActivity;
+import com.pepe.ItemActivity;
 
 import java.util.Arrays;
 import java.util.List;

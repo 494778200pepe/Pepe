@@ -8,11 +8,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-import com.pepe.view.ItemFragment;
+import com.pepe.ItemFragment;
 import com.pepe.view.R;
 
 import java.util.ArrayList;
