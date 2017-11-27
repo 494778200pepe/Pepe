@@ -24,5 +24,6 @@
     <string name="str_view_path_clip_path">clipPath</string>
     <string name="str_view_path_clip_rect">clipRect</string>
     <string name="str_view_path_show_hide">showHide</string>
+    <string name="str_view_path_measure">pathMeasure</string>
 
 </resources>

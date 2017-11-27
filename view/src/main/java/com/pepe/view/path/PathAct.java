@@ -35,6 +35,7 @@ public class PathAct extends AppCompatActivity implements View.OnClickListener {
         pageModels.add(new PageModel(R.layout.item_view_path_clip_path, R.string.str_view_path_clip_path));
         pageModels.add(new PageModel(R.layout.item_view_path_clip_rect, R.string.str_view_path_clip_rect));
         pageModels.add(new PageModel(R.layout.item_view_path_show_hide, R.string.str_view_path_show_hide));
+        pageModels.add(new PageModel(R.layout.item_view_path_measure, R.string.str_view_path_measure));
     }
 
     @Override

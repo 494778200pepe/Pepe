@@ -9,7 +9,6 @@ public class MathTool {
 
     /**
      * 开平方
-     *
      * @param value
      * @return
      */
@@ -36,7 +35,6 @@ public class MathTool {
      * Sin330 = -0.5000000000000004
      * Sin345 = -0.2588190451025207
      * Sin360 = -2.4492935982947064E-16 无穷小 0
-     *
      * @param angle 角度
      * @return 正弦函数值
      */
@@ -64,7 +62,6 @@ public class MathTool {
      * Cos330 = 0.8660254037844384
      * Cos345 = 0.9659258262890683
      * Cos360 = 1.0
-     *
      * @param angle 角度
      * @return 余弦函数值
      */
@@ -90,7 +87,6 @@ public class MathTool {
      * tan315 = -1.0000000000000004
      * tan330 = -0.26794919243112264
      * tan360 = -2.4492935982947064E-16
-     *
      * @param angle 角度
      * @return 正切函数值
      */
@@ -98,4 +94,38 @@ public class MathTool {
         //在这里我是写sin函数，其实可以用cos，tan等函数的，不信大家尽管试试
         return Math.tan(angle * Math.PI / 180);
     }
+
+    /**
+     * @param slope 直线的斜率
+     * @return 角度的弧度值
+     */
+    public static double atan(int slope) {
+        // angel=Math.atan(slope)
+        // angel为一个角度的弧度值,slope为直线的斜率,是一个数字,这个数字可以是负的无穷大到正无穷大之间的任何一个值.
+        // 不过,利用他进行计算比较复杂.因为他的周期性,一个数字的反正切值不止一个.例如atan(-1)的值可能是45度,也可能是225度.
+        // 这样就是他的周期性,对于正切函数来说,他的周期是180度,所以两个相差180度的角具有相同的正切和斜率:
+        // tanθ=tan(θ+180)
+        // 然而,Math.atan()只能返回一个角度值,因此确定他的角度非常的复杂,而且,90度和270度的正切是无穷大,因为除数为零,
+        // 我们也是比较难以处理的~!因此我们更多的会采用第二个函数:Math.atan2.
+        double angel = Math.atan(slope);
+        // x=Math.atan(1)//计算正切值为1的数字对应的弧度值
+        // 输出一个弧度值0.785398163397448
+        // x=180*x/Math.PI//转换为角度值
+        // trace(x) //输出45
+        return angel;
+    }
+
+    /**
+     * 根据临边和对边，求角度
+     * @param x x 是临边边长
+     * @param y y 是对边边长
+     * @return 角度的角度值
+     */
+    public static double atan2(int x, int y) {
+        double angel = Math.atan2(y, x);
+        //转换为角度值
+        double degree = 180 * angel / Math.PI;
+        return degree;
+    }
+
 }

@@ -1,17 +1,15 @@
-做学问，容不得半点马虎和偷懒!
+
+generateDefaultLayoutParams
+Android自定义ViewGroup（四、打造自己的布局容器） - CSDN博客
+http://blog.csdn.net/xmxkf/article/details/51500304#￢ﾑﾢ-￩ﾇﾍ￥ﾆﾙgeneratelayoutparams
+ViewGroup generateLayoutParams() 方法的作用 - CSDN博客
+http://blog.csdn.net/javalive09/article/details/39230885
+浅谈自己对 ViewGroup.generateLayoutParams(attrs) 方法理解
+http://www.360doc.com/content/15/1030/11/16427899_509413926.shtml
+LayoutParams，setContentView，generateDefaultLayoutParams - pageTan的小基地 - CSDN博客
+http://blog.csdn.net/u013818990/article/details/50570944
+自定义LayoutParams - pageTan的小基地 - CSDN博客
+http://blog.csdn.net/u013818990/article/details/50603889
 
 
 
-
-
-
-
-
-
-
-Android开发之自定义控件(一)---onMeasure详解 - dmk877的专栏 - CSDN博客
-http://blog.csdn.net/dmk877/article/details/49558367
-Android开发之getMeasuredWidth和getWidth区别从源码分析 - dmk877的专栏 - CSDN博客
-http://blog.csdn.net/dmk877/article/details/49734869
-Android视图绘制流程完全解析，带你一步步深入了解View(二) - 郭霖的专栏 - CSDN博客
-http://blog.csdn.net/guolin_blog/article/details/16330267

@@ -1,0 +1,66 @@
+PathMeasure是一个用来测量Path的类，主要有以下方法:
+
+构造方法
+方法名	                                    释义
+PathMeasure()	                            创建一个空的PathMeasure
+说明：   用这个构造函数可创建一个空的 PathMeasure，但是使用之前需要先调用 setPath 方法来与 Path 进行关联。
+        被关联的 Path 必须是已经创建好的，如果关联之后 Path 内容进行了更改，则需要使用 setPath 方法重新关联。
+PathMeasure(Path path, boolean forceClosed)	创建 PathMeasure 并关联一个指定的Path(Path需要已经创建完成)。
+说明：   1、第一个参数自然就是被关联的 Path 了，第二个参数是用来确保 Path 闭合，如果设置为 true，
+            则不论之前Path是否闭合，都会自动闭合该 Path(如果Path可以闭合的话)。
+         2、不论 forceClosed 设置为何种状态(true 或者 false)， 都不会影响原有Path的状态，即 Path 与 PathMeasure 关联之后，之前的的 Path 不会有任何改变。
+         3、forceClosed 的设置状态可能会影响测量结果，如果 Path 未闭合但在与 PathMeasure 关联的时候设置 forceClosed 为 true 时，
+            测量结果可能会比 Path 实际长度稍长一点，获取到到是该 Path 闭合时的状态。
+
+公共方法
+返回值	        方法名	                                    释义
+void	        setPath(Path path, boolean forceClosed)	    关联一个Path
+boolean	        isClosed()	                                是否闭合
+float	        getLength()	                                获取Path的长度
+boolean	        nextContour()	                            跳转到下一个轮廓
+说明：       nextContour()方法用的比较少，比较大部分情况下都只会有一个Path而不是多个，毕竟这样会增加Path的复杂度，
+            但是如果真有一个Path，包含了多个Path，那么通过nextContour这个方法，就可以进行切换，
+            同时，默认的API，例如getLength，获取的也是当前的这段Path所对应的长度，而不是所有的Path的长度，
+            同时，nextContour获取Path的顺序，与Path的添加顺序是相同的。
+boolean	        getSegment(float startD, float stopD, Path dst, boolean startWithMoveTo)	截取片段
+说明:     1、返回值表示截取是否成功
+          2、startWithMoveTo	 表示起始点是否使用 moveTo，用于保证截取的 Path 第一个点位置不变
+          3、如果在安卓4.4或者之前的版本，在默认开启硬件加速的情况下，更改 dst 的内容后可能绘制会出现问题，
+             请关闭硬件加速或者给 dst 添加一个单个操作，例如: dst.rLineTo(0, 0)
+
+boolean	        getPosTan(float distance, float[] pos, float[] tan)	                        获取指定长度的位置坐标及该点切线值
+说明：     方法是用于得到路径上某一长度的位置以及该位置的正切值：
+            返回值(boolean)	判断获取是否成功	true表示成功，数据会存入 pos 和 tan 中，
+                            false 表示失败，pos 和 tan 不会改变
+            distance	距离 Path 起点的长度	取值范围: 0 <= distance <= getLength
+            pos	        该点的坐标值	坐标值: (x==[0], y==[1])
+            tan	        该点的正切值	正切值: (x==[0], y==[1])
+boolean	        getMatrix(float distance, Matrix matrix, int flags)	                        获取指定长度的位置坐标及该点Matrix
+说明：      用于得到路径上某一长度的位置以及该位置的正切值的矩阵
+            返回值(boolean)	    判断获取是否成功	true表示成功，数据会存入matrix中，false 失败，matrix内容不会改变
+            distance	        距离 Path 起点的长度	取值范围: 0 <= distance <= getLength
+            matrix	            根据 falgs 封装好的matrix	会根据 flags 的设置而存入不同的内容
+            flags	            规定哪些内容会存入到matrix中	可选择
+                                POSITION_MATRIX_FLAG(位置)
+                                ANGENT_MATRIX_FLAG(正切)
+
+硬件加速的Bug
+            由于硬件加速的问题，PathMeasure中的getSegment在讲Path添加到dst数组中时会被导致一些错误，需要通过mDst.lineTo(0,0)来避免这样一个Bug。
+
+Path特效之PathMeasure打造万能路径动效 - CSDN博客
+http://blog.csdn.net/tianjian4592/article/details/47067161
+安卓自定义View进阶-Path之玩出花样(PathMeasure) - CSDN博客
+http://blog.csdn.net/u013831257/article/details/51565591
+PathMeasure之迷径追踪 - eclipse_xu - CSDN博客
+http://blog.csdn.net/eclipsexys/article/details/51992473
+android仿支付宝付款成功及&quot;天女散花&quot;效果实现——看PathMeasure大展身手-博客-云栖社区-阿里云
+https://yq.aliyun.com/articles/12448
+
+Android面试常客Handler详解-慕课网
+https://www.imooc.com/learn/267
+QQ5.0侧滑菜单-慕课网
+https://www.imooc.com/learn/211
+移动开发_Android入门基础到高级教程_慕课网
+https://www.imooc.com/course/list?c=android&page=5
+实战课程_慕课网
+http://coding.imooc.com/?c=android&sort=3
