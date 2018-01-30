@@ -1,0 +1,110 @@
+================================================================================
+= 题目: 分隔提取字符串函数
+= 日期: 2017.03.02
+================================================================================
+
+*. 注意事项
+   a. 分隔符作为一项的结束, 若在最后一项时分隔符可有可无, 即: "a," 与 "a" 都表示
+      只有一项;
+   b. from 和 to 为 str 索引, index 为分隔后的索引项;
+   c. 要求函数完成后就可以当基础函数使用;
+   d. 既然是基础函数就不应该调用已有 split 类似函数。
+
+*. 示例
+   str 为 "a,b,,c,d,,,1,2,3,4,5", 分隔符为 ',', 则有:
+   ---------------------------------------------------
+    from  to   index    result
+   ---------------------------------------------------
+      0   20    < 0     (null)
+      0   20      0     "a"
+      0   20      2     ""
+      0   20      4     "d"
+      0   20      8     "2"
+      0   20      11    "5"
+      0   20    > 11    (null)
+
+      3   15      0     ""
+      3   15      2     "c"
+      3   15     11     (null)
+
+     11   25      0     "1"
+     11   25      2     "3"
+     11   25      4     "5"
+     11   25     >4     (null)
+   ---------------------------------------------------
+
+1. C 描述
+   /*
+   提取以分隔符 split 分隔的 index 项字符串, 其中:
+   参数:
+      str      源字符串
+      length   字符串长度, 若 < 0 则为 str 以 '\0' 结尾
+      ret_len  返回提取字符串长度, 允许返回值为 0
+      split    分隔符
+      index    索引项, 从 0 开始
+      from     字符串 str 的开始索引, 从 0 开始
+      to       字符串 str 的结束索引, 不含此索引, 若 < 0 则到字符串末尾
+   返回值:
+      NULL     提取 index 项失败, 可能未找到或参数不合法
+      (值)     返回 str 串的子串指针
+   */
+   const char* split_string(const char* str,   int length, int* ret_len,
+                                  char  split, int index,  int  from, int to)
+   {
+      // ??? ... ...
+   }
+
+2. C++ 描述
+   /*
+   提取以分隔符 ASplit 分隔的 AIndex 项字符串, 其中:
+   参数:
+      AStr     源字符串
+      ASplit   分隔符
+      AIndex   索引项, 从 0 开始
+      AFrom    字符串 AStr 的开始索引, 从 0 开始
+      ATo      字符串 AStr 的结束索引, 不含此索引, 若 < 0 则到字符串末尾
+   返回值:
+      (值)     返回 AStr 的 AIndex 项字符串
+   */
+   string SplitString(const string& AStr,  char ASplit,
+                               int  AIndex, int AFrom, int ATo)
+   {
+      // ??? ... ...
+   }
+
+3. Delphi 描述
+   (*
+   提取以分隔符 ASplit 分隔的 AIndex 项字符串, 其中:
+   参数:
+      AStr     源字符串
+      ASplit   分隔符
+      AIndex   索引项, 从 0 开始
+      AFrom    字符串 AStr 的开始索引, 从 0 开始
+      ATo      字符串 AStr 的结束索引, 不含此索引, 若 < 0 则到字符串末尾
+   返回值:
+      (值)     返回 AStr 的 AIndex 项字符串
+   *)
+   function SplitString(const AStr: String;  ASplit: Char;
+                              AIndex, AFrom, ATo: Integer): String;
+   begin
+      // ??? ... ...
+   end;
+
+4. Java 描述
+   /*
+   提取以分隔符 split 分隔的 index 项字符串, 其中:
+   参数:
+      str      源字符串
+      split    分隔符
+      index    索引项, 从 0 开始
+      from     字符串 str 的开始索引, 从 0 开始
+      to       字符串 str 的结束索引, 不含此索引, 若 < 0 则到字符串末尾
+   返回值:
+      null     提取 index 项失败, 可能未找到或参数不合法
+      (值)     返回 str 的 index 项字符串
+   */
+   public static String splitString(String str,  char split,
+                                       int index, int from, int to)
+   {
+      // ??? ... ...
+   }
