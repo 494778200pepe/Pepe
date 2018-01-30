@@ -18,12 +18,14 @@ public class BinaryInsertSort {
             int temp = array[i];
             int low = 0;
             int high = i - 1;
-            while (low <= high) {
-                int mid = (low + high) / 2;
-                if (temp < array[mid]) {
-                    high = mid - 1;
-                } else {
-                    low = mid + 1;
+            if(array[i] < array[i - 1]){
+                while (low <= high) {
+                    int mid = (low + high) / 2;
+                    if (temp < array[mid]) {
+                        high = mid - 1;
+                    } else {
+                        low = mid + 1;
+                    }
                 }
             }
             for (int j = i; j >= low + 1; j--) {
@@ -40,5 +42,11 @@ public class BinaryInsertSort {
         }
         System.out.println();
     }
+
+    /**
+     * 叶工修改意见：
+     * 1、插入排序应该先判断 array[i] < array[i-1] 才进入二分定位。
+     */
 }
+
 

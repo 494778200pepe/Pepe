@@ -20,7 +20,7 @@ public class SelectSort {
         int k;
         int j;
         p(array);
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             k = i;
             for (j = i + 1; j < array.length; j++) {
                 if (array[k] > array[j]) {
@@ -43,4 +43,9 @@ public class SelectSort {
         System.out.println();
     }
 
+    /**
+    * 叶工修改意见：
+    * 1、选择排序中 for (int i = 0; i < array.length; i++) 判断条件应该为 i < array.length - 1;
+    */
 }
+
