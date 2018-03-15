@@ -4,6 +4,10 @@ package com.hopechart.sort;
  * 冒泡排序
  * @author wang
  * @date 2018/1/30.
+ * 描述：前一个比后一个大，就交换，循环n遍。每次确定一个最大值。
+ * 时间复杂度：
+ * 空间复杂度：
+ * 稳定性：不稳定。左边的最大值会比右边的最大值，更先到达右端，相对顺序就变了。
  */
 
 public class BubbleSort {

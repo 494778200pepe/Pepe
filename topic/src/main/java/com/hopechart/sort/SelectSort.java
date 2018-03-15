@@ -4,6 +4,10 @@ package com.hopechart.sort;
  * 选择排序
  * @author wang
  * @date 2018/1/28.
+ * 描述：找最小值。从左边开始找，每次都标记最小的，然后互换。
+ * 时间复杂度：
+ * 空间复杂度：
+ * 稳定性：不稳定。左边的最大值，可能因为与最小值互换，而变到最右边。
  */
 
 public class SelectSort {

@@ -4,6 +4,10 @@ package com.hopechart.sort;
  * 折半插入排序
  * @author wang
  * @date 2018/1/28.
+ * 描述：利用折半来获取中间值，不断缩小定位，以尽快确定需要移位的左边界。然后移位，插入。
+ * 时间复杂度：
+ * 空间复杂度：
+ * 稳定性：稳定。
  */
 
 public class BinaryInsertSort {

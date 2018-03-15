@@ -4,6 +4,10 @@ package com.hopechart.sort;
  * 插入排序
  * @author wang
  * @date 2018/1/30.
+ * 描述：从大往小找，经过的值，不断往后移，腾出位置。找到位置了就插进去。
+ * 时间复杂度：
+ * 空间复杂度：
+ * 稳定性：稳定。后面的值，后插入，相对顺序不会变。
  */
 
 public class InsertSort {
