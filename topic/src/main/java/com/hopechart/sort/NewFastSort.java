@@ -19,45 +19,27 @@ public class NewFastSort {
     }
 
     public static void fastSort(int[] array, int l, int r) {
-        System.out.println("============> fastSort :  " + l + " --> " + r);
         if (l < r) {
             int left = l;
             int right = r;
-            int mid = left + (right - left) / 2;
-            System.out.println("mid = " + mid);
-            int midValue = array[mid];
-            System.out.println("midValue = " + midValue);
-            while (left < right) {
-                while (left < right && array[right] > midValue) {
+            int midValue = array[left + (right - left) / 2];
+            do {
+                while (array[right] > midValue) {
                     right--;
                 }
-                while (left < right && array[left] < midValue) {
+                while (array[left] < midValue) {
                     left++;
                 }
-                if (left < right) {
+                if (left <= right) {
                     int temp = array[left];
                     array[left] = array[right];
                     array[right] = temp;
                     right--;
                     left++;
                 }
-            }
-            System.out.println("交换后 left = " + left);
-            System.out.println("交换后 right = " + right);
-            p(array);
-            if (array[left] == midValue) {
-                System.out.println("中位数相等");
-                fastSort(array, l, left - 1);
-                fastSort(array, left + 1, r);
-            } else if (array[left] < midValue) {
-                System.out.println("中位数偏小 ，放左边");
-                fastSort(array, l, left);
-                fastSort(array, left + 1, r);
-            } else {
-                System.out.println("中位数偏大 ，放右边");
-                fastSort(array, l, left - 1);
-                fastSort(array, left, r);
-            }
+            } while (left <= right);
+            fastSort(array, l, right);
+            fastSort(array, left, r);
         }
     }
 
@@ -67,4 +49,12 @@ public class NewFastSort {
         }
         System.out.println();
     }
+    /**
+     * 叶工第一次修改意见：
+     *  1、mid 与 midValue 变量可以合并；
+     *  2、while (left < right) 应该用 do {..} while (left <= right)；
+     *  3、if (left < right) 处理没有按我讲的去做；
+     *  4、if (array[left] == midValue) 由于上一条没有处理好导致递归处理复杂了。
+     */
+
 }
