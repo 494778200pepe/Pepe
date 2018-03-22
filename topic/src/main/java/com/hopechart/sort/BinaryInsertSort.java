@@ -12,7 +12,7 @@ package com.hopechart.sort;
 
 public class BinaryInsertSort {
     public static void main(String[] args) {
-        int[] array = {21, 4, 5, 15, 8, 21, 3, 4, 9, 0, 12};
+        int[] array = {1234, 99, 21, 4, 5, 15, 8, 21, 1, 54, -1, 0, -5, 43532, 0, -1, 327327, -1010, 2, 3, 5, 4, 3, 9, 78, 55, -999, 11, 0, 3, 4, 9, 0, 12, -9};
         binaryInsertSort(array);
     }
 
@@ -22,7 +22,7 @@ public class BinaryInsertSort {
             int temp = array[i];
             int low = 0;
             int high = i - 1;
-            if(array[i] < array[i - 1]){
+            if (array[i] < array[i - 1]) {
                 while (low <= high) {
                     int mid = (low + high) / 2;
                     if (temp < array[mid]) {

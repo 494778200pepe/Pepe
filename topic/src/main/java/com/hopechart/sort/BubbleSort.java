@@ -15,12 +15,12 @@ public class BubbleSort {
         float f = 0.3f;
         double d = 0.3d;
         // 结果是 不相等
-        if(f == d){
+        if (f == d) {
             System.out.println("相等");
-        }else{
+        } else {
             System.out.println("不相等");
         }
-        int[] array = {99, 21, 4, 5, 15, 8, 21, 1, 54, -1, 0, -5, 11, 0, 3, 4, 9, 0, 12, -9};
+        int[] array = {1234, 99, 21, 4, 5, 15, 8, 21, 1, 54, -1, 0, -5, 43532, 0, -1, 327327, -1010, 2, 3, 5, 4, 3, 9, 78, 55, -999, 11, 0, 3, 4, 9, 0, 12, -9};
         bubbleSort(array);
     }
 

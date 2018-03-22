@@ -36,6 +36,8 @@ public class NewFastSort {
                     array[right] = temp;
                     right--;
                     left++;
+                } else {
+                    break;
                 }
             } while (left <= right);
             fastSort(array, l, right);
@@ -55,6 +57,11 @@ public class NewFastSort {
      *  2、while (left < right) 应该用 do {..} while (left <= right)；
      *  3、if (left < right) 处理没有按我讲的去做；
      *  4、if (array[left] == midValue) 由于上一条没有处理好导致递归处理复杂了。
+     */
+
+    /**
+     * 叶工第二次修改意见：
+     *  1、f (left <= right) {..} 应该加 else break 这样就更好了。
      */
 
 }

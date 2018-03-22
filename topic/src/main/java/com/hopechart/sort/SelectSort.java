@@ -13,7 +13,7 @@ package com.hopechart.sort;
 public class SelectSort {
 
     public static void main(String[] args) {
-        int[] array = {21, 4, 5, 15, 8, 21, 3, 4, 9, 0, 12};
+        int[] array = {1234, 99, 21, 4, 5, 15, 8, 21, 1, 54, -1, 0, -5, 43532, 0, -1, 327327, -1010, 2, 3, 5, 4, 3, 9, 78, 55, -999, 11, 0, 3, 4, 9, 0, 12, -9};
         selectSort(array);
     }
 
@@ -48,8 +48,8 @@ public class SelectSort {
     }
 
     /**
-    * 叶工修改意见：
-    * 1、选择排序中 for (int i = 0; i < array.length; i++) 判断条件应该为 i < array.length - 1;
-    */
+     * 叶工修改意见：
+     * 1、选择排序中 for (int i = 0; i < array.length; i++) 判断条件应该为 i < array.length - 1;
+     */
 }
 
