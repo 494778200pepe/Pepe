@@ -3,8 +3,6 @@ package com.hopechart.sort;
 /**
  * @author wang
  * @date 2018/3/30.
- * 归并排序的递归和非递归实现（C代码） - petercao - 博客园
- * https://www.cnblogs.com/bluestorm/archive/2012/09/06/2673138.html
  */
 
 public class NoRecursionMergeSort {
@@ -15,11 +13,55 @@ public class NoRecursionMergeSort {
         int[] array = {1234, 99, 21, 4, 5, 15, 8, 21, 1, 54, -1, 0, -5, 43532, 0, -1, 327327, -1010, 2, 3, 5, 4, 3, 9, 78, 55, -999, 11, 0, 3, 4, 9, 0, 12, -9};
 //        int[] array = {8, 7, 6, 5, 4, 3, 2, 1};
 //        int[] array = {2, 4, 6, 8, 1, 3, 4, 7};
-        p(array);
         mergeSort(array);
+        p(array);
     }
 
+    /**
+     * 第二版
+     * @param array
+     */
     public static void mergeSort(int[] array) {
+        int len = array.length;
+        int leftMin, leftMax, rightMin, rightMax;
+        int tag;
+        int[] temp = new int[len];
+        for (int i = 1; i < len; i *= 2) {
+            for (leftMin = 0; leftMin < len - i; leftMin = rightMax) {
+                rightMin = leftMax = leftMin + i;
+                rightMax = leftMax + i;
+
+                if (rightMax > len) {
+                    rightMax = len;
+                }
+
+                tag = 0;
+                // 第一步
+                while (leftMin < leftMax && rightMin < rightMax) {
+                    temp[tag++] = array[rightMin] < array[leftMin] ? array[rightMin++] : array[leftMin++];
+                }
+
+                // 第二步
+                while (leftMin < leftMax) {
+                    // 第一步如果 rightMin == rightMax，那么 leftMin < leftMax，从left复制到right
+                    array[--rightMin] = array[--leftMax];
+                }
+
+                // 第三步
+                while (tag > 0) {
+                    // 第一步如果 rightMin == rightMax，经由第二步，rightMin = next
+                    // 第一步如果 rightMin < rightMax,那么 rightMin 之后的就不用动
+                    array[--rightMin] = temp[--tag];
+                }
+            }
+        }
+    }
+
+    /**
+     * 第一版
+     * @param array
+     */
+    public static void mergesort(int[] array) {
         int len = array.length;
         int leftMin = 0, leftMax, rightMin, rightMax = 0;
         for (int i = 1; i < array.length; i *= 2) {

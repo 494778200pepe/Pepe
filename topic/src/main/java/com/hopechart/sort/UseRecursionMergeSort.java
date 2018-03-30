@@ -3,6 +3,8 @@ package com.hopechart.sort;
 /**
  * @author wang
  * @date 2018/3/22.
+ * 归并排序的递归和非递归实现（C代码） - petercao - 博客园
+ * https://www.cnblogs.com/bluestorm/archive/2012/09/06/2673138.html
  */
 
 public class UseRecursionMergeSort {
