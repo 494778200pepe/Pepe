@@ -11,6 +11,7 @@ package com.hopechart.sort;
  */
 
 public class BubbleSort {
+
     public static void main(String[] args) {
         float f = 0.3f;
         double d = 0.3d;
