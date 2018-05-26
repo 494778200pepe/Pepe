@@ -4,7 +4,9 @@ import android.text.TextUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class DateTools {
 
@@ -22,6 +24,8 @@ public class DateTools {
         // 例如：cc_time=1291778220
         long lcc_time = Long.valueOf(cc_time);
         re_StrTime = sdf.format(new Date(lcc_time * 1000L));
+
+        List<String> ls = new ArrayList<String>();
         return re_StrTime;
 
     }

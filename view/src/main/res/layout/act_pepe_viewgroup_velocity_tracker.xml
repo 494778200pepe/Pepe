@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pepe.viewgroup.velocitytracker.ScrollLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_blue"
+        android:gravity="center"
+        android:text="text1"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_purple"
+        android:gravity="center"
+        android:text="text2"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_yellow"
+        android:gravity="center"
+        android:text="text3"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_blue"
+        android:gravity="center"
+        android:text="text4"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/color_purple"
+        android:gravity="center"
+        android:text="text5"
+        android:textColor="@android:color/white" />
+</com.pepe.viewgroup.velocitytracker.ScrollLayout>
+

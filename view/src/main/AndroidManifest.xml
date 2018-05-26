@@ -48,6 +48,8 @@
         <activity android:name="com.pepe.viewgroup.ViewGroupAct" />
         <activity android:name="com.pepe.viewgroup.drag.DragAct"
             android:theme="@style/Theme.AppCompat"/>
+        <activity android:name="com.pepe.viewgroup.slidingmenu.SlidingMenuAct"/>
+        <activity android:name="com.pepe.viewgroup.velocitytracker.VelocityTrackerAct"/>
 
 
         <!--HenCoder_draw-->

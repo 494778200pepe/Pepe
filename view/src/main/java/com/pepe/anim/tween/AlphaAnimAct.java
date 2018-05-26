@@ -4,14 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewPropertyAnimator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.pepe.view.R;
-
 
 /**
  * Created by pepe on 2016/8/20 0020.
@@ -22,7 +20,7 @@ public class AlphaAnimAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_alpah_animation);
+        setContentView(R.layout.act_alpha_animation);
         image = (ImageView) findViewById(R.id.image_xml);
     }
 

@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 
 import com.pepe.ItemActivity;
 import com.pepe.viewgroup.drag.DragAct;
+import com.pepe.viewgroup.slidingmenu.SlidingMenuAct;
+import com.pepe.viewgroup.velocitytracker.VelocityTrackerAct;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +25,9 @@ public class ViewGroupAct extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final List<ItemActivity> acts = Arrays.asList(
-                new ItemActivity(DragAct.class, "Drag")
+                new ItemActivity(DragAct.class, "Drag"),
+                new ItemActivity(SlidingMenuAct.class, "SlidingMenu"),
+                new ItemActivity(VelocityTrackerAct.class, "VelocityTracker")
         );
         ArrayAdapter<ItemActivity> adapter = new ArrayAdapter<>(
                 this,
