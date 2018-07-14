@@ -9,7 +9,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Glide" />
             <option value="$PROJECT_DIR$/Handler" />
             <option value="$PROJECT_DIR$/IPCClient" />
             <option value="$PROJECT_DIR$/IPCServer" />
@@ -31,7 +30,6 @@
             <option value="$PROJECT_DIR$/view" />
             <option value="$PROJECT_DIR$/viewflipper" />
             <option value="$PROJECT_DIR$/viewgroup" />
-            <option value="$PROJECT_DIR$/widget" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
